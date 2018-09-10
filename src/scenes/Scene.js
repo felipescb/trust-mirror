@@ -2,13 +2,12 @@ import VideoScene from './VideoScene'
 import HypeScene from './HypeScene'
 
 export default class Scene {
-  constructor(description, container) {
-    this.description = description
+  constructor(data, description, container) {
     switch (description.type) {
       case 'video':
-        return new VideoScene(description, container);
+        return new VideoScene(data, description, container);
       case 'hype':
-        return new HypeScene(description, container);
+        return new HypeScene(data, description, container);
     }
   }
   play() {

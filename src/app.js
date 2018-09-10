@@ -1,3 +1,5 @@
+import Scene from './scenes/Scene';
+
 const sceneDescriptions = [
   {
     type: 'video',
@@ -25,7 +27,7 @@ class Journey{
     this.currentIndex = index;
     const desc = sceneDescriptions[index]
     console.log("Playing", index, desc);
-    const scene = newScene(desc);
+    const scene = new Scene(desc);
     scene.onEnd = this.playNext;
     scene.play();
   }
@@ -35,39 +37,6 @@ class Journey{
     }
   }
 
-}
-
-function newScene(desc){
-  switch(desc.type){
-    case 'video':
-      return new VideoScene(desc);
-    case 'hype':
-      return new HypeScene(desc);
-  }
-}
-
-class Scene{
-  constructor(description){
-    this.description = description
-  }
-  play(){
-    console.log(this.description);
-    this.onEnd();
-  }
-}
-
-class VideoScene extends Scene{
-  play(){
-    console.log('playing video', this.description)
-    super.play();
-  }
-}
-
-class HypeScene extends Scene {
-  play() {
-    console.log('playing hype', this.description)
-    super.play();
-  }
 }
 
 export default Journey

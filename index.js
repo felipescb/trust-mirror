@@ -1,15 +1,15 @@
 import io from 'socket.io-client';
-import Journey from './src/app';
+import Script from './src/app';
 
 const DEV = true;
 
-const journey = new Journey();
+const script = new Script();
 if(DEV){
   const data = require('./assets/sample.json');
   handleData(data)
   document.onload = () => {
-    journey.setup(data);
-    journey.start();
+    script.setup(data);
+    script.start();
   }
 }
 else{
@@ -18,6 +18,6 @@ else{
 }
 
 function handleData(data){
-  journey.setup(data);
-  journey.start();
+  script.setup(data);
+  script.start();
 }

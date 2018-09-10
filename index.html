@@ -6,13 +6,69 @@
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="node_modules/socket.io-client/dist/socket.io.js"></script>
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+	<style>
+
+		body {
+		    background: black;
+		}
+
+		#c {
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+
+		#v {
+			height: 1000px;
+			width: auto;
+		}
+
+	</style>
+
 </head>
 <body>
 
 
-	<div class="typing-animation">
+	<!-- <div class="typing-animation">
 		<span id="quote"></span>
-	</div>
+	</div> -->
+
+	<video id=v>
+    	<source src=assets/video/1_welcome.mp4 type=video/mp4>
+	</video>
+
+	<div class="container" id=n >
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+
+	<script type="text/javascript">
+		var v = document.getElementById('v');
+		var n = document.getElementById('n');
+		n.style.visibility = 'hidden';
+		v.addEventListener('ended', function(){
+        	 v.style.visibility = 'hidden';
+        	 v.outerHTML = "";
+        	 n.style.visibility = 'visible';
+		}, false);
+
+		function playVideo() {
+			v.play();
+		}
+	</script>
+
 
 	<script type="text/javascript" src="js/visuals.js"></script>
 	
@@ -23,12 +79,14 @@
 
 		socket.on("go", function(data) {
 			console.log(data);
-			$(function(){
-				$("#quote").typed({
-					strings: ["Hi," + data.data.identifier],
-					typeSpeed: 50
-				});
-			});
+			// $(function(){
+			// 	$("#quote").typed({
+			// 		strings: ["Hi," + data.data.identifier],
+			// 		typeSpeed: 50
+			// 	});
+			// });
+			playVideo();
+
 
 		});
 

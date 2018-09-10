@@ -16,20 +16,31 @@ const sceneDescriptions = [
 ]
 
 class Journey{
-  constructor(data){
+  constructor(){
     this.currentIndex = 0;
-    this.data = data;
-    console.log(this.data);
-    
     this.playNext = this.playNext.bind(this);
+  }
+  setup(data){
+    this.container = document.getElementById('container');
+    this.createScenes(data);
+  }
+  createScenes(data){
+    this.data = data;
+    this.scenes = sceneDescriptions.map(desc => {
+      const scene = new Scene(desc, this.container);
+      scene.onEnd = this.playNext;
+      return scene;
+    })
+  }
+  start(){
+    if(!this.playing){
+      this.playing = true;
+      this.play(0);
+    }
   }
   play(index = this.currentIndex) {
     this.currentIndex = index;
-    const desc = sceneDescriptions[index]
-    console.log("Playing", index, desc);
-    const scene = new Scene(desc);
-    scene.onEnd = this.playNext;
-    scene.play();
+    this.scenes[index].play(this.container);
   }
   playNext(){
     if(++this.currentIndex < sceneDescriptions.length){

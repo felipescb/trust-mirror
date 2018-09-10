@@ -3,13 +3,21 @@ import Journey from './src/app';
 
 const DEV = true;
 
-console.log('running');
+const journey = new Journey();
 if(DEV){
   const data = require('./assets/sample.json');
-  const journey = new Journey(data);
-  journey.play();
+  handleData(data)
+  document.onload = () => {
+    journey.setup(data);
+    journey.start();
+  }
 }
 else{
   var socket = io.connect("http://localhost:3000/");
-  socket.on("go", processData);
+  socket.on("go", handleData);
+}
+
+function handleData(data){
+  journey.setup(data);
+  journey.start();
 }

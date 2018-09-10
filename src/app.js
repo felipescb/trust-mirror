@@ -1,7 +1,7 @@
 import Scene from './scenes/Scene';
-
+import ballonsPlay from './scenes/BalloonSceneGenerator'
 // welcome
-// 
+// hello
 // ballons?
 // data.likes?
 // data.cached
@@ -11,24 +11,24 @@ import Scene from './scenes/Scene';
 const LOOP = true;
 
 const sceneDescriptions = [
-  // {
-  //   type: 'video',
-  //   src: require('./1_welcome.mp4'),
-  // },
+  {
+    type: 'video',
+    src: require('./1_welcome.mp4'),
+  },
   {
     type: 'video',
     src: require('../assets/video/hello_compr.mp4'),
     attrs: [
       {
-        domGenerator: ({ identifier }) => `<div style="bottom:71.8%;top:21.7%" class="floating flex-center">${identifier}</div>`,
+        domGenerator: ({ identifier }) => `<div style="color:#111 ;bottom:71.8%;top:21.7%" class="floating flex-center">${identifier}</div>`,
         in: 2800,
       }
     ]
   },
-  // {
-  //   type: 'video',
-  //   src: require('./1_welcome.mp4'),
-  // }
+  {
+    type: 'custom',
+    play: ballonsPlay,
+  },
 ]
 
 class Script{
@@ -57,6 +57,7 @@ class Script{
     }
   }
   play(index = this.currentIndex) {
+    console.log(this, this.currentIndex)
     this.currentIndex = index;
     this.scenes[index].play();
   }

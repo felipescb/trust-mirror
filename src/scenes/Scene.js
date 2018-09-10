@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 import VideoScene from './VideoScene'
 import HypeScene from './HypeScene'
 
@@ -9,9 +11,15 @@ export default class Scene {
       case 'hype':
         return new HypeScene(data, description, container);
     }
+
+    this.description = description;
+    this.container = container;
+    this.data = data;
   }
   play() {
-    console.log("I don't know how to play this, skipping it :(", this.description);
+    const media = this.description.play(this.data, this.onEnd);
+    console.log('playing');
+    $(this.container).html(media);
   }
 }
 

@@ -9,3 +9,11 @@ video, iframe{
     display: block;
     margin: auto;
 }
+
+.floating{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}

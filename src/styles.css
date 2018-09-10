@@ -4,6 +4,7 @@ body {
     background: #111;
     margin: 0;
     font-family: 'Space Mono', monospace;
+    color: white;
 }
 
 video, iframe{
@@ -24,3 +25,34 @@ video, iframe{
     display: flex;
     align-items: center;
 }
+
+
+
+.balloon{
+    /* animation: up 4s infinite; */
+    position: absolute;
+    height: 55vh;
+}
+
+.string{
+    transform-origin: center;
+    animation: string 0.5s infinite linear;
+    animation-direction: alternate;
+}
+
+.balloon:nth-child(1n) .string{
+    animation-delay: .4s;
+}
+.balloon:nth-child(2n) .string{
+    animation-delay: 1s;
+}
+.balloon:nth-child(3n) .string{
+    animation-delay: .8s;
+}
+.balloon:nth-child(4n) .string{
+    animation-delay: 0s;
+}
+@keyframes string{
+    from{transform: translateX(-15px)} 
+    to{transform:translateX(2px)}
+} 

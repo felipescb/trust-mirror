@@ -29,11 +29,12 @@ export default class VideoScene {
     }
   }
   handleVideoDOM({ src } = this.description){
-    const $video = $(`<video controls autoplay="true"><source src=${src}/></video>`);
+    const $video = $(`<video controls autoplay><source src=${src}/></video>`);
     this.$wrapper.append($video);
     const video = $video.get(0);
     video.addEventListener('ended', this.onEnd);
     video.addEventListener('started', this.handleAttrs);
+    video.play();
     return $video;
   }
 }

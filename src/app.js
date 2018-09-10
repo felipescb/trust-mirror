@@ -4,7 +4,7 @@ const sceneDescriptions = [
     src: require('./1_welcome.mp4'),
   },
   {
-    type: 'video',
+    type: 'hype',
     src: require('./1_welcome.mp4'),
   },
   {
@@ -25,7 +25,7 @@ class Journey{
     this.currentIndex = index;
     const desc = sceneDescriptions[index]
     console.log("Playing", index, desc);
-    const scene = new Scene(desc);
+    const scene = newScene(desc);
     scene.onEnd = this.playNext;
     scene.play();
   }
@@ -37,6 +37,15 @@ class Journey{
 
 }
 
+function newScene(desc){
+  switch(desc.type){
+    case 'video':
+      return new VideoScene(desc);
+    case 'hype':
+      return new HypeScene(desc);
+  }
+}
+
 class Scene{
   constructor(description){
     this.description = description
@@ -45,8 +54,19 @@ class Scene{
     console.log(this.description);
     this.onEnd();
   }
-  onEnd(){
-    console.log('Not implemented yet!')
+}
+
+class VideoScene extends Scene{
+  play(){
+    console.log('playing video', this.description)
+    super.play();
+  }
+}
+
+class HypeScene extends Scene {
+  play() {
+    console.log('playing hype', this.description)
+    super.play();
   }
 }
 

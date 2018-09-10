@@ -20,7 +20,7 @@ const sceneDescriptions = [
     src: require('../assets/video/hello_compr.mp4'),
     attrs: [
       {
-        dom: `<div style="top:22.5%;" class="floating">Walid</div>`,
+        domGenerator: ({ identifier }) => `<div style="bottom:71.8%;top:21.7%" class="floating flex-center">${identifier}</div>`,
         in: 2800,
       }
     ]
@@ -45,7 +45,7 @@ class Script{
     // sort data.cached by type(positive, negative)
     // play each phrase.mp4
     this.scenes = sceneDescriptions.map(desc => {
-      const scene = new Scene(desc, this.container);
+      const scene = new Scene(this.data, desc, this.container);
       scene.onEnd = this.playNext;
       return scene;
     })

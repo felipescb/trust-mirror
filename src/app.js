@@ -15,48 +15,44 @@ const LOOP = false;
 
 const sceneDescriptions = (data) => [
   {
+    type: 'video',
+    src: () => require('../assets/video/hello_compr.mp4'),
+    attrs: [
+      {
+        domGenerator: () => {
+          const { identifier } = data
+          const firstName = identifier.split(' ')[0];
+          const tooMany = firstName.length >= 13;
+          const hello = tooMany ? '<h1 style="top:10%;font-size:2em; " class="floating">Hello</h1>' : '';
+          return `<div style="color:#111"> \
+          ${hello}
+          <div style="color:#111 ;bottom:71.8%;top:21.7%" class="floating flex-center">${tooMany ? '' : 'Hello'} ${firstName} \
+          </div>`
+        },
+        in: 2800,
+      }
+    ]
+  },
+  {
     type: 'custom',
     scene: {
       play: stampsPlay,
       background: {
         color: '#FE01CD',
-        side: 'right'
+        from: 'left'
       }
     },
   },
-  // {
-  //   type: 'video',
-  //   src: () => require('./1_welcome.mp4'),
-  // },
-  // {
-  //   type: 'video',
-  //   src: () => require('../assets/video/hello_compr.mp4'),
-  //   attrs: [
-  //     {
-  //       domGenerator: () => {
-  //         const { identifier } = data
-  //         const firstName = identifier.split(' ')[0];
-  //         const tooMany = firstName.length >= 13;
-  //         const hello = tooMany ? '<h1 style="top:10%;font-size:2em; " class="floating">Hello</h1>' : '';
-  //         return `<div style="color:#111"> \
-  //         ${hello}
-  //         <div style="color:#111 ;bottom:71.8%;top:21.7%" class="floating flex-center">${tooMany ? '' : 'Hello'} ${firstName} \
-  //         </div>`
-  //       },
-  //       in: 2800,
-  //     }
-  //   ]
-  // },
-  // {
-  //   type: 'custom',
-  //   scene: {
-  //     background: {
-  //       color: '#555',
-  //       side: 'right'
-  //     },
-  //     play: ballonsPlay,
-  //   },
-  // },
+  {
+    type: 'custom',
+    scene: {
+      background: {
+        color: '#B72CFF',
+        from: 'top'
+      },
+      play: ballonsPlay,
+    },
+  },
 ]
 
 class Script{
@@ -66,6 +62,7 @@ class Script{
   }
   setup(data){
     this.container = document.getElementById('container');
+    this.container.onmousedown = this.playNext.bind(this);
     this.createScenes(data);
   }
   createScenes(data){
@@ -90,7 +87,7 @@ class Script{
     this.scenes[index].play();
   }
   playNext(){
-    if(++this.currentIndex < sceneDescriptions.length){
+    if (++this.currentIndex < this.scenes.length){
       this.play(this.currentIndex);
     }
     else if(LOOP){

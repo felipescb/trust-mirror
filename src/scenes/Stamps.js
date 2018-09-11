@@ -1,5 +1,10 @@
 import $ from 'jquery'
 
+// CONFIG
+const maxTopForStamps = 80;
+const minTopForStamps = 10;
+const maxFontSizeOffset = 1.5;
+
 export default function StampsPlay(data, onEnd) {
   const wrapper = $('<div class="wrapper"></div>');
   const strings = data.likes.map(like => like.name);
@@ -11,15 +16,15 @@ export default function StampsPlay(data, onEnd) {
     const str = strings.pop();
     popped++;
     const stamp = $('<div class="stamp">'+str+'</div>');
-    // CONFIG
-    const maxTopForStamps = 80;
-    const minTopForStamps = 10;
+    const top = Math.random() * maxTopForStamps + minTopForStamps;
+    const transformOrigin = top > 50 ? 'center left' : 'center right'
     stamp.css({
       position: 'fixed',
-      top: Math.random() * maxTopForStamps + minTopForStamps + '%',
+      top: top + '%',
       left: (Math.random()*25 + 50) +'%',
       transform: `translateX(-50%) rotate(${Math.random()>.5 ? -90 : 0}deg)`,
-      fontSize: `${Math.random()*1.5+1}rem`,
+      transformOrigin: transformOrigin,
+      fontSize: `${Math.random()*maxFontSizeOffset+1}rem`,
       textShadow: ''
 
     });

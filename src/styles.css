@@ -132,7 +132,18 @@ video, iframe{
 .facet{
     padding: 0 2rem;
 }
-
+.count{
+}
+.facet.clip-on{
+    animation: clip-on .3s ease-in;
+    overflow: hidden;
+    word-wrap: nowrap;
+    white-space: nowrap;
+}
+@keyframes clip-on{
+    from{width: 0%}
+    to{width: 100%;}
+}
 .hidden{
     visibility: hidden;
 }

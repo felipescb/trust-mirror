@@ -5,7 +5,7 @@ const DEV = true;
 
 const script = new Script();
 if(DEV){
-  const data = require('./assets/sample.json');
+  const data = require('./src/sample.json');
   handleData(data)
   document.onload = () => {
     script.setup(data);

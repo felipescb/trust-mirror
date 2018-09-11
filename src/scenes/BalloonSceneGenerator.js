@@ -3,7 +3,7 @@ import $ from 'jquery'
 export default function ballonsPlay(data, onEnd){
   const player = [];
   const imgs = data.photos;
-  imgs.forEach(src => {
+  imgs.forEach((src, i) => {
     const img = new Image();
     img.src = src;
     const balloon = svg(src);
@@ -13,7 +13,8 @@ export default function ballonsPlay(data, onEnd){
     const top = Math.random() * 30 + 10
     balloon.css({
       left: start+'%',
-      top: '100%'
+      top: '100%',
+      animationDelay: i*200+'ms',
     });
     balloon.animate({
       left: end + '%',

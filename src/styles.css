@@ -1,5 +1,5 @@
 html{
-    --slide-duration: 1s;
+    --slide-duration: .5s;
 }
 
 
@@ -35,11 +35,14 @@ video, iframe{
 
 
 .balloon{
-    /* animation: up 4s infinite; */
+    animation: left-right 2s linear infinite alternate;
     position: absolute;
     height: 55vh;
 }
-
+@keyframes left-right{
+    from{transform: translateX(-5%)}
+    to{transform: translateX(5%)}
+}
 .string{
     transform-origin: center;
     animation: string 0.5s infinite linear;
@@ -59,8 +62,8 @@ video, iframe{
     animation-delay: 0s;
 }
 @keyframes string{
-    from{transform: translateX(-15px)} 
-    to{transform:translateX(2px)}
+    from{transform: translateX(-2%)} 
+    to{transform:translateX(1%)}
 } 
 
 
@@ -87,4 +90,25 @@ video, iframe{
 @keyframes slide-in-right{
     from{transform: translateX(100%)}
     to{transform: translateX(0%)}
+}
+.slide-in-left{
+    animation: slide-in-left var(--slide-duration) 1 linear;
+}
+@keyframes slide-in-left{
+    from{transform: translateX(-100%)}
+    to{transform: translateX(0%)}
+}
+.slide-in-top{
+    animation: slide-in-top var(--slide-duration) 1 linear;
+}
+@keyframes slide-in-top{
+    from{transform: translateY(-100%)}
+    to{transform: translateY(0%)}
+}
+.slide-in-bottom{
+    animation: slide-in-bottom var(--slide-duration) 1 linear;
+}
+@keyframes slide-in-bottom{
+    from{transform: translateY(100%)}
+    to{transform: translateY(0%)}
 }

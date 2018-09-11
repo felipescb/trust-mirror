@@ -17,8 +17,8 @@ export default class Scene {
     this.data = data;
   }
   play() {
-    const backgroundProps = this.scene.background;
-    const background = $(`<div class="background slide-in-${backgroundProps.side}" style="background-color:${backgroundProps.color}"></div>`)
+    const { from, color } = this.scene.background;
+    const background = $(`<div class="background slide-in-${from}" style="background-color:${color}"></div>`)
     background.on('animationend webkitAnimationEnd oAnimationEnd', (evt) => {
       console.log(evt)
       const media = this.scene.play(this.data, this.onEnd);

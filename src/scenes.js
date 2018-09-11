@@ -4,7 +4,8 @@
 //X data.likes? => stamps style(see vitas mail)
 // you_are
 // data.cached string.replace("- ", "_").toLowerCase() // 6-9 videos only
-// data.raw.consumption_preferences TBC
+// data.raw.consumption_preferences show all sentences, choose max 3 audios from a limited list
+// data.personality display all facets with number 
 // black?
 
 import ballonsPlay from './scenes/BalloonSceneGenerator'
@@ -15,8 +16,8 @@ import stampsPlay from './scenes/Stamps'
 export default (data) => {
   const HELLO = {
     type: 'media',
-    src: require('../assets/video/hello_compr.mp4'),
-    audioSrc: require('../assets/audio/hello.mp3'),
+    src: '/assets/video/hello_compr.mp4',
+    audioSrc: '/assets/audio/hello.mp3',
     attrs: [
       {
         domGenerator: () => {
@@ -55,5 +56,15 @@ export default (data) => {
       }
     },
   }
-  return [HELLO, LIKES, BALLOONS]
+
+  const CACHED = data.cached.map(trait => ({
+    type: 'media',
+    src: trait
+  }));
+  return [ 
+    // [...CACHED], 
+    HELLO, 
+    LIKES, 
+    BALLOONS
+  ]
 }

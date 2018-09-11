@@ -19255,7 +19255,9 @@ var _Stamps2 = _interopRequireDefault(_Stamps);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } //X welcome
+// require is required here else parcel won't
+// move the files to /dist in dev at least
+//X welcome
 //X hello
 //X ballons?
 //X data.likes? => stamps style(see vitas mail)
@@ -19265,8 +19267,6 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 // data.personality display all facets with number 
 // black?
 
-// require is required here else parcel won't
-// move the files to /dist in dev at least
 exports.default = function (data) {
   var HELLO = {
     type: 'media',
@@ -19313,7 +19313,9 @@ exports.default = function (data) {
       src: trait
     };
   });
-  return [[].concat(_toConsumableArray(CACHED)), HELLO, LIKES, BALLOONS];
+  return [
+  // [...CACHED], 
+  HELLO, LIKES, BALLOONS];
 };
 },{"./scenes/BalloonSceneGenerator":"src/scenes/BalloonSceneGenerator.js","./scenes/Stamps":"src/scenes/Stamps.js"}],"src/app.js":[function(require,module,exports) {
 'use strict';

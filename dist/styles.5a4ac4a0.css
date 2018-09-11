@@ -31,8 +31,13 @@ video, iframe{
     display: flex;
     align-items: center;
 }
-
-
+.f-v{
+    display: flex;
+    flex-direction: column;
+}
+.a-c{
+    justify-content: space-between;
+}
 
 .balloon{
     animation: left-right 2s linear infinite alternate;
@@ -86,6 +91,7 @@ video, iframe{
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: -1;
 }
 
 .slide-in-right{
@@ -115,4 +121,9 @@ video, iframe{
 @keyframes slide-in-bottom{
     from{transform: translateY(100%)}
     to{transform: translateY(0%)}
+}
+
+
+.facets-wrapper{
+    height: 100vh;
 }

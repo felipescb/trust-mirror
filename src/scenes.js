@@ -5,7 +5,7 @@
 // you_are
 //X data.cached string.replace("- ", "_").toLowerCase() // 6-9 videos only
 // data.raw.consumption_preferences show all sentences, choose max 3 audios from a limited list
-// data.personality display all facets with number 
+//X data.personality display all facets with number 
 // black?
 
 import ballonsPlay from './scenes/BalloonSceneGenerator'
@@ -76,10 +76,10 @@ export default (data) => {
     }
   }
   return [ 
-    HELLO, 
-    LIKES, 
-    BALLOONS,
+    // HELLO, 
+    // LIKES, 
+    // BALLOONS,
     FACETS,
-    ...CACHED, 
+    // ...CACHED, 
   ]
 }

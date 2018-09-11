@@ -3,7 +3,7 @@
 //X ballons?
 //X data.likes? => stamps style(see vitas mail)
 // you_are
-// data.cached string.replace("- ", "_").toLowerCase() // 6-9 videos only
+//X data.cached string.replace("- ", "_").toLowerCase() // 6-9 videos only
 // data.raw.consumption_preferences show all sentences, choose max 3 audios from a limited list
 // data.personality display all facets with number 
 // black?
@@ -14,6 +14,8 @@ import stampsPlay from './scenes/Stamps'
 // require is required here else parcel won't
 // move the files to /dist in dev at least
 export default (data) => {
+  const lang = data.lang;
+
   const HELLO = {
     type: 'media',
     src: '/assets/video/hello_compr.mp4',
@@ -59,10 +61,10 @@ export default (data) => {
 
   const CACHED = data.cached.map(trait => ({
     type: 'media',
-    src: trait
+    src: '/assets/video/' + lang + '_'+trait.phrase.replace(/([ -])/g, '_').toLowerCase() + '.mp4',
   }));
   return [ 
-    // [...CACHED], 
+    ...CACHED, 
     HELLO, 
     LIKES, 
     BALLOONS

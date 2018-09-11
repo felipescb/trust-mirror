@@ -18960,36 +18960,32 @@ var VideoScene = function () {
     this.description = description;
     this.container = container;
     this.data = data;
+    this.handleAttrs = this.handleAttrs.bind(this);
   }
 
   _createClass(VideoScene, [{
     key: 'play',
     value: function play() {
-      var _this = this;
-
       this.$wrapper = (0, _jquery2.default)('<div class="video-container"></div>');
       this.video = this.handleVideo();
       this.audio = this.handleAudio();
-      var endTrigger = this.video.duration > this.audio.duration ? this.video : this.audio;
+      var endTrigger = this.audio && this.audio.duration > this.video.duration ? this.audio : this.video;
       endTrigger.addEventListener('ended', this.onEnd);
       (0, _jquery2.default)(this.container).html(this.$wrapper);
-      this.video.addEventListener('play', function () {
-        _this.handleAttrs();
-        _this.audio.play();
-      });
       this.video.play();
     }
   }, {
     key: 'handleAttrs',
     value: function handleAttrs() {
-      var _this2 = this;
+      var _this = this;
 
       var attrs = this.description.attrs;
+
       if (attrs && attrs.length) {
         attrs.forEach(function (attr) {
-          var $elem = (0, _jquery2.default)(attr.domGenerator(_this2.data));
+          var $elem = (0, _jquery2.default)(attr.domGenerator(_this.data));
           setTimeout(function () {
-            $elem.appendTo(_this2.$wrapper);
+            $elem.appendTo(_this.$wrapper);
           }, attr.in || 0);
           if (attr.out !== undefined) {
             setTimeout(function () {
@@ -19005,10 +19001,13 @@ var VideoScene = function () {
       var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.description,
           audioSrc = _ref.audioSrc;
 
-      var $audio = (0, _jquery2.default)('<audio src=' + audioSrc + '/></audio>');
-      this.$wrapper.append($audio);
-      var audio = $audio.get(0);
-      return audio;
+      if (audioSrc) {
+        var $audio = (0, _jquery2.default)('<audio src=' + audioSrc + '/></audio>');
+        this.$wrapper.append($audio);
+        var audio = $audio.get(0);
+        this.video.addEventListener('play', audio.play);
+        return audio;
+      }
     }
   }, {
     key: 'handleVideo',
@@ -19019,6 +19018,7 @@ var VideoScene = function () {
       var $video = (0, _jquery2.default)('<video><source src=' + src + '/></video>');
       this.$wrapper.append($video);
       var video = $video.get(0);
+      video.addEventListener('play', this.handleAttrs);
       return video;
     }
   }]);
@@ -19255,19 +19255,21 @@ var _Stamps2 = _interopRequireDefault(_Stamps);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// require is required here else parcel won't
-// move the files to /dist in dev at least
-//X welcome
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } //X welcome
 //X hello
 //X ballons?
 //X data.likes? => stamps style(see vitas mail)
 // you_are
-// data.cached string.replace("- ", "_").toLowerCase() // 6-9 videos only
+//X data.cached string.replace("- ", "_").toLowerCase() // 6-9 videos only
 // data.raw.consumption_preferences show all sentences, choose max 3 audios from a limited list
 // data.personality display all facets with number 
 // black?
 
+// require is required here else parcel won't
+// move the files to /dist in dev at least
 exports.default = function (data) {
+  var lang = data.lang;
+
   var HELLO = {
     type: 'media',
     src: '/assets/video/hello_compr.mp4',
@@ -19310,12 +19312,10 @@ exports.default = function (data) {
   var CACHED = data.cached.map(function (trait) {
     return {
       type: 'media',
-      src: trait
+      src: '/assets/video/' + lang + '_' + trait.phrase.replace(/([ -])/g, '_').toLowerCase() + '.mp4'
     };
   });
-  return [
-  // [...CACHED], 
-  HELLO, LIKES, BALLOONS];
+  return [].concat(_toConsumableArray(CACHED), [HELLO, LIKES, BALLOONS]);
 };
 },{"./scenes/BalloonSceneGenerator":"src/scenes/BalloonSceneGenerator.js","./scenes/Stamps":"src/scenes/Stamps.js"}],"src/app.js":[function(require,module,exports) {
 'use strict';
@@ -19363,7 +19363,8 @@ var Script = function () {
       this.data = data;
       // sort data.cached by type(positive, negative)
       // play each phrase.mp4
-      this.scenes = (0, _scenes2.default)(data).map(function (desc) {
+      var generatedScenes = (0, _scenes2.default)(data);
+      this.scenes = generatedScenes.map(function (desc) {
         var scene = new _Scene2.default(_this.data, desc, _this.container);
         scene.onEnd = _this.playNext;
         return scene;
@@ -19388,8 +19389,8 @@ var Script = function () {
   }, {
     key: 'playNext',
     value: function playNext() {
-      console.log('trying to playing next');
       if (++this.currentIndex < this.scenes.length) {
+        console.log('playing next', this.currentIndex, this.scenes[this.currentIndex]);
         this.play(this.currentIndex);
       } else if (LOOP) {
         this.play(0);

@@ -19,7 +19,8 @@ class Script{
     this.data = data;
     // sort data.cached by type(positive, negative)
     // play each phrase.mp4
-    this.scenes = sceneDescriptions(data).map(desc => {
+    const generatedScenes = sceneDescriptions(data);
+    this.scenes = generatedScenes.map(desc => {
       const scene = new Scene(this.data, desc, this.container);
       scene.onEnd = this.playNext;
       return scene;
@@ -36,8 +37,8 @@ class Script{
     this.scenes[index].play();
   }
   playNext(){
-    console.log('trying to playing next')
     if (++this.currentIndex < this.scenes.length){
+      console.log('playing next', this.currentIndex, this.scenes[this.currentIndex])
       this.play(this.currentIndex);
     }
     else if(LOOP){

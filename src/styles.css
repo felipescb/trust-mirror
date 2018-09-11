@@ -1,3 +1,9 @@
+html{
+    --slide-duration: 1s;
+}
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
 
 body {
@@ -56,3 +62,29 @@ video, iframe{
     from{transform: translateX(-15px)} 
     to{transform:translateX(2px)}
 } 
+
+
+.stamp{
+    animation: fade-out 3s .6s 1 forwards;
+    display: block;
+    font-weight: bold;
+}
+@keyframes fade-out{
+    to{opacity: .7}
+}
+
+
+.background{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.slide-in-right{
+    animation: slide-in-right var(--slide-duration) 1 linear;
+}
+@keyframes slide-in-right{
+    from{transform: translateX(100%)}
+    to{transform: translateX(0%)}
+}

@@ -1,34 +1,62 @@
+
 import Scene from './scenes/Scene';
 import ballonsPlay from './scenes/BalloonSceneGenerator'
-// welcome
-// hello
-// ballons?
-// data.likes?
-// data.cached
+import stampsPlay from './scenes/Stamps'
+//X welcome
+//X hello
+//X ballons?
+// data.likes? => stamps style(see vitas mail)
+// you_are
+// data.cached string.replace("- ", "_").toLowerCase() // 6-9 videos only
 // data.raw.consumption_preferences TBC
 // black?
 
-const LOOP = true;
+const LOOP = false;
 
-const sceneDescriptions = [
-  {
-    type: 'video',
-    src: require('./1_welcome.mp4'),
-  },
-  {
-    type: 'video',
-    src: require('../assets/video/hello_compr.mp4'),
-    attrs: [
-      {
-        domGenerator: ({ identifier }) => `<div style="color:#111 ;bottom:71.8%;top:21.7%" class="floating flex-center">${identifier}</div>`,
-        in: 2800,
-      }
-    ]
-  },
+const sceneDescriptions = (data) => [
   {
     type: 'custom',
-    play: ballonsPlay,
+    scene: {
+      play: stampsPlay,
+      background: {
+        color: '#FE01CD',
+        side: 'right'
+      }
+    },
   },
+  // {
+  //   type: 'video',
+  //   src: () => require('./1_welcome.mp4'),
+  // },
+  // {
+  //   type: 'video',
+  //   src: () => require('../assets/video/hello_compr.mp4'),
+  //   attrs: [
+  //     {
+  //       domGenerator: () => {
+  //         const { identifier } = data
+  //         const firstName = identifier.split(' ')[0];
+  //         const tooMany = firstName.length >= 13;
+  //         const hello = tooMany ? '<h1 style="top:10%;font-size:2em; " class="floating">Hello</h1>' : '';
+  //         return `<div style="color:#111"> \
+  //         ${hello}
+  //         <div style="color:#111 ;bottom:71.8%;top:21.7%" class="floating flex-center">${tooMany ? '' : 'Hello'} ${firstName} \
+  //         </div>`
+  //       },
+  //       in: 2800,
+  //     }
+  //   ]
+  // },
+  // {
+  //   type: 'custom',
+  //   scene: {
+  //     background: {
+  //       color: '#555',
+  //       side: 'right'
+  //     },
+  //     play: ballonsPlay,
+  //   },
+  // },
 ]
 
 class Script{
@@ -44,7 +72,7 @@ class Script{
     this.data = data;
     // sort data.cached by type(positive, negative)
     // play each phrase.mp4
-    this.scenes = sceneDescriptions.map(desc => {
+    this.scenes = sceneDescriptions(data).map(desc => {
       const scene = new Scene(this.data, desc, this.container);
       scene.onEnd = this.playNext;
       return scene;

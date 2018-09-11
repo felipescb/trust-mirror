@@ -1,7 +1,9 @@
 html{
     --slide-duration: .5s;
 }
-
+*{
+    box-sizing: border-box;
+}
 
 
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
@@ -33,7 +35,7 @@ video, iframe{
 }
 .f-v{
     display: flex;
-    flex-direction: column;
+        
 }
 .a-c{
     justify-content: space-between;
@@ -77,9 +79,6 @@ video, iframe{
     display: block;
     font-weight: bold;
     max-width: 100vw;
-}
-.facet{
-    line-height: 1;
 }
 @keyframes fade-out{
     to{opacity: .2}
@@ -126,4 +125,14 @@ video, iframe{
 
 .facets-wrapper{
     height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    padding: 1rem;
+}
+.facet{
+    padding: 0 2rem;
+}
+
+.hidden{
+    visibility: hidden;
 }

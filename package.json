@@ -6,6 +6,7 @@
     "start": "parcel index.html"
   },
   "dependencies": {
+    "countup": "^1.8.2",
     "jquery": "^3.3.1",
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1"

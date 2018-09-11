@@ -12,14 +12,19 @@ export default class Scene {
         return new HypeScene(data, description, container);
     }
 
-    this.description = description;
+    this.scene = description.scene;
     this.container = container;
     this.data = data;
   }
   play() {
-    const media = this.description.play(this.data, this.onEnd);
-    console.log('playing');
-    $(this.container).html(media);
+    const backgroundProps = this.scene.background;
+    const background = $(`<div class="background slide-in-${backgroundProps.side}" style="background-color:${backgroundProps.color}"></div>`)
+    background.on('animationend webkitAnimationEnd oAnimationEnd', (evt) => {
+      console.log(evt)
+      const media = this.scene.play(this.data, this.onEnd);
+      $(this.container).append(media);
+    })
+    $(this.container).html(background);
   }
 }
 

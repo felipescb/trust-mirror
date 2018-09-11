@@ -19228,7 +19228,6 @@ function StampsPlay(data, onEnd) {
       transformOrigin: transformOrigin,
       fontSize: Math.random() * maxFontSizeOffset + 1 + 'rem',
       textShadow: ''
-
     });
     if (strings.length > popped) {
       setTimeout(createStamp, Math.random() * 600 + 300);
@@ -19238,6 +19237,67 @@ function StampsPlay(data, onEnd) {
     wrapper.append(stamp);
   }
 }
+},{"jquery":"node_modules/jquery/dist/jquery.js"}],"src/scenes/FacetsPlay.js":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (data, onEnd) {
+  var $wrapper = (0, _jquery2.default)('<div class="facets-wrapper"></div>');
+  var facets = flatten(data.raw.personality.map(function (big5) {
+    return big5.children;
+  }));
+  setTimeout(createFacet, Math.random() * 700 + 300);
+  var popped = 0;
+  return $wrapper;
+
+  function createFacet() {
+    var _facets$pop = facets.pop(),
+        name = _facets$pop.name,
+        percentile = _facets$pop.percentile,
+        category = _facets$pop.category;
+
+    popped++;
+    var facet = (0, _jquery2.default)('<div class="stamp facet">\n      ' + name + ':' + percentile + '\n      <br>\n      <span style="font-size: .7em">' + category + '</span>\n    </div>');
+    var top = Math.random() * maxTopForStamps + minTopForStamps;
+    var transformOrigin = top > 50 ? 'center left' : 'center right';
+    facet.css({
+      position: 'fixed',
+      top: top + '%',
+      left: Math.random() * 25 + 50 + '%',
+      transform: 'translateX(-50%)',
+      transformOrigin: transformOrigin,
+      fontSize: Math.random() * maxFontSizeOffset + 1 + 'rem',
+      textShadow: ''
+    });
+    if (facets.length > popped) {
+      setTimeout(createFacet, Math.random() * 600 + 300);
+    } else {
+      setTimeout(onEnd, 2000);
+    }
+    $wrapper.append(facet);
+  }
+  return $wrapper;
+};
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// CONFIG
+var maxTopForStamps = 80;
+var minTopForStamps = 10;
+var maxFontSizeOffset = 1.5;
+
+var flatten = function flatten(list) {
+  return list.reduce(function (a, b) {
+    return a.concat(Array.isArray(b) ? flatten(b) : b);
+  }, []);
+};
 },{"jquery":"node_modules/jquery/dist/jquery.js"}],"src/scenes.js":[function(require,module,exports) {
 'use strict';
 
@@ -19252,6 +19312,10 @@ var _BalloonSceneGenerator2 = _interopRequireDefault(_BalloonSceneGenerator);
 var _Stamps = require('./scenes/Stamps');
 
 var _Stamps2 = _interopRequireDefault(_Stamps);
+
+var _FacetsPlay = require('./scenes/FacetsPlay');
+
+var _FacetsPlay2 = _interopRequireDefault(_FacetsPlay);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19315,9 +19379,20 @@ exports.default = function (data) {
       src: '/assets/video/' + lang + '_' + trait.phrase.replace(/([ -])/g, '_').toLowerCase() + '.mp4'
     };
   });
-  return [].concat(_toConsumableArray(CACHED), [HELLO, LIKES, BALLOONS]);
+
+  var FACETS = {
+    type: 'custom',
+    scene: {
+      play: _FacetsPlay2.default,
+      background: {
+        color: 'rebeccapurple',
+        from: 'right'
+      }
+    }
+  };
+  return [HELLO, LIKES, BALLOONS, FACETS].concat(_toConsumableArray(CACHED));
 };
-},{"./scenes/BalloonSceneGenerator":"src/scenes/BalloonSceneGenerator.js","./scenes/Stamps":"src/scenes/Stamps.js"}],"src/app.js":[function(require,module,exports) {
+},{"./scenes/BalloonSceneGenerator":"src/scenes/BalloonSceneGenerator.js","./scenes/Stamps":"src/scenes/Stamps.js","./scenes/FacetsPlay":"src/scenes/FacetsPlay.js"}],"src/app.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

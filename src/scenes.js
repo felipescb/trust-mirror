@@ -10,6 +10,7 @@
 
 import ballonsPlay from './scenes/BalloonSceneGenerator'
 import stampsPlay from './scenes/Stamps'
+import facetsPlay from './scenes/FacetsPlay'
 
 // require is required here else parcel won't
 // move the files to /dist in dev at least
@@ -63,10 +64,22 @@ export default (data) => {
     type: 'media',
     src: '/assets/video/' + lang + '_'+trait.phrase.replace(/([ -])/g, '_').toLowerCase() + '.mp4',
   }));
+
+  const FACETS = {
+    type: 'custom',
+    scene: {
+      play: facetsPlay,
+      background: {
+        color: 'rebeccapurple',
+        from: 'right',
+      }
+    }
+  }
   return [ 
-    ...CACHED, 
     HELLO, 
     LIKES, 
-    BALLOONS
+    BALLOONS,
+    FACETS,
+    ...CACHED, 
   ]
 }

@@ -26,7 +26,6 @@ export default function StampsPlay(data, onEnd) {
       transformOrigin: transformOrigin,
       fontSize: `${Math.random()*maxFontSizeOffset+1}rem`,
       textShadow: ''
-
     });
     if (strings.length > popped){
       setTimeout(createStamp, Math.random() * 600 + 300)

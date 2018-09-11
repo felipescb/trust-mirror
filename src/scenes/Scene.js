@@ -6,7 +6,7 @@ import HypeScene from './HypeScene'
 export default class Scene {
   constructor(data, description, container) {
     switch (description.type) {
-      case 'video':
+      case 'media':
         return new VideoScene(data, description, container);
       case 'hype':
         return new HypeScene(data, description, container);
@@ -19,10 +19,9 @@ export default class Scene {
   play() {
     const { from, color } = this.scene.background;
     const background = $(`<div class="background slide-in-${from}" style="background-color:${color}"></div>`)
-    background.on('animationend webkitAnimationEnd oAnimationEnd', (evt) => {
-      console.log(evt)
-      const media = this.scene.play(this.data, this.onEnd);
-      $(this.container).append(media);
+    background.on('animationend webkitAnimationEnd oAnimationEnd', () => {
+      const playingDOM = this.scene.play(this.data, this.onEnd);
+      $(this.container).append(playingDOM);
     })
     $(this.container).html(background);
   }

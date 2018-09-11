@@ -62,8 +62,8 @@ video, iframe{
     animation-delay: 0s;
 }
 @keyframes string{
-    from{transform: translateX(-2%)} 
-    to{transform:translateX(1%)}
+    from{transform: translateX(-3%)} 
+    to{transform:translateX(0%)}
 } 
 
 

@@ -10,16 +10,17 @@ export default function ballonsPlay(data, onEnd){
     const start = Math.random() * 60 + 10;
     const sign = Math.random() > .5 ? 1 : -1;
     const end = Math.min(70,(1 + sign * Math.random() / 5) * start);
-    const top = Math.random() * 30 + 10
+    const top = Math.random() * 70 + 5
     balloon.css({
       left: start+'%',
       top: '100%',
       animationDelay: i*200+'ms',
     });
-    balloon.animate({
-      left: end + '%',
-      top: top + '%',
-    }, 4000);
+    setTimeout(() => 
+      balloon.animate({
+        left: end + '%',
+        top: top + '%',
+      }, Math.random()*2000+3000), Math.random()*1000)
     player.push(balloon);
 
   })

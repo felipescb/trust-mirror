@@ -16,8 +16,7 @@ import consumptionPlay from './scenes/ConsumptionPlay'
 const i18n = {
   goodbye: {
     thankYou: 'Thank you',
-    youAre: 'You are the',
-    theContent: 'content'
+    youAre: 'You are the content',
   }
 }
 // require is required here else parcel won't
@@ -35,10 +34,10 @@ export default (data) => {
           const { identifier } = data
           const firstName = identifier.split(' ')[0];
           const tooMany = firstName.length >= 13;
-          const hello = tooMany ? '<h1 style="top:10%;font-size:2em; " class="floating">Hello</h1>' : '';
+          const hello = tooMany ? '<h1 style="top:15%;font-size:2em; " class="floating">Hello</h1>' : '';
           return `<div style="color:#111"> \
           ${hello}
-          <div style="color:#111 ;bottom:71.8%;top:21.7%" class="floating flex-center">${tooMany ? '' : 'Hello'} ${firstName} \
+          <div style="color:#111 ;bottom:71.8%;top:21.7%; font-size: 1.5em;" class="floating flex-center">${tooMany ? '' : 'Hello'} ${firstName} \
           </div>`
         },
         in: 2800,
@@ -51,14 +50,13 @@ export default (data) => {
     src: '/assets/video/goodbye_compr.mp4',
     attrs: [
       {
-        domGenerator: () => `<div class="floating flex-center" style="top:26.5%;bottom:67%;color:#111">${i18n.goodbye.thankYou}</div>`,
+        domGenerator: () => `<div class="floating flex-center" style="font-size:2.5rem;top:26.5%;bottom:67%;color:#111">${i18n.goodbye.thankYou}.</div>`,
         in: 0,
         // out: 5000
       },
       {
         domGenerator: () => `
-        <div class="floating flex-center" style="left:20%;top:36.5%;bottom:57%;color:#111">${i18n.goodbye.youAre}</div>
-          <div class="floating flex-center" style="top:46.5%;bottom:47%;color:#111">${i18n.goodbye.theContent}</div>
+          <div class="floating flex-center" style="font-size:1.5rem;top:36.5%;bottom:57%;color:#111">${i18n.goodbye.youAre}</div>
         `,
         in: 0,
         // out: 5000
@@ -97,7 +95,7 @@ export default (data) => {
     scene: {
       play: facetsPlay,
       background: {
-        color: 'rebeccapurple',
+        color: '#000',
         from: 'right',
       }
     }
@@ -108,18 +106,18 @@ export default (data) => {
     scene: {
       play: consumptionPlay,
       background: {
-        color: '#111',
+        color: '#000',
         from: 'top',
       }
     }
   }
   return [
-    GOODBYE,
     // HELLO, 
     // LIKES, 
-    // BALLOONS,
+     BALLOONS,
     // FACETS,
     // CONSUMPTION_PREFS,
     // ...CACHED, 
+    // GOODBYE,
   ]
 }

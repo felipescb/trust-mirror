@@ -8,23 +8,34 @@ const allowed = [
 const audios = [];
 
 const prefixes = {
-  0: 'You are not',
-  .5: 'You may be',
-  1: 'You are',
+  en: {
+    0: 'You are not',
+    .5: 'You may be',
+    1: 'You are',
+  },
+  fr: {
+    0: 'Vous n\'êtes pas',
+    .5: 'Vous êtes peut-être',
+    1: 'Vous êtes',
+  }
 }
 
-export default function(data, onEnd){
-  const $wrapper = $('<div class="f-v a-c wrapper"></div>')
-  const prefs = flatten(data.raw.consumption_preferences.map(pref => pref.consumption_preferences))
+export default function ({ marketPreferences, lang }, onEnd){
+  const fr = lang == 'fr' ? lang+'_' : ''
+  const $wrapper = $('<div class="f-v wrapper scrollable"></div>')
+  const prefs = flatten(marketPreferences.map(pref => pref.preferences))
   let offset = 250;
   prefs.forEach((pref, i) => {
     const string = [
-      prefixes[pref.score],
+      prefixes[lang][pref.score],
       pref.name.toLowerCase()
     ].join(' ')
-    const $pref = $(`<div class="pref hidden">${string}</div>`);
-    setTimeout(() => $pref.removeClass('hidden'), (1+i)*offset);
-    $wrapper.append($pref);
+    const $pref = $(`<div class="pref">${string}</div>`);
+    setTimeout(() => {
+      $pref.appendTo($wrapper);
+      $wrapper.get(0).scrollTop += 500
+    }, (1+i)*offset);
+    // $wrapper.append($pref);
     if(audios.length == 0 && i == prefs.length - 1){
       setTimeout(onEnd, (1+i)*offset + 2000)
     }

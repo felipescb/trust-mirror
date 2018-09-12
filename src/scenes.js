@@ -11,6 +11,7 @@
 import ballonsPlay from './scenes/BalloonSceneGenerator'
 import stampsPlay from './scenes/Stamps'
 import facetsPlay from './scenes/FacetsPlay'
+import consumptionPlay from './scenes/ConsumptionPlay'
 
 // require is required here else parcel won't
 // move the files to /dist in dev at least
@@ -75,11 +76,23 @@ export default (data) => {
       }
     }
   }
-  return [ 
-    HELLO, 
-    LIKES, 
-    BALLOONS,
-    FACETS,
-    ...CACHED, 
+
+  const CONSUMPTION_PREFS = {
+    type: 'custom',
+    scene: {
+      play: consumptionPlay,
+      background: {
+        color: '#111',
+        from: 'top',
+      }
+    }
+  }
+  return [
+    CONSUMPTION_PREFS,
+    // HELLO, 
+    // LIKES, 
+    // BALLOONS,
+    // FACETS,
+    // ...CACHED, 
   ]
 }

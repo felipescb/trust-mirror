@@ -76,10 +76,10 @@ export default (data) => {
     }
   }
   return [ 
-    // HELLO, 
-    // LIKES, 
-    // BALLOONS,
+    HELLO, 
+    LIKES, 
+    BALLOONS,
     FACETS,
-    // ...CACHED, 
+    ...CACHED, 
   ]
 }

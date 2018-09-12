@@ -42,6 +42,9 @@ export default function(data, onEnd){
     if(hidden.length > 0){
       setTimeout(showNext, Math.random()*300+600)
     }
+    else{
+      setTimeout(onEnd, 2000);
+    }
   }
   setTimeout(showNext, 800)
   return $wrapper;

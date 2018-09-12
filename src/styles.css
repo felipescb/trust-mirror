@@ -81,7 +81,7 @@ video, iframe{
     max-width: 100vw;
 }
 @keyframes fade-out{
-    to{opacity: .2}
+    to{opacity: .5}
 }
 
 
@@ -136,7 +136,14 @@ video, iframe{
 .facet{
     padding: 0 2rem;
 }
-.count{
+
+.scrollable{
+    overflow: auto;
+
+}
+.pref{
+    flex-grow: 0;
+    padding-bottom: .5rem;
 }
 .facet.clip-on{
     animation: clip-on .3s ease-in;
@@ -148,6 +155,9 @@ video, iframe{
     from{width: 0%}
     to{width: 100%;}
 }
-.hidden{
+.invisible{
     visibility: hidden;
+}
+.hidden{
+    display: none;
 }

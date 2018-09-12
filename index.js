@@ -15,6 +15,7 @@ if(DEV){
 else{
   const url = "http://app.cached.id/";
   var socket = io.connect(url);
+  window.socket = socket;
   socket.on("go", (data) => handleData(data, () => {
     fetch('http://localhost:3000/print', {
       method: 'post',

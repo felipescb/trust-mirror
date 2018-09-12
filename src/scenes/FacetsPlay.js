@@ -22,17 +22,16 @@ export default function(data, onEnd){
       )
     )
   );
-  console.log(JSON.stringify(facets))
   shuffleArray(facets);
   facets.forEach(createFacet);
 
   function showNext(){
     let chosen;
-    const hidden = $('.hidden');
-    if(hidden.length > 0){
-      const rdm = parseInt(Math.random() * hidden.length - 1);
-      chosen = $(hidden[rdm]);
-      chosen.toggleClass('hidden clip-on');
+    const invisible = $('.invisible');
+    if(invisible.length > 0){
+      const rdm = parseInt(Math.random() * invisible.length - 1);
+      chosen = $(invisible[rdm]);
+      chosen.toggleClass('invisible clip-on');
       const numb = $('.count', chosen);
       const id = numb.attr('id')
       const count = parseInt(numb.text());
@@ -52,7 +51,7 @@ export default function(data, onEnd){
 
   function createFacet(facet, i) {
     const { name, percentile, category } = facet;
-    const $facet = $(`<div class="facet hidden">
+    const $facet = $(`<div class="facet invisible">
       ${name}: <span class="count" id="f-${i}">${parseInt(percentile * 1000000)}</span>
       <br>
       <span style="font-size: .8em">${category}</span>
@@ -62,5 +61,4 @@ export default function(data, onEnd){
     });
     $wrapper.append($facet)
   }
-  return $wrapper;
 }

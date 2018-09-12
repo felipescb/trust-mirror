@@ -4,7 +4,7 @@
 //X data.likes? => stamps style(see vitas mail)
 // you_are
 //X data.cached string.replace("- ", "_").toLowerCase() // 6-9 videos only
-// data.raw.consumption_preferences show all sentences, choose max 3 audios from a limited list
+//X data.raw.consumption_preferences show all sentences, choose max 3 audios from a limited list
 //X data.personality display all facets with number 
 // black?
 
@@ -88,11 +88,11 @@ export default (data) => {
     }
   }
   return [
+    HELLO, 
+    LIKES, 
+    BALLOONS,
+    FACETS,
     CONSUMPTION_PREFS,
-    // HELLO, 
-    // LIKES, 
-    // BALLOONS,
-    // FACETS,
-    // ...CACHED, 
+    ...CACHED, 
   ]
 }

@@ -1,5 +1,6 @@
 html{
     --slide-duration: .5s;
+    font-size: 36px;
 }
 *{
     box-sizing: border-box;
@@ -12,6 +13,7 @@ body {
     background: #111;
     margin: 0;
     font-family: 'Space Mono', monospace;
+    
     color: white;
 }
 
@@ -44,7 +46,7 @@ video, iframe{
 .balloon{
     animation: left-right 2s linear infinite alternate;
     position: absolute;
-    height: 55vh;
+    width: 20vw;
 }
 @keyframes left-right{
     from{transform: translateX(-5%)}

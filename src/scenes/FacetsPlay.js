@@ -24,22 +24,21 @@ export default function(data, onEnd){
   shuffleArray(facets);
   facets.forEach(createFacet);
 
-  let shown = 0;
   function showNext(){
     let chosen;
     const hidden = $('.hidden');
-    const rdm = parseInt(Math.random() * hidden.length - 1);
-    chosen = $(hidden[rdm]);
-    chosen.toggleClass('hidden clip-on');
-    const numb = $('.count', chosen);
-    const id = numb.attr('id')
-    const count = parseInt(numb.text());
-    var countup = new CountUp(id, 0, count, 0, 3, { 
-      separator: '', 
-      useEasing: false,
-    })
-    countup.start();
     if(hidden.length > 0){
+      const rdm = parseInt(Math.random() * hidden.length - 1);
+      chosen = $(hidden[rdm]);
+      chosen.toggleClass('hidden clip-on');
+      const numb = $('.count', chosen);
+      const id = numb.attr('id')
+      const count = parseInt(numb.text());
+      var countup = new CountUp(id, 0, count, 0, 3, { 
+        separator: '', 
+        useEasing: false,
+      })
+      countup.start();
       setTimeout(showNext, Math.random()*300+600)
     }
     else{

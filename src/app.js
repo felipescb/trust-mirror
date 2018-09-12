@@ -10,10 +10,11 @@ class Script{
     this.currentIndex = 0;
     this.playNext = this.playNext.bind(this);
   }
-  setup(data){
+  setup(data, onEnd){
     this.container = document.getElementById('container');
     this.container.onmousedown = this.playNext.bind(this);
     this.createScenes(data);
+    this.onEnd = onEnd;
   }
   createScenes(data){
     this.data = data;
@@ -43,6 +44,9 @@ class Script{
     }
     else if(LOOP){
       this.play(0);
+    }
+    else{
+      this.onEnd();
     }
   }
 }

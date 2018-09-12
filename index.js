@@ -1,7 +1,7 @@
 import io from 'socket.io-client';
 import Script from './src/app';
 
-const DEV = false;
+const DEV = true;
 
 const script = new Script();
 if(DEV){

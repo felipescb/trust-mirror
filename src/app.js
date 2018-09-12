@@ -3,7 +3,7 @@
 import Scene from './scenes/Scene';
 
 import sceneDescriptions from './scenes.js';
-const LOOP = true;
+const LOOP = false;
 
 class Script{
   constructor(){

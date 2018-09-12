@@ -42,7 +42,7 @@ export default class VideoScene {
     }
   }
   handleVideo({ src } = this.description){
-    const $video = $(`<video><source src=${src}/></video>`);
+    const $video = $(`<video controls><source src=${src}/></video>`);
     this.$wrapper.append($video);
     const video = $video.get(0);
     video.addEventListener('play', this.handleAttrs);

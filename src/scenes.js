@@ -13,6 +13,13 @@ import stampsPlay from './scenes/Stamps'
 import facetsPlay from './scenes/FacetsPlay'
 import consumptionPlay from './scenes/ConsumptionPlay'
 
+const i18n = {
+  goodbye: {
+    thankYou: 'Thank you',
+    youAre: 'You are the',
+    theContent: 'content'
+  }
+}
 // require is required here else parcel won't
 // move the files to /dist in dev at least
 export default (data) => {
@@ -39,6 +46,25 @@ export default (data) => {
     ]
   }
 
+  const GOODBYE = {
+    type: 'media',
+    src: '/assets/video/goodbye_compr.mp4',
+    attrs: [
+      {
+        domGenerator: () => `<div class="floating flex-center" style="top:26.5%;bottom:67%;color:#111">${i18n.goodbye.thankYou}</div>`,
+        in: 0,
+        // out: 5000
+      },
+      {
+        domGenerator: () => `
+        <div class="floating flex-center" style="left:20%;top:36.5%;bottom:57%;color:#111">${i18n.goodbye.youAre}</div>
+          <div class="floating flex-center" style="top:46.5%;bottom:47%;color:#111">${i18n.goodbye.theContent}</div>
+        `,
+        in: 0,
+        // out: 5000
+      }
+    ]
+  }
   const BALLOONS = {
     type: 'custom',
     scene: {
@@ -88,11 +114,12 @@ export default (data) => {
     }
   }
   return [
-    HELLO, 
-    LIKES, 
-    BALLOONS,
-    FACETS,
-    CONSUMPTION_PREFS,
-    ...CACHED, 
+    GOODBYE,
+    // HELLO, 
+    // LIKES, 
+    // BALLOONS,
+    // FACETS,
+    // CONSUMPTION_PREFS,
+    // ...CACHED, 
   ]
 }

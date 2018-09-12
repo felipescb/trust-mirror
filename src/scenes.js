@@ -112,12 +112,12 @@ export default (data) => {
     }
   }
   return [
-    // HELLO, 
-    // LIKES, 
+    HELLO, 
+    LIKES, 
      BALLOONS,
-    // FACETS,
-    // CONSUMPTION_PREFS,
-    // ...CACHED, 
-    // GOODBYE,
+    FACETS,
+    CONSUMPTION_PREFS,
+    ...CACHED, 
+    GOODBYE,
   ]
 }

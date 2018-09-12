@@ -22,6 +22,7 @@ export default function(data, onEnd){
       )
     )
   );
+  console.log(JSON.stringify(facets))
   shuffleArray(facets);
   facets.forEach(createFacet);
 

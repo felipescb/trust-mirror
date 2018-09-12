@@ -1,7 +1,7 @@
 import io from 'socket.io-client';
 import Script from './src/app';
 
-const DEV = true;
+const DEV = false;
 
 const script = new Script();
 if(DEV){
@@ -13,11 +13,17 @@ if(DEV){
   }
 }
 else{
-  var socket = io.connect("http://localhost:3000/");
-  socket.on("go", handleData);
+  const url = "http://app.cached.id/";
+  var socket = io.connect(url);
+  socket.on("go", (data) => handleData(data, () => {
+    fetch('http://localhost:3000/print', {
+      method: 'post',
+      body: JSON.stringify(data),
+    });
+  }));
 }
 
-function handleData(data){
-  script.setup(data);
+function handleData(data, onEnd){
+  script.setup(data, onEnd);
   script.start();
 }

@@ -16,20 +16,21 @@ export default class Scene {
     this.container = container;
     this.data = data;
   }
+  // this is the play of the scene
   play() {
     const { audioSrc, endOnAudio = false, background } = this.scene
-    const playScene = () => {
+    const getScene = () => {
       const playingDOM = this.scene.play(this.data, endOnAudio ? () => { } : this.onEnd);
-      $(this.container).append(playingDOM);
       this.handleAudio(audioSrc, endOnAudio);
+      return playingDOM;
     }
     if(background){
       const { from, color } = background;
       const $background = $(`<div class="background slide-in-${from}" style="background-color:${color}"></div>`)
-      $background.on('animationend webkitAnimationEnd oAnimationEnd', playScene);
+      $background.on('animationend webkitAnimationEnd oAnimationEnd', () => this.container.append(getScene()));
       $(this.container).html($background);
     }else{
-      playScene()
+      $(this.container).html(getScene());
     }
   }
   handleAudio(audioSrc, endOnAudio){

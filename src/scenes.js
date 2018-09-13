@@ -20,9 +20,10 @@ const i18n = {
   }
 }
 
+const audioExtension = 'mp3'
 const pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_main_audio/';
-const pather = (fileName) => `${pathPrefix}${fileName}.wav`
-const createAudioScene = (audioSrc, prefix = pathPrefix) => ({ type: 'media', audioSrc: prefix+audioSrc+'.wav' })
+const pather = (fileName) => `${pathPrefix}${fileName}.${audioExtension}`
+const createAudioScene = (audioSrc, prefix = pathPrefix) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension })
 export default (data) => {
   const lang = data.lang;
 
@@ -96,7 +97,7 @@ export default (data) => {
     return {
       type: 'media',
       src: '/assets/CACHED_CONTENT/CACHED_ANIMATIONS/' + fileName + '.mp4',
-      audioSrc: '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_facets_audio/' + fileName + '.wav'
+      audioSrc: '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_facets_audio/' + fileName + '.' + audioExtension
     }
   });
   

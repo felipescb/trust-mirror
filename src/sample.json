@@ -1,4 +1,5 @@
 {
+  "lang": "en",
   "identifier": "Walid Vb",
   "photos": [
     "https://scontent.xx.fbcdn.net/v/t1.0-9/13263857_10153407422431710_6778547054944028480_n.jpg?_nc_cat=0&oh=89ec9e43cc52641f40eb44918e1080f2&oe=5C1E5BE0",
@@ -746,7 +747,6 @@
       ]
     }
   ],
-  "lang": "fr",
   "raw": {
     "word_count": 8988,
     "processed_language": "en",

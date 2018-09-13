@@ -11,10 +11,11 @@ class Script{
     this.playNext = this.playNext.bind(this);
   }
   setup(data, onEnd){
+    console.log(onEnd)
     this.container = document.getElementById('container');
     this.container.onmousedown = this.playNext.bind(this);
-    this.createScenes(data);
     this.onEnd = onEnd;
+    this.createScenes(data);
   }
   createScenes(data){
     this.data = data;
@@ -46,7 +47,7 @@ class Script{
       this.play(0);
     }
     else{
-      this.onEnd();
+      this.onEnd(this.data);
     }
   }
 }

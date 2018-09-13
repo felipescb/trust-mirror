@@ -28,7 +28,7 @@ export default function ({ marketPreferences, lang }, onEnd){
   prefs.forEach((pref, i) => {
     const string = [
       prefixes[lang][pref.score],
-      pref.name.toLowerCase()
+      pref[fr + 'name'].toLowerCase()
     ].join(' ')
     const $pref = $(`<div class="pref">${string}</div>`);
     setTimeout(() => {

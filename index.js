@@ -4,26 +4,28 @@ import Script from './src/app';
 const DEV = true;
 
 const script = new Script();
+const url = "http://app.cached.id/";
+var socket = io.connect(url);
 if(DEV){
   const data = require('./src/sample.json');
-  handleData(data)
+  handleData(data, beDone)
   document.onload = () => {
-    script.setup(data);
+    script.setup(data, beDone);
     script.start();
   }
 }
 else{
-  const url = "http://app.cached.id/";
-  var socket = io.connect(url);
-  window.socket = socket;
-  socket.on("go", (data) => handleData(data, () => {
-    fetch('http://localhost:3000/print', {
-      method: 'post',
-      body: JSON.stringify(data),
-    });
-  }));
+  socket.on("go", (data) => handleData(data, beDone));
 }
 
+function beDone(data){
+  console.log('Printing!')
+  fetch('http://localhost:3001/', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    mode: 'no-cors',
+  });
+}
 function handleData(data, onEnd){
   script.setup(data, onEnd);
   script.start();

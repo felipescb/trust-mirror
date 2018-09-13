@@ -85,10 +85,15 @@ export default (data) => {
     },
   }
 
-  const CACHED = data.cached.map(trait => ({
-    type: 'media',
-    src: '/assets/video/' + lang + '_'+trait.phrase.replace(/([ -])/g, '_').toLowerCase() + '.mp4',
-  }));
+  const BIG5 = data.cached.map(trait => {
+    const fileName = '1_INTELLECT_LOW';
+    //trait.phrase.replace(/([ -])/g, '_').toLowerCase()
+    return {
+      type: 'media',
+      src: '/assets/CACHED_CONTENT/CACHED_ANIMATIONS/' + fileName + '.mp4',
+      audioSrc: '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_facets_audio/' + fileName + '.wav'
+    }
+  });
 
   const FACETS = {
     type: 'custom',
@@ -112,12 +117,12 @@ export default (data) => {
     }
   }
   return [
-    HELLO, 
-    LIKES, 
-     BALLOONS,
-    FACETS,
-    CONSUMPTION_PREFS,
-    ...CACHED, 
-    GOODBYE,
+    // HELLO, 
+    // LIKES, 
+    //  BALLOONS,
+    // FACETS,
+    // CONSUMPTION_PREFS,
+    ...BIG5, 
+    // GOODBYE,
   ]
 }

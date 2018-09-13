@@ -26,7 +26,7 @@ const createAudioScene = (audioSrc, prefix = pathPrefix) => ({ type: 'media', au
 export default (data) => {
   const lang = data.lang;
 
-  const HELLO = {
+  const HELLO_0 = {
     type: 'media',
     src: '/assets/video/hello_compr.mp4',
     audioSrc: pather('0_HELLO'),
@@ -47,7 +47,7 @@ export default (data) => {
     ]
   }
 
-  const GOODBYE = {
+  const GOODBYE_13 = {
     type: 'media',
     src: '/assets/video/goodbye_compr.mp4',
     audioSrc: pather('13_OUTRO'),
@@ -66,7 +66,7 @@ export default (data) => {
       }
     ]
   }
-  const BALLOONS = {
+  const BALLOONS_4 = {
     type: 'custom',
     scene: {
       background: {
@@ -74,11 +74,12 @@ export default (data) => {
         from: 'top'
       },
       play: ballonsPlay,
-      audioSrc: pather('2_HOW_DO_YOU_SEE_YOURSELF')
+      audioSrc: pather('2_HOW_DO_YOU_SEE_YOURSELF'),
+      endOnAudio: false,
     },
   }
 
-  const LIKES = {
+  const LIKES_2 = {
     type: 'custom',
     scene: {
       play: stampsPlay,
@@ -91,16 +92,27 @@ export default (data) => {
   }
 
   const createBIG5 = (posNeg) => data.cached.filter(c => c.type === posNeg).map(trait => {
-    const fileName = '1_INTELLECT_LOW';
-    //const fileName = `${trait.id}_${trait.pole}`.toUpperCase();
+    const fileName = `${trait.id.replace('facet_', '')}_${trait.pole}`.toUpperCase();
     return {
       type: 'media',
       src: '/assets/CACHED_CONTENT/CACHED_ANIMATIONS/' + fileName + '.mp4',
       audioSrc: '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_facets_audio/' + fileName + '.wav'
     }
   });
+  
+  const CONSUMPTION_PREFS_10 = {
+    type: 'custom',
+    scene: {
+      play: consumptionPlay,
+      audioSrc: '10_HOW_OUR_CLIENTS_SEE_YOU',
+      background: {
+        color: '#000',
+        from: 'top',
+      }
+    }
+  }
 
-  const FACETS = {
+  const FACETS_12 = {
     type: 'custom',
     scene: {
       play: facetsPlay,
@@ -112,31 +124,20 @@ export default (data) => {
     }
   }
 
-  const CONSUMPTION_PREFS = {
-    type: 'custom',
-    scene: {
-      play: consumptionPlay,
-      audioSrc: '10_HOW_OUR_CLIENTS_SEE_YOU',
-      background: {
-        color: '#000',
-        from: 'top',
-      }
-    }
-  }
   return [
-    HELLO,
+    HELLO_0,
     createAudioScene('1_INTRO'),
-    BALLOONS,
-    LIKES,
+    LIKES_2,
     createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'),
+    BALLOONS_4,
     createAudioScene('5_ASSESSMENT'),
-    ...createBIG5('positive'),
+    ...createBIG5('positive'), // 6
     createAudioScene('7_COME_CLOSER'),
-    ...createBIG5('negative'),
+    ...createBIG5('negative'), // 8
     createAudioScene('9_PURGATORY'),
-    CONSUMPTION_PREFS,
+    CONSUMPTION_PREFS_10,
     createAudioScene('11_LEARNING_TO_SEE'),
-    FACETS,
-    GOODBYE,
+    FACETS_12,
+    GOODBYE_13,
   ]
 }

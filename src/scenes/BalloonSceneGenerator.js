@@ -1,35 +1,37 @@
 import $ from 'jquery'
 
 export default function ballonsPlay(data, onEnd){
-  const player = [];
+  const player = $('<div></div>');
   const imgs = data.photos;
   imgs.forEach((src, i) => {
     const img = new Image();
     img.src = src;
-    const balloon = svg(src, i);
-    console.log(src)
-    const start = Math.random() * 60 + 10;
-    const sign = Math.random() > .5 ? 1 : -1;
-    const end = Math.min(70,(1 + sign * Math.random() / 5) * start);
-    const top = Math.random() * 70 + 5
-    balloon.css({
-      left: start+'%',
-      top: '100%',
-      animationDelay: i*200+'ms',
-    });
-    setTimeout(() => 
-      balloon.animate({
-        left: end + '%',
-        top: top + '%',
-      }, Math.random()*2000+3000), Math.random()*1000)
-    player.push(balloon);
-
+    img.onload = () => {
+      const balloon = svg(img, i);
+      const start = Math.random() * 60 + 10;
+      const sign = Math.random() > .5 ? 1 : -1;
+      const end = Math.min(70,(1 + sign * Math.random() / 5) * start);
+      const top = Math.random() * 50;
+      //const top = '-100';
+      balloon.css({
+        left: start+'%',
+        top: '100%',
+        animationDelay: i*500+'ms',
+      });
+      setTimeout(() => 
+        balloon.animate({
+          left: end + '%',
+          top: top + '%',
+        }, Math.random()*3000+3000), Math.random()*3000)
+      player.append(balloon);
+    }
   })
   setTimeout(onEnd, 5000);
   return player;
 }
 
-function svg(src, i){
+function svg(img, i){
+  const { src, width, height } = img;
   let svg = `<?xml version="1.0" encoding="utf-8"?>
       <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
       <svg class="balloon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -38,8 +40,8 @@ function svg(src, i){
           .st0{fill:none;stroke:#FFFFFF;stroke-width:10;stroke-miterlimit:10;}
         </style>
         <defs>
-            <pattern id="img-${i}" patternUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000">
-                <image id="img-${i}"xlink:href="${src}" width="600" height="450" />             
+            <pattern id="img-${i}" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                <image id="img-${i}"xlink:href="${src}" width="${width}" height="${height}" />
             </pattern>
         </defs>
         <title>test</title>

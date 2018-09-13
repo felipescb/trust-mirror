@@ -4,17 +4,11 @@ import { flatten, shuffleArray } from '../utils'
 
 window.$ = $;
 // CONFIG
-const rowsCount = 6;
-
 
 export default function(data, onEnd){
-  const $wrapper = $('<div class="facets-wrapper f-h a-c"></div>')
-  $wrapper.css({
-    //gridTemplateRows: `repeat(${rowsCount}, 1fr)`,
-    // transform: 'scaleX(-1)'
-  })
+  const $wrapper = $('<div class="facets-wrapper f-h a-c"></div>');
   const facets = flatten(
-    data.raw.personality.map(big5 => 
+    data.facets.map(big5 => 
       big5.children.map(c => {
         c.category = big5.name 
         return c

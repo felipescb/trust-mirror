@@ -1,5 +1,5 @@
 import io from 'socket.io-client';
-import Script from './src/app';
+import Script from './src/script';
 
 const DEV = true;
 

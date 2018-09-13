@@ -1,7 +1,3 @@
-// thank text should be off
-// bit faster facets
-
-
 //X welcome
 //X hello
 //X ballons?
@@ -18,9 +14,13 @@ import facetsPlay from './scenes/FacetsPlay'
 import consumptionPlay from './scenes/ConsumptionPlay'
 
 const i18n = {
+  thankTrust: {
+    en: 'Thank you for trusting us.',
+    fr: 'Merci pour votre confiance en nous.',
+  },
   goodbye: {
-    thankYou: 'Thank you',
-    youAre: 'You are the content',
+    thankYou: 'Thank you.',
+    youAre: 'You are the content.',
   }
 }
 
@@ -29,10 +29,7 @@ const pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_main_audio/';
 const pather = (fileName) => `${pathPrefix}${fileName}.${audioExtension}`
 const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension, attrs })
 
-const thankTrust = {
-  en: 'Thank you for trusting us.',
-  fr: 'Merci pour votre confiance en nous.',
-}
+
 export default (data) => {
   const lang = data.lang;
 
@@ -149,7 +146,7 @@ export default (data) => {
   }
 
 
-  const thankYouFor = `<div style="font-size: #FFF">${thankTrust[lang]}</div>`
+  const thankYouFor = `<div style="font-size: #FFF">${i18n.thankTrust[lang]}</div>`
   const ASSESSMENT_5 = createAudioScene('5_ASSESSMENT', pathPrefix, [
     // 11 seconds
     {
@@ -177,7 +174,15 @@ export default (data) => {
         out: 13000
       }
     ]
-  )
+  );
+
+  const END = {
+    type: 'custom',
+    scene: {
+      play: () => $('<div class="text-wrapper">' + thankYouFor + '</div>')
+    }
+  };
+
   return [
     HELLO_0,
     INTRO_1,
@@ -194,5 +199,6 @@ export default (data) => {
     createAudioScene('11_LEARNING_TO_SEE'),
     FACETS_12,
     GOODBYE_13,
+    END,
   ]
 }

@@ -23,13 +23,13 @@ export default function ballonsPlay(data, onEnd){
         balloon.animate({
           left: end + '%',
           top: top + '%',
-        }, Math.random() * 3000 + 3000, finish), Math.random()*3000)
+        }, Math.random() * 3000 + 2000, finish), Math.random()*2000)
       player.append(balloon);
     }
   })
   function finish(){
     if(++finishedCount == imgs.length){
-      onEnd();
+      setTimeout(onEnd, 1500);
     }
   }
   return player;

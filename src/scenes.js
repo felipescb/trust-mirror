@@ -19,15 +19,17 @@ const i18n = {
     youAre: 'You are the content',
   }
 }
-// require is required here else parcel won't
-// move the files to /dist in dev at least
+
+const pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_main_audio/';
+const pather = (fileName) => `${pathPrefix}${fileName}.wav`
+const createAudioScene = (audioSrc, prefix = pathPrefix) => ({ type: 'media', audioSrc: prefix+audioSrc+'.wav' })
 export default (data) => {
   const lang = data.lang;
 
   const HELLO = {
     type: 'media',
     src: '/assets/video/hello_compr.mp4',
-    audioSrc: '/assets/audio/hello.mp3',
+    audioSrc: pather('0_HELLO'),
     attrs: [
       {
         domGenerator: () => {
@@ -48,6 +50,7 @@ export default (data) => {
   const GOODBYE = {
     type: 'media',
     src: '/assets/video/goodbye_compr.mp4',
+    audioSrc: pather('13_OUTRO'),
     attrs: [
       {
         domGenerator: () => `<div class="floating flex-center" style="font-size:2.5rem;top:26.5%;bottom:67%;color:#111">${i18n.goodbye.thankYou}.</div>`,
@@ -71,6 +74,7 @@ export default (data) => {
         from: 'top'
       },
       play: ballonsPlay,
+      audioSrc: pather('2_HOW_DO_YOU_SEE_YOURSELF')
     },
   }
 
@@ -78,6 +82,7 @@ export default (data) => {
     type: 'custom',
     scene: {
       play: stampsPlay,
+      audioSrc: pather('4_HOW_IMPORTANT_ARE_THESE_THINGS'),
       background: {
         color: '#FE01CD',
         from: 'left'
@@ -85,9 +90,9 @@ export default (data) => {
     },
   }
 
-  const BIG5 = data.cached.map(trait => {
+  const createBIG5 = (posNeg) => data.cached.filter(c => c.type === posNeg).map(trait => {
     const fileName = '1_INTELLECT_LOW';
-    //trait.phrase.replace(/([ -])/g, '_').toLowerCase()
+    //const fileName = `${trait.id}_${trait.pole}`.toUpperCase();
     return {
       type: 'media',
       src: '/assets/CACHED_CONTENT/CACHED_ANIMATIONS/' + fileName + '.mp4',
@@ -99,6 +104,7 @@ export default (data) => {
     type: 'custom',
     scene: {
       play: facetsPlay,
+      audioSrc: pather('GOOD_HARD_LOOK'),
       background: {
         color: '#000',
         from: 'right',
@@ -110,6 +116,7 @@ export default (data) => {
     type: 'custom',
     scene: {
       play: consumptionPlay,
+      audioSrc: '10_HOW_OUR_CLIENTS_SEE_YOU',
       background: {
         color: '#000',
         from: 'top',
@@ -117,12 +124,19 @@ export default (data) => {
     }
   }
   return [
-    // HELLO, 
-    // LIKES, 
-    //  BALLOONS,
-    // FACETS,
-    // CONSUMPTION_PREFS,
-    ...BIG5, 
-    // GOODBYE,
+    HELLO,
+    createAudioScene('1_INTRO'),
+    BALLOONS,
+    LIKES,
+    createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'),
+    createAudioScene('5_ASSESSMENT'),
+    ...createBIG5('positive'),
+    createAudioScene('7_COME_CLOSER'),
+    ...createBIG5('negative'),
+    createAudioScene('9_PURGATORY'),
+    CONSUMPTION_PREFS,
+    createAudioScene('11_LEARNING_TO_SEE'),
+    FACETS,
+    GOODBYE,
   ]
 }

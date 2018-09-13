@@ -13,7 +13,7 @@ export default class VideoScene {
     this.video = this.handleVideo();
     this.audio = this.handleAudio();
     $(this.container).html(this.$wrapper);
-    this.video.play();
+    this.video && this.video.play();
   }
   handleEnd(){
     if((!this.audio || this.audio.currentTime >= this.audio.duration) && 
@@ -42,9 +42,14 @@ export default class VideoScene {
       const $audio = $(`<audio src=${audioSrc}/></audio>`);
       this.$wrapper.append($audio);
       const audio = $audio.get(0);
-      this.video.addEventListener('play', ()=>{
-        audio.play()
-      });
+      if (this.video){
+        this.video.addEventListener('play', ()=>{
+          audio.play()
+        });
+      }
+      else{
+        audio.play();
+      }
       audio.addEventListener('ended', this.handleEnd)
       return audio
     }

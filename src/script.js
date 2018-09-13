@@ -11,7 +11,6 @@ class Script{
     this.playNext = this.playNext.bind(this);
   }
   setup(data, onEnd){
-    console.log(onEnd)
     this.container = document.getElementById('container');
     this.container.onmousedown = this.playNext.bind(this);
     this.onEnd = onEnd;
@@ -19,10 +18,10 @@ class Script{
   }
   createScenes(data){
     this.data = data;
-    // sort data.cached by type(positive, negative)
-    // play each phrase.mp4
     const generatedScenes = sceneDescriptions(data);
     this.scenes = generatedScenes.map(desc => {
+      // pass the container used by scenes
+      // to call this.container.html(theScene)
       const scene = new Scene(this.data, desc, this.container);
       scene.onEnd = this.playNext;
       return scene;

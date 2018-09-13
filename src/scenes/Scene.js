@@ -25,12 +25,16 @@ export default class Scene {
       return playingDOM;
     }
     if(background){
+      const scenes = getScene()
       const { from, color } = background;
       const $background = $(`<div class="background slide-in-${from}" style="background-color:${color}"></div>`)
-      $background.on('animationend webkitAnimationEnd oAnimationEnd', () => this.container.append(getScene()));
+      $background.on('animationend webkitAnimationEnd oAnimationEnd', () =>
+        $(this.container).append(scenes)
+      );
       $(this.container).html($background);
     }else{
-      $(this.container).html(getScene());
+      const scenes = getScene()
+      $(this.container).html(scenes);
     }
   }
   handleAudio(audioSrc, endOnAudio){

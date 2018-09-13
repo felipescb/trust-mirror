@@ -1,7 +1,7 @@
 import io from 'socket.io-client';
 import Script from './src/script';
 
-const DEV = true;
+const DEV = false;
 
 const script = new Script();
 const url = "http://app.cached.id/";

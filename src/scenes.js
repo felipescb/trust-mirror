@@ -29,6 +29,16 @@ const pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_main_audio/';
 const pather = (fileName) => `${pathPrefix}${fileName}.${audioExtension}`
 const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension, attrs })
 
+// scenes are expected in the following format:
+// type: 'media' or 'custom'
+// src: 'url of the video'
+// audioSrc: 'url of the audio'
+// attrs: array of
+//   domGenerator(data): function returning a dom string
+//   in: time in ms should it appear
+//   out: time in ms should it disappear
+// // if custom
+// play(data, onEnd): function returning a jQuery dom object
 
 export default (data) => {
   const lang = data.lang;

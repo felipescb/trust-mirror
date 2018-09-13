@@ -3,6 +3,7 @@ import $ from 'jquery'
 export default function ballonsPlay(data, onEnd){
   const player = $('<div></div>');
   const imgs = data.photos;
+  let finishedCount = 0;
   imgs.forEach((src, i) => {
     const img = new Image();
     img.src = src;
@@ -22,11 +23,15 @@ export default function ballonsPlay(data, onEnd){
         balloon.animate({
           left: end + '%',
           top: top + '%',
-        }, Math.random()*3000+3000), Math.random()*3000)
+        }, Math.random() * 3000 + 3000, finish), Math.random()*3000)
       player.append(balloon);
     }
   })
-  setTimeout(onEnd, 5000);
+  function finish(){
+    if(++finishedCount == imgs.length){
+      onEnd();
+    }
+  }
   return player;
 }
 

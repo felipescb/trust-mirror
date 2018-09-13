@@ -22,6 +22,10 @@ export default class VideoScene {
       }
   }
   handleAttrs(){
+    if(this.attrsHandled){
+      return
+    }
+    this.attrsHandled = true;
     const { attrs } = this.description
     if(attrs && attrs.length){
       attrs.forEach( attr => {
@@ -48,6 +52,7 @@ export default class VideoScene {
         });
       }
       else{
+        audio.addEventListener('play', this.handleAttrs);
         audio.play();
       }
       audio.addEventListener('ended', this.handleEnd)

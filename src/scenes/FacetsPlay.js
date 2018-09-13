@@ -34,16 +34,16 @@ export default function(data, onEnd){
       chosen.toggleClass('invisible clip-on');
       const numb = $('.count', chosen);
       const id = numb.attr('id')
-      const count = parseInt(numb.text());
-      var countup = new CountUp(id, 0, count, 0, 3, { 
+      const count = parseFloat(numb.text());
+      var countup = new CountUp(id, 0, count, 5, 3, { 
         separator: '', 
         useEasing: false,
       })
       countup.start();
-      setTimeout(showNext, Math.random()*300+600)
+      setTimeout(showNext, Math.random()*200+200)
     }
     else{
-      setTimeout(onEnd, 2000);
+      setTimeout(onEnd, 3000);
     }
   }
   setTimeout(showNext, 800)
@@ -52,13 +52,10 @@ export default function(data, onEnd){
   function createFacet(facet, i) {
     const { name, percentile, category } = facet;
     const $facet = $(`<div class="facet invisible">
-      ${name}: <span class="count" id="f-${i}">${parseInt(percentile * 1000000)}</span>
+      ${name}: <span class="count" id="f-${i}">${parseInt(percentile * 10000000)/100000}</span>%
       <br>
       <span style="font-size: .8em">${category}</span>
     </div>`);
-    $facet.css({
-      textShadow: ''
-    });
     $wrapper.append($facet)
   }
 }

@@ -1,3 +1,7 @@
+// thank text should be off
+// bit faster facets
+
+
 //X welcome
 //X hello
 //X ballons?
@@ -23,7 +27,12 @@ const i18n = {
 const audioExtension = 'mp3'
 const pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_main_audio/';
 const pather = (fileName) => `${pathPrefix}${fileName}.${audioExtension}`
-const createAudioScene = (audioSrc, prefix = pathPrefix) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension })
+const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension, attrs })
+
+const thankTrust = {
+  en: 'Thank you for trusting us.',
+  fr: 'Merci pour votre confiance en nous.',
+}
 export default (data) => {
   const lang = data.lang;
 
@@ -39,13 +48,27 @@ export default (data) => {
           const tooMany = firstName.length >= 13;
           const hello = tooMany ? '<h1 style="top:15%;font-size:2em; " class="floating">Hello</h1>' : '';
           return `<div style="color:#111"> \
-          ${hello}
-          <div style="color:#111 ;bottom:71.8%;top:21.7%; font-size: 1.5em;" class="floating flex-center">${tooMany ? '' : 'Hello'} ${firstName} \
+            ${hello}
+            <div style="color:#111 ;bottom:71.8%;top:21.7%; font-size: 1.5em;" class="floating flex-center">${tooMany ? '' : 'Hello'} ${firstName} \
           </div>`
         },
         in: 2800,
       }
     ]
+  }
+  const INTRO_1 = createAudioScene('1_INTRO', pathPrefix, [
+      {
+        domGenerator: () => `<div class="text-wrapper"><div class="logo"> <img src="/assets/images/logo.png"> </div>${thankYouFor}</div>`,
+        in: 7000,
+        out: 11000
+      }
+    ]
+  )
+
+  const INTRO_1a = {
+    type: 'media',
+    src: '/assets/video/1a_intro.mp4',
+    audioSrc: pather('1a_INTRO'),
   }
 
   const GOODBYE_13 = {
@@ -56,14 +79,14 @@ export default (data) => {
       {
         domGenerator: () => `<div class="floating flex-center" style="font-size:2.5rem;top:26.5%;bottom:67%;color:#111">${i18n.goodbye.thankYou}.</div>`,
         in: 0,
-        // out: 5000
+        out: 4900
       },
       {
         domGenerator: () => `
           <div class="floating flex-center" style="font-size:1.5rem;top:36.5%;bottom:57%;color:#111">${i18n.goodbye.youAre}</div>
         `,
         in: 0,
-        // out: 5000
+        out: 5200
       }
     ]
   }
@@ -105,7 +128,7 @@ export default (data) => {
     type: 'custom',
     scene: {
       play: consumptionPlay,
-      audioSrc: '10_HOW_OUR_CLIENTS_SEE_YOU',
+      audioSrc: pather('10_HOW_OUR_CLIENTS_SEE_YOU'),
       background: {
         color: '#000',
         from: 'top',
@@ -117,7 +140,7 @@ export default (data) => {
     type: 'custom',
     scene: {
       play: facetsPlay,
-      audioSrc: pather('GOOD_HARD_LOOK'),
+      audioSrc: pather('12_GOOD_HARD_LOOK'),
       background: {
         color: '#000',
         from: 'right',
@@ -125,17 +148,48 @@ export default (data) => {
     }
   }
 
+
+  const thankYouFor = `<div style="font-size: #FFF">${thankTrust[lang]}</div>`
+  const ASSESSMENT_5 = createAudioScene('5_ASSESSMENT', pathPrefix, [
+    // 11 seconds
+    {
+      domGenerator: () => `<div class="text-wrapper">${thankYouFor}</div>`,
+      in: 11000,
+      out: 13000
+    }
+  ]
+  )
+  const COME_CLOSER_7 = createAudioScene('7_COME_CLOSER', pathPrefix, [
+    // 16 seconds
+      {
+        domGenerator: () => `<div class="text-wrapper">${thankYouFor}</div>`,
+        in: 16500,
+        out: 18000
+      }
+    ]
+  )
+  const PURGATORY_9 = createAudioScene('9_PURGATORY', pathPrefix,
+    [
+    // 11seconds
+      {
+        domGenerator: () => `<div class="text-wrapper">${thankYouFor}</div>`,
+        in: 11500,
+        out: 13000
+      }
+    ]
+  )
   return [
     HELLO_0,
-    createAudioScene('1_INTRO'),
+    INTRO_1,
+    INTRO_1a,
     LIKES_2,
-    createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'),
+    createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'), // => video + audio
     BALLOONS_4,
-    createAudioScene('5_ASSESSMENT'),
+    ASSESSMENT_5,
     ...createBIG5('positive'), // 6
-    createAudioScene('7_COME_CLOSER'),
+    COME_CLOSER_7,
     ...createBIG5('negative'), // 8
-    createAudioScene('9_PURGATORY'),
+    PURGATORY_9,
     CONSUMPTION_PREFS_10,
     createAudioScene('11_LEARNING_TO_SEE'),
     FACETS_12,

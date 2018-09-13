@@ -1,426 +1,427 @@
 {
-  "_id": "5b9a37bb6ba0e907fbe4c7bc",
-  "identifier": "Felipe de Souza",
+  "_id": "5b9ad477fe9ac36c39ff3567",
+  "identifier": "Aline Martinez",
   "photos": [
-    "https://scontent.xx.fbcdn.net/v/t1.0-9/36952859_2006403629672195_4582597879968825344_n.jpg?_nc_cat=0&oh=def7ecaae51f11589a22e41b1c9ab05d&oe=5C289A2F",
-    "https://scontent.xx.fbcdn.net/v/t31.0-8/18921187_1580568928622457_7200217862863418331_o.png?_nc_cat=0&oh=78eb18328d9d47235c017d655e11fa1d&oe=5C1B80E7",
-    "https://scontent.xx.fbcdn.net/v/t1.0-9/297061_229201490462879_703080163_n.jpg?_nc_cat=0&oh=fabe3cd4147da43b1b63c009be90cf17&oe=5C25A407",
-    "https://scontent.xx.fbcdn.net/v/t1.0-9/261544_194932487223113_2892129_n.jpg?_nc_cat=0&oh=7d49c9d91e3add355a0cd19fe411510c&oe=5C2746BF"
+    "https://scontent.xx.fbcdn.net/v/t1.0-9/229849_408088719245099_1903643608_n.jpg?_nc_cat=0&oh=4c299b2f1ebffc381ec7addb8706ecc6&oe=5C37B2CD",
+    "https://scontent.xx.fbcdn.net/v/t1.0-9/59885_4231941670692_181844732_n.jpg?_nc_cat=0&oh=f162c4bf3b23d7d863d26d38b0f15844&oe=5C345AAA",
+    "https://scontent.xx.fbcdn.net/v/t31.0-8/471622_206087636170615_396768389_o.jpg?_nc_cat=0&oh=7bc51411181fde941bc5a23cdb70f28e&oe=5C1B2ECF",
+    "https://scontent.xx.fbcdn.net/v/t1.0-9/392095_2589910420937_508626754_n.jpg?_nc_cat=0&oh=919066af8450b1aecec1b72516535cd0&oe=5C3A1643",
+    "https://scontent.xx.fbcdn.net/v/t31.0-8/277746_2084374822863_110790_o.jpg?_nc_cat=0&oh=bc07f379cd155256e54ea223197a6dc1&oe=5C2728C6"
   ],
   "likes": [
     {
-      "name": "The Distillers",
-      "id": "227808241416402",
-      "created_time": "2018-08-26T18:38:10+0000"
+      "name": "Project Três",
+      "id": "827920047292933",
+      "created_time": "2018-08-25T08:34:55+0000"
     },
     {
-      "name": "Opu Labs",
-      "id": "594790170854801",
-      "created_time": "2018-08-12T18:43:56+0000"
+      "name": "ZurichRetreat",
+      "id": "1133412666696729",
+      "created_time": "2018-08-14T15:32:55+0000"
     },
     {
-      "name": "Comyounity",
-      "id": "122848368361902",
-      "created_time": "2018-08-09T15:42:47+0000"
+      "name": "Eniarof",
+      "id": "1376331339285478",
+      "created_time": "2018-08-06T09:36:54+0000"
     },
     {
-      "name": "INTERLUDE",
-      "id": "940489256113178",
-      "created_time": "2018-08-02T12:08:28+0000"
+      "name": "Audio Crumbs",
+      "id": "2179065045441020",
+      "created_time": "2018-08-04T16:39:54+0000"
     },
     {
-      "name": "The Psychometrics Centre, University of Cambridge",
-      "id": "217121084971171",
-      "created_time": "2018-07-13T15:01:23+0000"
+      "name": "i-D",
+      "id": "1588095974768328",
+      "created_time": "2018-07-24T21:08:30+0000"
     },
     {
-      "name": "Festival of Dangerous Ideas",
-      "id": "558635534500700",
-      "created_time": "2018-07-11T15:03:58+0000"
-    },
-    {
-      "name": "Quem conta é a água",
-      "id": "197377910886348",
-      "created_time": "2018-07-07T16:56:21+0000"
-    },
-    {
-      "name": "Fondation VASARELY",
-      "id": "122094354486335",
-      "created_time": "2018-06-03T22:56:33+0000"
-    },
-    {
-      "name": "RESPECT IS BURNING",
-      "id": "8951162018",
-      "created_time": "2018-06-03T22:55:50+0000"
-    },
-    {
-      "name": "Street School",
-      "id": "1621630124725528",
-      "created_time": "2018-05-17T09:08:22+0000"
-    },
-    {
-      "name": "Melissa S. McCracken",
-      "id": "612254108889961",
-      "created_time": "2018-04-23T04:13:49+0000"
-    },
-    {
-      "name": "Cyberpunk Is Now",
-      "id": "437051623151257",
-      "created_time": "2018-04-13T22:16:16+0000"
-    },
-    {
-      "name": "Google Cloud Platform",
-      "id": "568932726621465",
-      "created_time": "2018-03-15T07:19:21+0000"
-    },
-    {
-      "name": "VICELAND",
-      "id": "878862935569519",
-      "created_time": "2018-03-04T23:42:32+0000"
-    },
-    {
-      "name": "Mesa & Cadeira",
-      "id": "190215337712144",
-      "created_time": "2018-02-25T06:55:26+0000"
-    },
-    {
-      "name": "Time is Art",
-      "id": "496475627058498",
-      "created_time": "2018-01-14T02:37:13+0000"
-    },
-    {
-      "name": "MIND THE HEADPHONE",
-      "id": "383920928381883",
-      "created_time": "2018-01-09T05:32:57+0000"
-    },
-    {
-      "name": "Zouk Needs You",
-      "id": "698911563539435",
-      "created_time": "2018-01-05T05:30:05+0000"
-    },
-    {
-      "name": "Minerando Dados",
-      "id": "181821759010898",
-      "created_time": "2018-01-03T14:17:05+0000"
-    },
-    {
-      "name": "Thievery Corporation",
-      "id": "23018941735",
-      "created_time": "2017-12-28T17:27:51+0000"
-    },
-    {
-      "name": "theory11",
-      "id": "7163962142",
-      "created_time": "2017-12-18T18:15:40+0000"
-    },
-    {
-      "name": "UP Lab",
-      "id": "190466931101942",
-      "created_time": "2017-11-29T01:51:58+0000"
-    },
-    {
-      "name": "Sven Løve",
-      "id": "781307831977003",
-      "created_time": "2017-11-17T19:34:08+0000"
-    },
-    {
-      "name": "VTEX People",
-      "id": "1875231952715975",
-      "created_time": "2017-11-01T21:04:29+0000"
-    },
-    {
-      "name": "thecamp",
-      "id": "1474737612838802",
-      "created_time": "2017-10-16T23:18:27+0000"
-    },
-    {
-      "name": "Nas Daily",
-      "id": "574719552680201",
-      "created_time": "2017-10-13T04:30:12+0000"
-    },
-    {
-      "name": "Bar do Momo",
-      "id": "361969667255730",
-      "created_time": "2017-09-24T17:59:45+0000"
-    },
-    {
-      "name": "Good Tech Lab",
-      "id": "283871308758938",
-      "created_time": "2017-09-20T15:16:21+0000"
-    },
-    {
-      "name": "Gabriel Gonçalvez",
-      "id": "220360418308888",
-      "created_time": "2017-08-14T21:42:39+0000"
-    },
-    {
-      "name": "Ecstatic Dance Brazil",
-      "id": "450940251956091",
-      "created_time": "2017-08-06T22:02:58+0000"
-    },
-    {
-      "name": "Stephen LaBerge's Lucidity Institute",
-      "id": "114127522029666",
-      "created_time": "2017-07-28T11:53:32+0000"
-    },
-    {
-      "name": "Bando",
-      "id": "748405812031514",
-      "created_time": "2017-07-07T17:07:02+0000"
-    },
-    {
-      "name": "Kaleidoscópio",
-      "id": "213110832068599",
-      "created_time": "2017-07-07T06:15:54+0000"
-    },
-    {
-      "name": "The New Yorker",
-      "id": "9258148868",
-      "created_time": "2017-07-04T19:52:30+0000"
-    },
-    {
-      "name": "Tame Impala",
-      "id": "35478245776",
-      "created_time": "2017-07-04T04:57:00+0000"
-    },
-    {
-      "name": "Cartumante",
-      "id": "1654597601448090",
-      "created_time": "2017-06-28T00:47:38+0000"
-    },
-    {
-      "name": "4bet Poker Team",
-      "id": "102041506618980",
-      "created_time": "2017-06-17T01:05:02+0000"
-    },
-    {
-      "name": "The Reflex",
-      "id": "230018453724781",
-      "created_time": "2017-06-13T15:27:10+0000"
-    },
-    {
-      "name": "The Dowsers",
-      "id": "1036370329762186",
-      "created_time": "2017-06-13T02:42:40+0000"
-    },
-    {
-      "name": "Postmodern Jukebox",
-      "id": "588168267896739",
-      "created_time": "2017-06-02T23:51:35+0000"
-    },
-    {
-      "name": "Neurohacker Collective",
-      "id": "788218057949099",
-      "created_time": "2017-05-12T23:31:00+0000"
-    },
-    {
-      "name": "Thiago Dias - Psicólogo",
-      "id": "301330796970825",
-      "created_time": "2017-05-03T00:03:55+0000"
-    },
-    {
-      "name": "Stamina MC",
-      "id": "49606610775",
-      "created_time": "2017-05-01T06:18:08+0000"
-    },
-    {
-      "name": "DJ Patife",
-      "id": "143617135667165",
-      "created_time": "2017-04-28T03:22:59+0000"
-    },
-    {
-      "name": "Learning How to Learn",
-      "id": "679537465474154",
-      "created_time": "2017-04-26T21:16:29+0000"
-    },
-    {
-      "name": "World-X-Movement",
-      "id": "1578538882361515",
-      "created_time": "2017-04-22T03:42:30+0000"
-    },
-    {
-      "name": "Eleva Educação",
-      "id": "731472286890513",
-      "created_time": "2017-03-29T13:41:07+0000"
-    },
-    {
-      "name": "Phouse",
-      "id": "609945662412831",
-      "created_time": "2017-03-18T20:48:09+0000"
-    },
-    {
-      "name": "Pretending I'm a Superman Documentary",
-      "id": "140650459769252",
-      "created_time": "2017-03-15T17:48:18+0000"
-    },
-    {
-      "name": "Spirit Studios",
-      "id": "1819013805048711",
-      "created_time": "2017-03-09T17:48:41+0000"
-    },
-    {
-      "name": "Leandro Karnal",
-      "id": "1603132246595808",
-      "created_time": "2017-03-05T22:47:57+0000"
-    },
-    {
-      "name": "Carne Doce",
-      "id": "234465940010286",
-      "created_time": "2017-02-07T02:21:34+0000"
-    },
-    {
-      "name": "Secret Point - Recreio dos Bandeirantes",
-      "id": "341609329218249",
-      "created_time": "2017-02-02T03:24:56+0000"
-    },
-    {
-      "name": "The Terence McKenna Page",
-      "id": "694382990598892",
-      "created_time": "2017-01-27T18:48:48+0000"
-    },
-    {
-      "name": "Museu De Imagens Do Inconsciente",
-      "id": "866682123382510",
-      "created_time": "2017-01-24T22:21:17+0000"
-    },
-    {
-      "name": "MC Shawlin",
-      "id": "157543320970454",
-      "created_time": "2017-01-24T20:18:27+0000"
-    },
-    {
-      "name": "Dj Marky",
-      "id": "92330216345",
-      "created_time": "2017-01-20T15:21:30+0000"
-    },
-    {
-      "name": "Mustache Burger",
-      "id": "104615173233438",
-      "created_time": "2017-01-19T15:18:12+0000"
-    },
-    {
-      "name": "Luka por aí",
-      "id": "126677530835941",
-      "created_time": "2017-01-19T04:22:14+0000"
-    },
-    {
-      "name": "Grão",
-      "id": "791808447559715",
-      "created_time": "2017-01-18T14:23:48+0000"
-    },
-    {
-      "name": "Dialeticomix",
-      "id": "853204554782019",
-      "created_time": "2017-01-17T04:25:23+0000"
-    },
-    {
-      "name": "Existential Comics",
-      "id": "517457241687031",
-      "created_time": "2017-01-16T03:34:08+0000"
-    },
-    {
-      "name": "Philosophy Matters",
-      "id": "305644206201700",
-      "created_time": "2017-01-16T03:33:49+0000"
-    },
-    {
-      "name": "Contraponto Editora",
-      "id": "452470758158966",
-      "created_time": "2017-01-13T21:50:46+0000"
-    },
-    {
-      "name": "The School of Life",
-      "id": "27467247081",
-      "created_time": "2017-01-11T13:55:18+0000"
-    },
-    {
-      "name": "Operação Serenata de Amor",
-      "id": "528880377304289",
-      "created_time": "2017-01-06T20:45:25+0000"
-    },
-    {
-      "name": "Kaytranada",
-      "id": "536774999682431",
-      "created_time": "2016-12-28T18:16:45+0000"
-    },
-    {
-      "name": "Lapa Comunicação",
-      "id": "416907185049516",
-      "created_time": "2016-12-12T21:00:44+0000"
-    },
-    {
-      "name": "Eli Iwasa",
-      "id": "185078594873659",
-      "created_time": "2016-11-29T17:38:20+0000"
-    },
-    {
-      "name": "Rua City Lab",
-      "id": "1663751803950626",
-      "created_time": "2016-11-20T19:55:36+0000"
-    },
-    {
-      "name": "Incidental Comics",
-      "id": "143875519002831",
-      "created_time": "2016-11-15T16:38:24+0000"
+      "name": "Fight for dignity",
+      "id": "456239628082392",
+      "created_time": "2018-07-18T18:18:30+0000"
     },
     {
       "name": "Boiler Room",
       "id": "164916136887439",
-      "created_time": "2016-11-06T13:45:57+0000"
+      "created_time": "2018-07-12T12:34:36+0000"
     },
     {
-      "name": "MC Marechal",
-      "id": "145887452143350",
-      "created_time": "2016-10-28T02:19:31+0000"
+      "name": "Connecting the Dots",
+      "id": "1980603585304636",
+      "created_time": "2018-07-09T22:27:22+0000"
     },
     {
-      "name": "Loulou Ghelichkhani",
-      "id": "211775552199429",
-      "created_time": "2016-10-27T04:08:11+0000"
+      "name": "Tactical Tech",
+      "id": "41914008626",
+      "created_time": "2018-07-04T14:37:57+0000"
     },
     {
-      "name": "Futurism",
-      "id": "352364611609411",
-      "created_time": "2016-10-21T23:11:01+0000"
+      "name": "Flowresta - música.arte.celebração",
+      "id": "553317571487600",
+      "created_time": "2018-05-25T17:06:11+0000"
     },
     {
-      "name": "ColaborAmerica",
-      "id": "1618960725023435",
-      "created_time": "2016-09-28T00:32:46+0000"
+      "name": "Página \"Ma Boo\"",
+      "id": "489049034842964",
+      "created_time": "2018-05-16T17:16:24+0000"
     },
     {
-      "name": "Luísa Lacerda",
-      "id": "1297902623584076",
-      "created_time": "2016-09-22T22:10:19+0000"
+      "name": "thecamp",
+      "id": "1474737612838802",
+      "created_time": "2018-05-15T21:11:46+0000"
     },
     {
-      "name": "Queremos",
-      "id": "177259598967683",
-      "created_time": "2016-09-05T22:56:50+0000"
+      "name": "Comprei Não Vou",
+      "id": "266429850055389",
+      "created_time": "2018-03-16T19:19:01+0000"
     },
     {
-      "name": "Ancorar",
-      "id": "457253284421032",
-      "created_time": "2016-09-04T03:05:50+0000"
+      "name": "OrganiCup",
+      "id": "402677536461567",
+      "created_time": "2017-07-07T16:06:29+0000"
     },
     {
-      "name": "The Slow Bakery, Pães Artesanais",
-      "id": "1708624472696830",
-      "created_time": "2016-09-02T14:05:58+0000"
+      "name": "Projeto Sonora",
+      "id": "752490751586487",
+      "created_time": "2018-01-26T15:35:46+0000"
+    },
+    {
+      "name": "Príncipe",
+      "id": "185392451552355",
+      "created_time": "2017-12-13T18:57:30+0000"
+    },
+    {
+      "name": "FAB LAB LIVRE SP",
+      "id": "1635453743394942",
+      "created_time": "2017-12-13T13:45:23+0000"
+    },
+    {
+      "name": "Red Bull Station",
+      "id": "608862742497681",
+      "created_time": "2017-12-05T16:05:01+0000"
+    },
+    {
+      "name": "Rafael Taques Motinha",
+      "id": "559195071085154",
+      "created_time": "2017-12-05T13:36:27+0000"
+    },
+    {
+      "name": "Piksel",
+      "id": "115252908544442",
+      "created_time": "2017-11-24T10:28:13+0000"
+    },
+    {
+      "name": "Science Hack Day Berlin",
+      "id": "1396919923858468",
+      "created_time": "2017-11-19T19:18:09+0000"
+    },
+    {
+      "name": "Suzanne Ciani - Diva of the Diode",
+      "id": "188151197650",
+      "created_time": "2017-11-09T12:47:47+0000"
+    },
+    {
+      "name": "A Capella Science",
+      "id": "450961484948568",
+      "created_time": "2017-11-07T23:02:50+0000"
+    },
+    {
+      "name": "Interwoven Design Group",
+      "id": "314227765366899",
+      "created_time": "2017-11-05T07:56:13+0000"
+    },
+    {
+      "name": "Cinzia C.",
+      "id": "1708164742540533",
+      "created_time": "2017-10-24T00:06:51+0000"
+    },
+    {
+      "name": "DataPaulette",
+      "id": "723006481126623",
+      "created_time": "2017-10-23T09:36:15+0000"
+    },
+    {
+      "name": "Página \"Instituto Rio Moda\"",
+      "id": "724944967695406",
+      "created_time": "2017-10-17T13:25:26+0000"
+    },
+    {
+      "name": "Ceia Ent.",
+      "id": "1928014657423450",
+      "created_time": "2017-10-08T16:53:11+0000"
+    },
+    {
+      "name": "ARVORE Immersive Experiences",
+      "id": "750001811838464",
+      "created_time": "2017-10-06T11:55:35+0000"
+    },
+    {
+      "name": "Howto-things",
+      "id": "798251620310330",
+      "created_time": "2017-10-05T22:58:31+0000"
+    },
+    {
+      "name": "Strelka Institute for Media, Architecture and Design",
+      "id": "213569161071",
+      "created_time": "2017-10-03T15:56:11+0000"
+    },
+    {
+      "name": "Center for Art and Media Karlsruhe",
+      "id": "142648659084955",
+      "created_time": "2017-09-30T11:26:16+0000"
+    },
+    {
+      "name": "Playtronica",
+      "id": "1384178658473687",
+      "created_time": "2017-09-28T10:53:29+0000"
+    },
+    {
+      "name": "ElektroCouture",
+      "id": "1493600300898413",
+      "created_time": "2017-09-28T10:48:55+0000"
+    },
+    {
+      "name": "Flusser Studies",
+      "id": "112158872752264",
+      "created_time": "2017-09-27T11:16:42+0000"
+    },
+    {
+      "name": "Wear It Berlin",
+      "id": "434767699998635",
+      "created_time": "2017-09-27T10:46:54+0000"
+    },
+    {
+      "name": "Karelian Art Residence",
+      "id": "650654648322550",
+      "created_time": "2017-09-22T09:27:42+0000"
+    },
+    {
+      "name": "West",
+      "id": "109823292380435",
+      "created_time": "2017-09-22T06:41:33+0000"
+    },
+    {
+      "name": "Microwave International New Media Arts Festival",
+      "id": "391068800965049",
+      "created_time": "2017-09-22T06:40:21+0000"
+    },
+    {
+      "name": "Common Ground",
+      "id": "626453690853242",
+      "created_time": "2017-09-14T14:07:45+0000"
+    },
+    {
+      "name": "Amanda Mussi",
+      "id": "843937165629040",
+      "created_time": "2017-09-14T08:53:09+0000"
+    },
+    {
+      "name": "Vogt Landscape Architects",
+      "id": "112011939427534",
+      "created_time": "2017-09-13T14:20:44+0000"
+    },
+    {
+      "name": "ICI Berlin Institute for Cultural Inquiry",
+      "id": "117760711621343",
+      "created_time": "2017-09-13T08:34:57+0000"
+    },
+    {
+      "name": "Spektrum Berlin",
+      "id": "1490426971185057",
+      "created_time": "2017-09-13T08:29:51+0000"
+    },
+    {
+      "name": "Anastasia Kristensen",
+      "id": "1066869430076673",
+      "created_time": "2017-09-12T15:53:34+0000"
+    },
+    {
+      "name": "Stephan van Kuyk - Art Consultant & Dealer",
+      "id": "353565981647510",
+      "created_time": "2017-09-11T12:32:02+0000"
+    },
+    {
+      "name": "GarageCube",
+      "id": "496150004057673",
+      "created_time": "2017-09-06T17:26:45+0000"
+    },
+    {
+      "name": "Berlin Fashion Week",
+      "id": "161097827265179",
+      "created_time": "2017-09-05T14:16:01+0000"
+    },
+    {
+      "name": "Universität der Künste Berlin",
+      "id": "109272212424219",
+      "created_time": "2017-08-25T19:56:19+0000"
+    },
+    {
+      "name": "文化庁メディア芸術祭 ｜ Japan Media Arts Festival",
+      "id": "114901911921760",
+      "created_time": "2017-08-25T13:27:46+0000"
+    },
+    {
+      "name": "Coding da Vinci",
+      "id": "839507489404377",
+      "created_time": "2017-08-22T13:20:17+0000"
+    },
+    {
+      "name": "Umbigo",
+      "id": "78082761961",
+      "created_time": "2017-08-21T15:15:23+0000"
+    },
+    {
+      "name": "FAD Festival de Arte Digital",
+      "id": "120980794591826",
+      "created_time": "2017-08-20T22:37:51+0000"
+    },
+    {
+      "name": "MetaLab",
+      "id": "5877204099",
+      "created_time": "2017-08-20T18:56:06+0000"
+    },
+    {
+      "name": "Ask Jackie",
+      "id": "368757549977379",
+      "created_time": "2017-08-20T18:32:35+0000"
+    },
+    {
+      "name": "Tokyo Wonder Site トーキョーワンダーサイト",
+      "id": "164842883583151",
+      "created_time": "2017-08-15T15:28:35+0000"
+    },
+    {
+      "name": "AIR 3331",
+      "id": "1486513021644020",
+      "created_time": "2017-08-15T15:28:32+0000"
+    },
+    {
+      "name": "Artists in Residence, Sapporo Tenjinyama Art Studio さっぽろ天神山アートスタジオ by AISP",
+      "id": "684157665017186",
+      "created_time": "2017-08-15T15:28:28+0000"
+    },
+    {
+      "name": "Move arts Japan",
+      "id": "244804628922937",
+      "created_time": "2017-08-15T15:22:18+0000"
+    },
+    {
+      "name": "Art Laboratory Berlin",
+      "id": "74447135766",
+      "created_time": "2017-08-14T11:31:36+0000"
+    },
+    {
+      "name": "Paola Evangelista Lucio",
+      "id": "325453531237327",
+      "created_time": "2017-08-07T12:24:41+0000"
+    },
+    {
+      "name": "Strb",
+      "id": "264250263706778",
+      "created_time": "2017-08-03T18:37:22+0000"
+    },
+    {
+      "name": "Ambrísia Estilingue",
+      "id": "250868438763815",
+      "created_time": "2017-07-30T09:18:18+0000"
+    },
+    {
+      "name": "StreetArtNews",
+      "id": "127611693962705",
+      "created_time": "2017-07-04T09:46:52+0000"
+    },
+    {
+      "name": "Cyborg Foundation",
+      "id": "140611442671788",
+      "created_time": "2017-06-19T22:39:27+0000"
+    },
+    {
+      "name": "Rosettta",
+      "id": "1731699130192159",
+      "created_time": "2017-06-19T13:24:29+0000"
+    },
+    {
+      "name": "Quero estudar alemão - Ich will Deutsch lernen",
+      "id": "135245230290556",
+      "created_time": "2017-06-16T18:01:55+0000"
+    },
+    {
+      "name": "Comum",
+      "id": "1166758950025032",
+      "created_time": "2017-06-14T19:01:40+0000"
+    },
+    {
+      "name": "Studio Joanie Lemercier",
+      "id": "309659289238954",
+      "created_time": "2017-06-10T20:09:10+0000"
+    },
+    {
+      "name": "Palavra Certa - Dicas da Língua Portuguesa",
+      "id": "556164451070076",
+      "created_time": "2017-06-08T21:23:20+0000"
+    },
+    {
+      "name": "Bauhaus-Universität Weimar",
+      "id": "103709019668025",
+      "created_time": "2017-06-06T06:46:30+0000"
+    },
+    {
+      "name": "BigTests",
+      "id": "738708079610743",
+      "created_time": "2017-06-02T07:03:59+0000"
+    },
+    {
+      "name": "Schtu",
+      "id": "793259304026831",
+      "created_time": "2017-05-30T08:28:40+0000"
+    },
+    {
+      "name": "Creative Coding Arts",
+      "id": "1147496695361632",
+      "created_time": "2017-05-26T12:19:30+0000"
+    },
+    {
+      "name": "SP_Urban Digital Festival",
+      "id": "549110638447812",
+      "created_time": "2017-05-22T18:54:15+0000"
+    },
+    {
+      "name": "I.M.E",
+      "id": "1219136164771836",
+      "created_time": "2017-05-20T22:28:47+0000"
+    },
+    {
+      "name": "Benfeitoria",
+      "id": "187072404660363",
+      "created_time": "2017-05-20T11:22:32+0000"
+    },
+    {
+      "name": "Collectif Interstice",
+      "id": "1694273844209890",
+      "created_time": "2017-05-13T18:18:34+0000"
+    },
+    {
+      "name": "Motion Bank",
+      "id": "121085727993892",
+      "created_time": "2017-05-11T07:54:13+0000"
+    },
+    {
+      "name": "PORT-Magazin",
+      "id": "68290691629",
+      "created_time": "2017-05-01T18:59:46+0000"
     }
   ],
   "cached": [
     {
       "type": "positive",
-      "phrase": "Philosophical",
+      "phrase": "Appreciative of art",
       "pole": "high",
-      "id": "facet_intellect"
+      "id": "facet_artistic_interests"
     },
     {
       "type": "positive",
-      "phrase": "Imaginative",
+      "phrase": "Philosophical",
       "pole": "high",
-      "id": "facet_imagination"
+      "id": "facet_intellect"
     },
     {
       "type": "positive",
@@ -430,9 +431,21 @@
     },
     {
       "type": "positive",
-      "phrase": "Appreciative of art",
+      "phrase": "Adventurous",
       "pole": "high",
-      "id": "facet_artistic_interests"
+      "id": "facet_adventurousness"
+    },
+    {
+      "type": "positive",
+      "phrase": "Empathetic",
+      "pole": "high",
+      "id": "facet_sympathy"
+    },
+    {
+      "type": "negative",
+      "phrase": "Trusting of others",
+      "pole": "high",
+      "id": "facet_trust"
     },
     {
       "type": "negative",
@@ -442,21 +455,21 @@
     },
     {
       "type": "negative",
-      "phrase": "Solemn",
+      "phrase": "Accommodating",
+      "pole": "high",
+      "id": "facet_cooperation"
+    },
+    {
+      "type": "negative",
+      "phrase": "Mild-tempered",
       "pole": "low",
-      "id": "facet_cheerfulness"
+      "id": "facet_anger"
     },
     {
       "type": "negative",
-      "phrase": "Self-conscious",
+      "phrase": "Uncompromising",
       "pole": "high",
-      "id": "facet_self_consciousness"
-    },
-    {
-      "type": "negative",
-      "phrase": "Melancholy",
-      "pole": "high",
-      "id": "facet_depression"
+      "id": "facet_morality"
     }
   ],
   "marketPreferences": [
@@ -467,74 +480,74 @@
         {
           "id": "consumption_preferences_automobile_ownership_cost",
           "name": "Likely to be sensitive to ownership cost when buying automobiles",
-          "french_name": "Susceptible d'être sensible au prix lors de l'achat d'une voiture",
-          "score": 0.5
+          "fr_name": "Susceptible d'être sensible au prix lors de l'achat d'une voiture",
+          "score": 1
         },
         {
           "id": "consumption_preferences_automobile_safety",
           "name": "Likely to prefer safety when buying automobiles",
-          "french_name": "Privilégie probablement la sécurité lors de l'achat d'une voiture",
+          "fr_name": "Privilégie probablement la sécurité lors de l'achat d'une voiture",
           "score": 0
         },
         {
           "id": "consumption_preferences_clothes_quality",
           "name": "Likely to prefer quality when buying clothes",
-          "french_name": "Privilégie probablement la qualité lors de l'achat de vêtements",
+          "fr_name": "Privilégie probablement la qualité lors de l'achat de vêtements",
           "score": 1
         },
         {
           "id": "consumption_preferences_clothes_style",
           "name": "Likely to prefer style when buying clothes",
-          "french_name": "Privilégie probablement le style lors de l'achat de vêtements",
+          "fr_name": "Privilégie probablement le style lors de l'achat de vêtements",
           "score": 1
         },
         {
           "id": "consumption_preferences_clothes_comfort",
           "name": "Likely to prefer comfort when buying clothes",
-          "french_name": "Privilégie probablement le confort lors de l'achat de vêtements",
+          "fr_name": "Privilégie probablement le confort lors de l'achat de vêtements",
           "score": 0
         },
         {
           "id": "consumption_preferences_influence_brand_name",
           "name": "Likely to be influenced by brand name when making product purchases",
-          "french_name": "Peut être influencé par le nom de marque lors de l'achat d'un produit",
+          "fr_name": "Peut être influencé par le nom de marque lors de l'achat d'un produit",
           "score": 0
         },
         {
           "id": "consumption_preferences_influence_utility",
           "name": "Likely to be influenced by product utility when making product purchases",
-          "french_name": "Peut être influencé par l'utilité du produit lors de l'achat d'un produit",
-          "score": 1
+          "fr_name": "Peut être influencé par l'utilité du produit lors de l'achat d'un produit",
+          "score": 0
         },
         {
           "id": "consumption_preferences_influence_online_ads",
           "name": "Likely to be influenced by online ads when making product purchases",
-          "french_name": "Susceptible d'être influencé par la publicité en ligne lors de l'achat d'un produit",
+          "fr_name": "Susceptible d'être influencé par la publicité en ligne lors de l'achat d'un produit",
           "score": 1
         },
         {
           "id": "consumption_preferences_influence_social_media",
           "name": "Likely to be influenced by social media when making product purchases",
-          "french_name": "Susceptible d'être influencé par les médias sociaux lors de l'achat de produits",
+          "fr_name": "Susceptible d'être influencé par les médias sociaux lors de l'achat de produits",
           "score": 0
         },
         {
           "id": "consumption_preferences_influence_family_members",
           "name": "Likely to be influenced by family when making product purchases",
-          "french_name": "Risque d'être influencé par la famille lors de l'achat d'un produit",
+          "fr_name": "Risque d'être influencé par la famille lors de l'achat d'un produit",
           "score": 0
         },
         {
           "id": "consumption_preferences_spur_of_moment",
           "name": "Likely to indulge in spur of the moment purchases",
-          "french_name": "Prompt à se livrer à des achats spontanés",
+          "fr_name": "Prompt à se livrer à des achats spontanés",
           "score": 0
         },
         {
           "id": "consumption_preferences_credit_card_payment",
           "name": "Likely to prefer using credit cards for shopping",
-          "french_name": "Préfère probablement utiliser les cartes de crédit pour faire ses courses",
-          "score": 0
+          "fr_name": "Préfère probablement utiliser les cartes de crédit pour faire ses courses",
+          "score": 1
         }
       ]
     },
@@ -545,19 +558,19 @@
         {
           "id": "consumption_preferences_eat_out",
           "name": "Likely to eat out frequently",
-          "french_name": "Prompt à manger au restaurant fréquemment",
-          "score": 1
+          "fr_name": "Prompt à manger au restaurant fréquemment",
+          "score": 0
         },
         {
           "id": "consumption_preferences_gym_membership",
           "name": "Likely to have a gym membership",
-          "french_name": "Possède probablement un abonnement à un club de gym",
+          "fr_name": "Possède probablement un abonnement à un club de gym",
           "score": 0
         },
         {
           "id": "consumption_preferences_outdoor",
           "name": "Likely to like outdoor activities",
-          "french_name": "Susceptible d'aimer les activités de plein air",
+          "fr_name": "Susceptible d'aimer les activités de plein air",
           "score": 0.5
         }
       ]
@@ -569,7 +582,7 @@
         {
           "id": "consumption_preferences_concerned_environment",
           "name": "Likely to be concerned about the environment",
-          "french_name": "Susceptible d'être préoccupé par l'environnement",
+          "fr_name": "Susceptible d'être préoccupé par l'environnement",
           "score": 1
         }
       ]
@@ -581,7 +594,7 @@
         {
           "id": "consumption_preferences_start_business",
           "name": "Likely to consider starting a business in next few years",
-          "french_name": "Envisage probablement la création d'une entreprise dans les prochaines années",
+          "fr_name": "Envisage probablement la création d'une entreprise dans les prochaines années",
           "score": 1
         }
       ]
@@ -593,61 +606,61 @@
         {
           "id": "consumption_preferences_movie_romance",
           "name": "Likely to like romance movies",
-          "french_name": "Prompt à préférer les films d'amour",
+          "fr_name": "Prompt à préférer les films d'amour",
           "score": 0
         },
         {
           "id": "consumption_preferences_movie_adventure",
           "name": "Likely to like adventure movies",
-          "french_name": "Susceptible d’aimer les films d'aventure",
+          "fr_name": "Susceptible d’aimer les films d'aventure",
           "score": 0
         },
         {
           "id": "consumption_preferences_movie_horror",
           "name": "Likely to like horror movies",
-          "french_name": "Prompt à aimer les films d'horreur",
+          "fr_name": "Prompt à aimer les films d'horreur",
           "score": 0
         },
         {
           "id": "consumption_preferences_movie_musical",
           "name": "Likely to like musical movies",
-          "french_name": "Prompt à aimer les films musicaux",
-          "score": 1
+          "fr_name": "Prompt à aimer les films musicaux",
+          "score": 0
         },
         {
           "id": "consumption_preferences_movie_historical",
           "name": "Likely to like historical movies",
-          "french_name": "Prompt à aimer les films historiques",
+          "fr_name": "Prompt à aimer les films historiques",
           "score": 1
         },
         {
           "id": "consumption_preferences_movie_science_fiction",
           "name": "Likely to like science-fiction movies",
-          "french_name": "Susceptible d’aimer les films de science-fiction",
+          "fr_name": "Susceptible d’aimer les films de science-fiction",
           "score": 1
         },
         {
           "id": "consumption_preferences_movie_war",
           "name": "Likely to like war movies",
-          "french_name": "Susceptible d’aimer les films de guerre",
+          "fr_name": "Susceptible d’aimer les films de guerre",
           "score": 0
         },
         {
           "id": "consumption_preferences_movie_drama",
           "name": "Likely to like drama movies",
-          "french_name": "Susceptible d'aimer les films dramatiques",
+          "fr_name": "Susceptible d'aimer les films dramatiques",
           "score": 0
         },
         {
           "id": "consumption_preferences_movie_action",
           "name": "Likely to like action movies",
-          "french_name": "Prompt à aimer les films d'action",
+          "fr_name": "Prompt à aimer les films d'action",
           "score": 1
         },
         {
           "id": "consumption_preferences_movie_documentary",
           "name": "Likely to like documentary movies",
-          "french_name": "Susceptible d'aimer les films documentaires",
+          "fr_name": "Susceptible d'aimer les films documentaires",
           "score": 1
         }
       ]
@@ -659,56 +672,56 @@
         {
           "id": "consumption_preferences_music_rap",
           "name": "Likely to like rap music",
-          "french_name": "Prompt à aimer le rap",
+          "fr_name": "Prompt à aimer le rap",
           "score": 0.5
         },
         {
           "id": "consumption_preferences_music_country",
           "name": "Likely to like country music",
-          "french_name": "Susceptible d'aimer la musique country",
-          "score": 0
+          "fr_name": "Susceptible d'aimer la musique country",
+          "score": 0.5
         },
         {
           "id": "consumption_preferences_music_r_b",
           "name": "Likely to like R&B music",
-          "french_name": "Prompt à aimer la musique R&B",
+          "fr_name": "Prompt à aimer la musique R&B",
           "score": 0.5
         },
         {
           "id": "consumption_preferences_music_hip_hop",
           "name": "Likely to like hip hop music",
-          "french_name": "Prompt à aimer la musique hip hop",
+          "fr_name": "Prompt à aimer la musique hip hop",
           "score": 1
         },
         {
           "id": "consumption_preferences_music_live_event",
           "name": "Likely to attend live musical events",
-          "french_name": "Susceptible d’assister à des événements musicaux en direct",
+          "fr_name": "Susceptible d’assister à des événements musicaux en direct",
           "score": 1
         },
         {
           "id": "consumption_preferences_music_playing",
           "name": "Likely to have experience playing music",
-          "french_name": "Joue probablement d’un instrument de musique",
+          "fr_name": "Joue probablement d’un instrument de musique",
           "score": 1
         },
         {
           "id": "consumption_preferences_music_latin",
           "name": "Likely to like Latin music",
-          "french_name": "Aime probablement la musique latine",
+          "fr_name": "Aime probablement la musique latine",
           "score": 1
         },
         {
           "id": "consumption_preferences_music_rock",
           "name": "Likely to like rock music",
-          "french_name": "Susceptible d’aimer le rock",
+          "fr_name": "Susceptible d’aimer le rock",
           "score": 1
         },
         {
           "id": "consumption_preferences_music_classical",
           "name": "Likely to like classical music",
-          "french_name": "Prompt à aimer la musique classique",
-          "score": 0.5
+          "fr_name": "Prompt à aimer la musique classique",
+          "score": 1
         }
       ]
     },
@@ -719,31 +732,31 @@
         {
           "id": "consumption_preferences_read_frequency",
           "name": "Likely to read often",
-          "french_name": "Lit probablement souvent",
-          "score": 0
+          "fr_name": "Lit probablement souvent",
+          "score": 0.5
         },
         {
           "id": "consumption_preferences_books_entertainment_magazines",
           "name": "Likely to read entertainment magazines",
-          "french_name": "Susceptible de lire des magazines de divertissement",
+          "fr_name": "Susceptible de lire des magazines de divertissement",
           "score": 0
         },
         {
           "id": "consumption_preferences_books_non_fiction",
           "name": "Likely to read non-fiction books",
-          "french_name": "Prompt à lire des livres inspirés de faits réels",
+          "fr_name": "Prompt à lire des livres inspirés de faits réels",
           "score": 1
         },
         {
           "id": "consumption_preferences_books_financial_investing",
           "name": "Likely to read financial investment books",
-          "french_name": "Prompt à lire les livres d'investissement financier",
-          "score": 0
+          "fr_name": "Prompt à lire les livres d'investissement financier",
+          "score": 1
         },
         {
           "id": "consumption_preferences_books_autobiographies",
           "name": "Likely to read autobiographical books",
-          "french_name": "Susceptible de lire des livres autobiographiques",
+          "fr_name": "Susceptible de lire des livres autobiographiques",
           "score": 0
         }
       ]
@@ -755,71 +768,328 @@
         {
           "id": "consumption_preferences_volunteer",
           "name": "Likely to volunteer for social causes",
-          "french_name": "Susceptible de faire du bénévolat pour des causes  humanitaires",
-          "score": 0
+          "fr_name": "Susceptible de faire du bénévolat pour des causes  humanitaires",
+          "score": 1
+        }
+      ]
+    }
+  ],
+  "facets": [
+    {
+      "id": "big5_openness",
+      "name": "Openness",
+      "fr_name": "Ouverture d'esprit",
+      "category": "personality",
+      "score": 0.9445897360795268,
+      "facets": [
+        {
+          "id": "facet_adventurousness",
+          "name": "Adventurousness",
+          "fr_name": "Aventureux",
+          "category": "personality",
+          "score": 0.9618975444787099
+        },
+        {
+          "id": "facet_artistic_interests",
+          "name": "Artistic interests",
+          "fr_name": "Intérêts artistiques",
+          "category": "personality",
+          "score": 0.9853290403978758
+        },
+        {
+          "id": "facet_emotionality",
+          "name": "Emotionality",
+          "fr_name": "Émotif",
+          "category": "personality",
+          "score": 0.8227160802477562
+        },
+        {
+          "id": "facet_imagination",
+          "name": "Imagination",
+          "fr_name": "Imaginatif",
+          "category": "personality",
+          "score": 0.8734587901217992
+        },
+        {
+          "id": "facet_intellect",
+          "name": "Intellect",
+          "fr_name": "Intellectuel",
+          "category": "personality",
+          "score": 0.9823559186176025
+        },
+        {
+          "id": "facet_liberalism",
+          "name": "Authority-challenging",
+          "fr_name": "Rebel",
+          "category": "personality",
+          "score": 0.9754739852144536
+        }
+      ]
+    },
+    {
+      "id": "big5_conscientiousness",
+      "name": "Conscientiousness",
+      "fr_name": "Attentionné",
+      "category": "personality",
+      "score": 0.6264724036891538,
+      "facets": [
+        {
+          "id": "facet_achievement_striving",
+          "name": "Achievement striving",
+          "fr_name": "Perfectionniste",
+          "category": "personality",
+          "score": 0.6163760072787635
+        },
+        {
+          "id": "facet_cautiousness",
+          "name": "Cautiousness",
+          "fr_name": "Prudent",
+          "category": "personality",
+          "score": 0.7422063200735488
+        },
+        {
+          "id": "facet_dutifulness",
+          "name": "Dutifulness",
+          "fr_name": "Loyal",
+          "category": "personality",
+          "score": 0.47016197296824286
+        },
+        {
+          "id": "facet_orderliness",
+          "name": "Orderliness",
+          "fr_name": "Droit",
+          "category": "personality",
+          "score": 0.3754460699769938
+        },
+        {
+          "id": "facet_self_discipline",
+          "name": "Self-discipline",
+          "fr_name": "Autodiscipliné",
+          "category": "personality",
+          "score": 0.432704856655251
+        },
+        {
+          "id": "facet_self_efficacy",
+          "name": "Self-efficacy",
+          "fr_name": "Efficace",
+          "category": "personality",
+          "score": 0.3383193777260275
+        }
+      ]
+    },
+    {
+      "id": "big5_extraversion",
+      "name": "Extraversion",
+      "fr_name": "Extraverti",
+      "category": "personality",
+      "score": 0.6828220005468806,
+      "facets": [
+        {
+          "id": "facet_activity_level",
+          "name": "Activity level",
+          "fr_name": "Hyperactif",
+          "category": "personality",
+          "score": 0.9181918918084567
+        },
+        {
+          "id": "facet_assertiveness",
+          "name": "Assertiveness",
+          "fr_name": "Sûr de soi",
+          "category": "personality",
+          "score": 0.5524437022390468
+        },
+        {
+          "id": "facet_cheerfulness",
+          "name": "Cheerfulness",
+          "fr_name": "Gaieté",
+          "category": "personality",
+          "score": 0.3228535377490299
+        },
+        {
+          "id": "facet_excitement_seeking",
+          "name": "Excitement-seeking",
+          "fr_name": "Désir d'action",
+          "category": "personality",
+          "score": 0.3356619000446315
+        },
+        {
+          "id": "facet_friendliness",
+          "name": "Outgoing",
+          "fr_name": "Extraverti",
+          "category": "personality",
+          "score": 0.43719811693401284
+        },
+        {
+          "id": "facet_gregariousness",
+          "name": "Gregariousness",
+          "fr_name": "Sociable",
+          "category": "personality",
+          "score": 0.2183229817771558
+        }
+      ]
+    },
+    {
+      "id": "big5_agreeableness",
+      "name": "Agreeableness",
+      "fr_name": "Aimable",
+      "category": "personality",
+      "score": 0.27263262223447904,
+      "facets": [
+        {
+          "id": "facet_altruism",
+          "name": "Altruism",
+          "fr_name": "Altruiste",
+          "category": "personality",
+          "score": 0.8008560686347619
+        },
+        {
+          "id": "facet_cooperation",
+          "name": "Cooperation",
+          "fr_name": "Collaboratif",
+          "category": "personality",
+          "score": 0.7484475495732444
+        },
+        {
+          "id": "facet_modesty",
+          "name": "Modesty",
+          "fr_name": "Modeste",
+          "category": "personality",
+          "score": 0.4829817770778636
+        },
+        {
+          "id": "facet_morality",
+          "name": "Uncompromising",
+          "fr_name": "Sans compromis",
+          "category": "personality",
+          "score": 0.6990674307697461
+        },
+        {
+          "id": "facet_sympathy",
+          "name": "Sympathy",
+          "fr_name": "Sympathique",
+          "category": "personality",
+          "score": 0.946821290237468
+        },
+        {
+          "id": "facet_trust",
+          "name": "Trust",
+          "fr_name": "Confiant",
+          "category": "personality",
+          "score": 0.7928551596390818
+        }
+      ]
+    },
+    {
+      "id": "big5_neuroticism",
+      "name": "Emotional range",
+      "fr_name": "Portée émotionnelle",
+      "category": "personality",
+      "score": 0.6133998139564374,
+      "facets": [
+        {
+          "id": "facet_anger",
+          "name": "Fiery",
+          "fr_name": "Fougueux",
+          "category": "personality",
+          "score": 0.27674088857971824
+        },
+        {
+          "id": "facet_anxiety",
+          "name": "Prone to worry",
+          "fr_name": "Inquiet",
+          "category": "personality",
+          "score": 0.4921234679081003
+        },
+        {
+          "id": "facet_depression",
+          "name": "Melancholy",
+          "fr_name": "Mélancolique",
+          "category": "personality",
+          "score": 0.5835148020129735
+        },
+        {
+          "id": "facet_immoderation",
+          "name": "Immoderation",
+          "fr_name": "Immodéré",
+          "category": "personality",
+          "score": 0.3422066595668144
+        },
+        {
+          "id": "facet_self_consciousness",
+          "name": "Self-consciousness",
+          "fr_name": "Conscience de soi",
+          "category": "personality",
+          "score": 0.5452227850430721
+        },
+        {
+          "id": "facet_vulnerability",
+          "name": "Susceptible to stress",
+          "fr_name": "Sensible au stress",
+          "category": "personality",
+          "score": 0.6585561431292712
         }
       ]
     }
   ],
   "lang": "en",
   "raw": {
-    "word_count": 4850,
+    "word_count": 7286,
     "processed_language": "en",
     "personality": [
       {
         "trait_id": "big5_openness",
         "name": "Openness",
         "category": "personality",
-        "percentile": 0.8861255451047272,
-        "raw_score": 0.7871611675644528,
+        "percentile": 0.9445897360795268,
+        "raw_score": 0.799559559099683,
         "significant": true,
         "children": [
           {
             "trait_id": "facet_adventurousness",
             "name": "Adventurousness",
             "category": "personality",
-            "percentile": 0.8733908714488918,
-            "raw_score": 0.5454543183229845,
+            "percentile": 0.9618975444787099,
+            "raw_score": 0.5678814758652315,
             "significant": true
           },
           {
             "trait_id": "facet_artistic_interests",
             "name": "Artistic interests",
             "category": "personality",
-            "percentile": 0.9470524627896426,
-            "raw_score": 0.7471788019231635,
+            "percentile": 0.9853290403978758,
+            "raw_score": 0.7756260916259464,
             "significant": true
           },
           {
             "trait_id": "facet_emotionality",
             "name": "Emotionality",
             "category": "personality",
-            "percentile": 0.7193189002820191,
-            "raw_score": 0.6718743714320136,
+            "percentile": 0.8227160802477562,
+            "raw_score": 0.6859374099030341,
             "significant": true
           },
           {
             "trait_id": "facet_imagination",
             "name": "Imagination",
             "category": "personality",
-            "percentile": 0.9788763914537144,
-            "raw_score": 0.8357430750848956,
+            "percentile": 0.8734587901217992,
+            "raw_score": 0.7916267231898472,
             "significant": true
           },
           {
             "trait_id": "facet_intellect",
             "name": "Intellect",
             "category": "personality",
-            "percentile": 0.9985118466723784,
-            "raw_score": 0.7447272544034751,
+            "percentile": 0.9823559186176025,
+            "raw_score": 0.7046827080226038,
             "significant": true
           },
           {
             "trait_id": "facet_liberalism",
             "name": "Authority-challenging",
             "category": "personality",
-            "percentile": 0.9533087386035931,
-            "raw_score": 0.600735176570478,
+            "percentile": 0.9754739852144536,
+            "raw_score": 0.6153576265904632,
             "significant": true
           }
         ]
@@ -828,56 +1098,56 @@
         "trait_id": "big5_conscientiousness",
         "name": "Conscientiousness",
         "category": "personality",
-        "percentile": 0.2796912699170798,
-        "raw_score": 0.6008239926313212,
+        "percentile": 0.6264724036891538,
+        "raw_score": 0.6430938334911036,
         "significant": true,
         "children": [
           {
             "trait_id": "facet_achievement_striving",
             "name": "Achievement striving",
             "category": "personality",
-            "percentile": 0.5279339568770021,
-            "raw_score": 0.6921086619157647,
+            "percentile": 0.6163760072787635,
+            "raw_score": 0.7040687731999292,
             "significant": true
           },
           {
             "trait_id": "facet_cautiousness",
             "name": "Cautiousness",
             "category": "personality",
-            "percentile": 0.43095701449323004,
-            "raw_score": 0.4814937181700044,
+            "percentile": 0.7422063200735488,
+            "raw_score": 0.5335154264167787,
             "significant": true
           },
           {
             "trait_id": "facet_dutifulness",
             "name": "Dutifulness",
             "category": "personality",
-            "percentile": 0.4885164004699139,
-            "raw_score": 0.6581953588246289,
+            "percentile": 0.47016197296824286,
+            "raw_score": 0.6570670332877407,
             "significant": true
           },
           {
             "trait_id": "facet_orderliness",
             "name": "Orderliness",
             "category": "personality",
-            "percentile": 0.2854248813415152,
-            "raw_score": 0.4755899528631435,
+            "percentile": 0.3754460699769938,
+            "raw_score": 0.48375720605952943,
             "significant": true
           },
           {
             "trait_id": "facet_self_discipline",
             "name": "Self-discipline",
             "category": "personality",
-            "percentile": 0.2264512724342274,
-            "raw_score": 0.5348984169455965,
+            "percentile": 0.432704856655251,
+            "raw_score": 0.562579511535313,
             "significant": true
           },
           {
             "trait_id": "facet_self_efficacy",
             "name": "Self-efficacy",
             "category": "personality",
-            "percentile": 0.6913003011893353,
-            "raw_score": 0.7706676263651479,
+            "percentile": 0.3383193777260275,
+            "raw_score": 0.7384326681768405,
             "significant": true
           }
         ]
@@ -886,56 +1156,56 @@
         "trait_id": "big5_extraversion",
         "name": "Extraversion",
         "category": "personality",
-        "percentile": 0.03782022012419345,
-        "raw_score": 0.47172962405555585,
+        "percentile": 0.6828220005468806,
+        "raw_score": 0.5722293283832227,
         "significant": true,
         "children": [
           {
             "trait_id": "facet_activity_level",
             "name": "Activity level",
             "category": "personality",
-            "percentile": 0.8027737917072858,
-            "raw_score": 0.583953184181403,
+            "percentile": 0.9181918918084567,
+            "raw_score": 0.6116581145745782,
             "significant": true
           },
           {
             "trait_id": "facet_assertiveness",
             "name": "Assertiveness",
             "category": "personality",
-            "percentile": 0.6183505313795075,
-            "raw_score": 0.6591134107546313,
+            "percentile": 0.5524437022390468,
+            "raw_score": 0.6506493720339568,
             "significant": true
           },
           {
             "trait_id": "facet_cheerfulness",
             "name": "Cheerfulness",
             "category": "personality",
-            "percentile": 0.12270565211719947,
-            "raw_score": 0.5791571290828617,
+            "percentile": 0.3228535377490299,
+            "raw_score": 0.6027100450270364,
             "significant": true
           },
           {
             "trait_id": "facet_excitement_seeking",
             "name": "Excitement-seeking",
             "category": "personality",
-            "percentile": 0.7539576602036058,
-            "raw_score": 0.6327330618285972,
+            "percentile": 0.3356619000446315,
+            "raw_score": 0.58561261037931,
             "significant": true
           },
           {
             "trait_id": "facet_friendliness",
             "name": "Outgoing",
             "category": "personality",
-            "percentile": 0.22282029836165523,
-            "raw_score": 0.5222348479933476,
+            "percentile": 0.43719811693401284,
+            "raw_score": 0.5525602073886969,
             "significant": true
           },
           {
             "trait_id": "facet_gregariousness",
             "name": "Gregariousness",
             "category": "personality",
-            "percentile": 0.08644112330564807,
-            "raw_score": 0.38327087493258616,
+            "percentile": 0.2183229817771558,
+            "raw_score": 0.41335279130169145,
             "significant": true
           }
         ]
@@ -944,56 +1214,56 @@
         "trait_id": "big5_agreeableness",
         "name": "Agreeableness",
         "category": "personality",
-        "percentile": 0.05434299189669062,
-        "raw_score": 0.6784270575108791,
+        "percentile": 0.27263262223447904,
+        "raw_score": 0.7181520853356071,
         "significant": true,
         "children": [
           {
             "trait_id": "facet_altruism",
             "name": "Altruism",
             "category": "personality",
-            "percentile": 0.8124735247668045,
-            "raw_score": 0.7362078417027063,
+            "percentile": 0.8008560686347619,
+            "raw_score": 0.7347216377990299,
             "significant": true
           },
           {
             "trait_id": "facet_cooperation",
             "name": "Cooperation",
             "category": "personality",
-            "percentile": 0.4762518108219746,
-            "raw_score": 0.5758005630573949,
+            "percentile": 0.7484475495732444,
+            "raw_score": 0.6197316678683105,
             "significant": true
           },
           {
             "trait_id": "facet_modesty",
             "name": "Modesty",
             "category": "personality",
-            "percentile": 0.35512632078238293,
-            "raw_score": 0.4287720198929487,
+            "percentile": 0.4829817770778636,
+            "raw_score": 0.4461240918525903,
             "significant": true
           },
           {
             "trait_id": "facet_morality",
             "name": "Uncompromising",
             "category": "personality",
-            "percentile": 0.4964436036372433,
-            "raw_score": 0.6253902781730734,
+            "percentile": 0.6990674307697461,
+            "raw_score": 0.6504277995468047,
             "significant": true
           },
           {
             "trait_id": "facet_sympathy",
             "name": "Sympathy",
             "category": "personality",
-            "percentile": 0.9382715313262261,
-            "raw_score": 0.722298407008313,
+            "percentile": 0.946821290237468,
+            "raw_score": 0.7251377956758772,
             "significant": true
           },
           {
             "trait_id": "facet_trust",
             "name": "Trust",
             "category": "personality",
-            "percentile": 0.6695787399518482,
-            "raw_score": 0.6038770821717804,
+            "percentile": 0.7928551596390818,
+            "raw_score": 0.6194338809536435,
             "significant": true
           }
         ]
@@ -1002,56 +1272,56 @@
         "trait_id": "big5_neuroticism",
         "name": "Emotional range",
         "category": "personality",
-        "percentile": 0.43082381742390663,
-        "raw_score": 0.4575414836627737,
+        "percentile": 0.6133998139564374,
+        "raw_score": 0.48361163284408715,
         "significant": true,
         "children": [
           {
             "trait_id": "facet_anger",
             "name": "Fiery",
             "category": "personality",
-            "percentile": 0.401259473217763,
-            "raw_score": 0.522039271976224,
+            "percentile": 0.27674088857971824,
+            "raw_score": 0.5033114721589471,
             "significant": true
           },
           {
             "trait_id": "facet_anxiety",
             "name": "Prone to worry",
             "category": "personality",
-            "percentile": 0.6595966496789185,
-            "raw_score": 0.622165604736971,
+            "percentile": 0.4921234679081003,
+            "raw_score": 0.5927653432198943,
             "significant": true
           },
           {
             "trait_id": "facet_depression",
             "name": "Melancholy",
             "category": "personality",
-            "percentile": 0.8274624195061313,
-            "raw_score": 0.5082417217746962,
+            "percentile": 0.5835148020129735,
+            "raw_score": 0.46179645764237487,
             "significant": true
           },
           {
             "trait_id": "facet_immoderation",
             "name": "Immoderation",
             "category": "personality",
-            "percentile": 0.23311511878907043,
-            "raw_score": 0.47258784272882165,
+            "percentile": 0.3422066595668144,
+            "raw_score": 0.48497058683382643,
             "significant": true
           },
           {
             "trait_id": "facet_self_consciousness",
             "name": "Self-consciousness",
             "category": "personality",
-            "percentile": 0.8419685331591141,
-            "raw_score": 0.5994697931496219,
+            "percentile": 0.5452227850430721,
+            "raw_score": 0.5526921481839764,
             "significant": true
           },
           {
             "trait_id": "facet_vulnerability",
             "name": "Susceptible to stress",
             "category": "personality",
-            "percentile": 0.6623855489309622,
-            "raw_score": 0.49431572628743425,
+            "percentile": 0.6585561431292712,
+            "raw_score": 0.49364951326432466,
             "significant": true
           }
         ]
@@ -1062,96 +1332,96 @@
         "trait_id": "need_challenge",
         "name": "Challenge",
         "category": "needs",
-        "percentile": 0.34145088004398483,
-        "raw_score": 0.7134634106891815,
+        "percentile": 0.34968207936894347,
+        "raw_score": 0.7144647749927604,
         "significant": true
       },
       {
         "trait_id": "need_closeness",
         "name": "Closeness",
         "category": "needs",
-        "percentile": 0.09859558641745442,
-        "raw_score": 0.7361203448944994,
+        "percentile": 0.06973906050226636,
+        "raw_score": 0.7277693834555624,
         "significant": true
       },
       {
         "trait_id": "need_curiosity",
         "name": "Curiosity",
         "category": "needs",
-        "percentile": 0.9689813908372091,
-        "raw_score": 0.8657623082502529,
+        "percentile": 0.9039349499159233,
+        "raw_score": 0.8509782282927298,
         "significant": true
       },
       {
         "trait_id": "need_excitement",
         "name": "Excitement",
         "category": "needs",
-        "percentile": 0.5348450097960139,
-        "raw_score": 0.6921518316113844,
+        "percentile": 0.21395790697245354,
+        "raw_score": 0.6222313898261859,
         "significant": true
       },
       {
         "trait_id": "need_harmony",
         "name": "Harmony",
         "category": "needs",
-        "percentile": 0.281341909190284,
-        "raw_score": 0.7892695638140386,
+        "percentile": 0.18967654381054616,
+        "raw_score": 0.7789026120035537,
         "significant": true
       },
       {
         "trait_id": "need_ideal",
         "name": "Ideal",
         "category": "needs",
-        "percentile": 0.5260766231334589,
-        "raw_score": 0.694162986349941,
+        "percentile": 0.45292459128399,
+        "raw_score": 0.6854338217796588,
         "significant": true
       },
       {
         "trait_id": "need_liberty",
         "name": "Liberty",
         "category": "needs",
-        "percentile": 0.6354095487089569,
-        "raw_score": 0.7494815322115698,
+        "percentile": 0.4899430085047158,
+        "raw_score": 0.7355671496041536,
         "significant": true
       },
       {
         "trait_id": "need_love",
         "name": "Love",
         "category": "needs",
-        "percentile": 0.2736930232064114,
-        "raw_score": 0.7393906254464243,
+        "percentile": 0.1847797458247447,
+        "raw_score": 0.725010116938064,
         "significant": true
       },
       {
         "trait_id": "need_practicality",
         "name": "Practicality",
         "category": "needs",
-        "percentile": 0.319737248848609,
-        "raw_score": 0.7176525382495603,
+        "percentile": 0.11755868622115906,
+        "raw_score": 0.7021214663229308,
         "significant": true
       },
       {
         "trait_id": "need_self_expression",
         "name": "Self-expression",
         "category": "needs",
-        "percentile": 0.5750747347202488,
-        "raw_score": 0.6815698697151242,
+        "percentile": 0.5720506733641548,
+        "raw_score": 0.6813038452036334,
         "significant": true
       },
       {
         "trait_id": "need_stability",
         "name": "Stability",
         "category": "needs",
-        "percentile": 0.21330558958802087,
-        "raw_score": 0.7091305293218029,
+        "percentile": 0.3691215081112016,
+        "raw_score": 0.7238063664944048,
         "significant": true
       },
       {
         "trait_id": "need_structure",
         "name": "Structure",
         "category": "needs",
-        "percentile": 0.32287047984054495,
-        "raw_score": 0.6836224780604542,
+        "percentile": 0.29821019396663173,
+        "raw_score": 0.6817292671279256,
         "significant": true
       }
     ],
@@ -1160,40 +1430,40 @@
         "trait_id": "value_conservation",
         "name": "Conservation",
         "category": "values",
-        "percentile": 0.07275972154031962,
-        "raw_score": 0.5998774828755379,
+        "percentile": 0.05190281982143102,
+        "raw_score": 0.5921678042665754,
         "significant": true
       },
       {
         "trait_id": "value_openness_to_change",
         "name": "Openness to change",
         "category": "values",
-        "percentile": 0.8291551382104304,
-        "raw_score": 0.8209334317504722,
+        "percentile": 0.8013459461197673,
+        "raw_score": 0.8169078959972402,
         "significant": true
       },
       {
         "trait_id": "value_hedonism",
         "name": "Hedonism",
         "category": "values",
-        "percentile": 0.1327121239186536,
-        "raw_score": 0.667029883127193,
+        "percentile": 0.08674522575344107,
+        "raw_score": 0.6512200470441871,
         "significant": true
       },
       {
         "trait_id": "value_self_enhancement",
         "name": "Self-enhancement",
         "category": "values",
-        "percentile": 0.35132318288576614,
-        "raw_score": 0.6895825411701053,
+        "percentile": 0.3554015755523122,
+        "raw_score": 0.6900639501520064,
         "significant": true
       },
       {
         "trait_id": "value_self_transcendence",
         "name": "Self-transcendence",
         "category": "values",
-        "percentile": 0.5029979766204534,
-        "raw_score": 0.833081175169391,
+        "percentile": 0.47123284043203234,
+        "raw_score": 0.8317832699759016,
         "significant": true
       }
     ],
@@ -1205,7 +1475,7 @@
           {
             "consumption_preference_id": "consumption_preferences_automobile_ownership_cost",
             "name": "Likely to be sensitive to ownership cost when buying automobiles",
-            "score": 0.5
+            "score": 1
           },
           {
             "consumption_preference_id": "consumption_preferences_automobile_safety",
@@ -1235,7 +1505,7 @@
           {
             "consumption_preference_id": "consumption_preferences_influence_utility",
             "name": "Likely to be influenced by product utility when making product purchases",
-            "score": 1
+            "score": 0
           },
           {
             "consumption_preference_id": "consumption_preferences_influence_online_ads",
@@ -1260,7 +1530,7 @@
           {
             "consumption_preference_id": "consumption_preferences_credit_card_payment",
             "name": "Likely to prefer using credit cards for shopping",
-            "score": 0
+            "score": 1
           }
         ]
       },
@@ -1271,7 +1541,7 @@
           {
             "consumption_preference_id": "consumption_preferences_eat_out",
             "name": "Likely to eat out frequently",
-            "score": 1
+            "score": 0
           },
           {
             "consumption_preference_id": "consumption_preferences_gym_membership",
@@ -1329,7 +1599,7 @@
           {
             "consumption_preference_id": "consumption_preferences_movie_musical",
             "name": "Likely to like musical movies",
-            "score": 1
+            "score": 0
           },
           {
             "consumption_preference_id": "consumption_preferences_movie_historical",
@@ -1375,7 +1645,7 @@
           {
             "consumption_preference_id": "consumption_preferences_music_country",
             "name": "Likely to like country music",
-            "score": 0
+            "score": 0.5
           },
           {
             "consumption_preference_id": "consumption_preferences_music_r_b",
@@ -1410,7 +1680,7 @@
           {
             "consumption_preference_id": "consumption_preferences_music_classical",
             "name": "Likely to like classical music",
-            "score": 0.5
+            "score": 1
           }
         ]
       },
@@ -1421,7 +1691,7 @@
           {
             "consumption_preference_id": "consumption_preferences_read_frequency",
             "name": "Likely to read often",
-            "score": 0
+            "score": 0.5
           },
           {
             "consumption_preference_id": "consumption_preferences_books_entertainment_magazines",
@@ -1436,7 +1706,7 @@
           {
             "consumption_preference_id": "consumption_preferences_books_financial_investing",
             "name": "Likely to read financial investment books",
-            "score": 0
+            "score": 1
           },
           {
             "consumption_preference_id": "consumption_preferences_books_autobiographies",
@@ -1452,7 +1722,7 @@
           {
             "consumption_preference_id": "consumption_preferences_volunteer",
             "name": "Likely to volunteer for social causes",
-            "score": 0
+            "score": 1
           }
         ]
       }

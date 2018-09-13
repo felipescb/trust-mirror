@@ -9,7 +9,7 @@ export default function(data, onEnd){
   const $wrapper = $('<div class="facets-wrapper f-h a-c"></div>');
   const facets = flatten(
     data.facets.map(big5 => 
-      big5.children.map(c => {
+      big5.facets.map(c => {
         c.category = big5.name 
         return c
       }
@@ -29,6 +29,7 @@ export default function(data, onEnd){
       const numb = $('.count', chosen);
       const id = numb.attr('id')
       const count = parseFloat(numb.text());
+      console.log(numb, numb.text())
       var countup = new CountUp(id, 0, count, 5, 3, { 
         separator: '', 
         useEasing: false,
@@ -44,9 +45,9 @@ export default function(data, onEnd){
   return $wrapper;
 
   function createFacet(facet, i) {
-    const { name, percentile, category } = facet;
+    const { name, score, category } = facet;
     const $facet = $(`<div class="facet invisible">
-      ${name}: <span class="count" id="f-${i}">${parseInt(percentile * 10000000)/100000}</span>%
+      ${name}: <span class="count" id="f-${i}">${parseInt(score * 10000000)/100000}</span>%
       <br>
       <span style="font-size: .8em">${category}</span>
     </div>`);

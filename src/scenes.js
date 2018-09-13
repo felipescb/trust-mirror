@@ -43,6 +43,8 @@ const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'med
 export default (data) => {
   const lang = data.lang;
 
+  console.log(data)
+
   const HELLO_0 = {
     type: 'media',
     src: '/assets/video/hello_compr.mp4',
@@ -189,7 +191,10 @@ export default (data) => {
   const END = {
     type: 'custom',
     scene: {
-      play: () => $('<div class="text-wrapper">' + thankYouFor + '</div>')
+      play: (data, onEnd) => {
+        onEnd(data);
+        $('<div class="text-wrapper">' + thankYouFor + '</div>')
+      }
     }
   };
 

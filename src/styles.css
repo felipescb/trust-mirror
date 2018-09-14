@@ -63,6 +63,7 @@ video, iframe{
     animation: left-right 2s linear infinite alternate;
     position: absolute;
     width: 20vw;
+    will-change: all;
 }
 @keyframes left-right{
     from{transform: translateX(-5%)}

@@ -15,6 +15,7 @@ export default function ballonsPlay(data, onEnd){
 
   const yPos = [], xPos = [], xStart = [];
 
+  // not very efficient, but prepare array of positions
   for (let i = 0; i < imgs.length; i++) {
     const spread = 85 / imgsCount;
     const sign = () => Math.random() > .5 ? 1 : -1;
@@ -44,7 +45,7 @@ export default function ballonsPlay(data, onEnd){
       });
       setTimeout(() => 
         balloon.animate({
-          left: end + '%',
+          left: Math.max(3, end) + '%',
           top: top + '%',
         }, Math.random() * minUpDuration + 2000, finish), getTime(i))
       player.append(balloon);

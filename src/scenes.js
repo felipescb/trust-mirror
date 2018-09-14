@@ -38,7 +38,8 @@ const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'med
 //   in: time in ms should it appear
 //   out: time in ms should it disappear
 // // if custom
-// play(data, onEnd): function returning a jQuery dom object
+// play(data, onEnd): function returning a jQuery dom object.
+//                    call onEnd to pass to next scene(effectively calls script.playNext)
 
 export default (data) => {
   const lang = data.lang;

@@ -15,8 +15,8 @@ import consumptionPlay from './scenes/ConsumptionPlay'
 
 const i18n = {
   thankTrust: {
-    en: 'Thank you for trusting us.',
-    fr: 'Merci pour votre confiance en nous.',
+    EN: 'Thank you for trusting us.',
+    FR: 'Merci pour votre confiance en nous.',
   },
   goodbye: {
     thankYou: 'Thank you.',
@@ -25,7 +25,7 @@ const i18n = {
 }
 
 const audioExtension = 'mp3'
-const pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_main_audio/';
+var pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/EN/cached_main_audio/';
 const pather = (fileName) => `${pathPrefix}${fileName}.${audioExtension}`
 const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension, attrs })
 
@@ -42,10 +42,13 @@ const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'med
 //                    call onEnd to pass to next scene(effectively calls script.playNext)
 
 export default (data) => {
-  const lang = data.lang;
+  const lang = data.lang.toUpperCase();
 
-  console.log(data)
-
+  //ça çe tree horrible
+  if (lang == "FR") {
+    pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/FR/cached_main_audio/';
+  }
+  
   const HELLO_0 = {
     type: 'media',
     src: '/assets/video/hello_compr.mp4',
@@ -129,8 +132,8 @@ export default (data) => {
     const fileName = `${trait.id.replace('facet_', '')}_${trait.pole}`.toUpperCase();
     return {
       type: 'media',
-      src: '/assets/CACHED_CONTENT/CACHED_ANIMATIONS/' + fileName + '.mp4',
-      audioSrc: '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_facets_audio/' + fileName + '.' + audioExtension
+      src: '/assets/CACHED_CONTENT/CACHED_ANIMATIONS/'+ lang + '/' + fileName + '.mp4',
+      audioSrc: '/assets/CACHED_CONTENT/CACHED_AUDIO/' + lang + '/cached_facets_audio/' + fileName + '.' + audioExtension
     }
   });
   
@@ -200,21 +203,21 @@ export default (data) => {
   };
 
   return [
-    // HELLO_0,
-    // INTRO_1,
-    // INTRO_1a,
-    // LIKES_2,
-    // createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'), // => video + audio
+    HELLO_0,
+    INTRO_1,
+    INTRO_1a,
+    LIKES_2,
+    createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'), // => video + audio
     BALLOONS_4,
-    // ASSESSMENT_5,
-    // ...createBIG5('positive'), // 6
-    // COME_CLOSER_7,
-    // ...createBIG5('negative'), // 8
-    // PURGATORY_9,
-    // CONSUMPTION_PREFS_10,
-    // createAudioScene('11_LEARNING_TO_SEE'),
-    // FACETS_12,
-    // GOODBYE_13,
-    // END,
+    ASSESSMENT_5,
+    ...createBIG5('positive'), // 6
+    COME_CLOSER_7,
+    ...createBIG5('negative'), // 8
+    PURGATORY_9,
+    CONSUMPTION_PREFS_10,
+    createAudioScene('11_LEARNING_TO_SEE'),
+    FACETS_12,
+    GOODBYE_13,
+    END,
   ]
 }

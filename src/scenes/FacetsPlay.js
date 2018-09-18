@@ -11,7 +11,7 @@ export default function(data, onEnd){
   const facets = flatten(
     data.facets.map(big5 => 
       big5.facets.map(c => {
-        c.category = big5.name 
+        c.category = ((lang == "FR") ? big5.fr_name : big5.name);
         return c
       }
       )
@@ -54,7 +54,7 @@ export default function(data, onEnd){
     } else {
       name = facet.name;
     }
-    
+
     const $facet = $(`<div class="facet invisible">
       ${name}: <span class="count" id="f-${i}">${parseInt(score * 10000000)/100000}</span>%
       <br>

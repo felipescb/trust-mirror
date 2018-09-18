@@ -14,6 +14,10 @@ import facetsPlay from './scenes/FacetsPlay'
 import consumptionPlay from './scenes/ConsumptionPlay'
 
 const i18n = {
+  hello : {
+    EN: 'Hello',
+    FR: 'Bonjour',  
+  },
   thankTrust: {
     EN: 'Thank you for trusting us.',
     FR: 'Merci pour votre confiance en nous.',
@@ -59,10 +63,10 @@ export default (data) => {
           const { identifier } = data
           const firstName = identifier.split(' ')[0];
           const tooMany = firstName.length >= 13;
-          const hello = tooMany ? '<h1 style="top:15%;font-size:2em; " class="floating">Hello</h1>' : '';
+          const hello = tooMany ? '<h1 style="top:15%;font-size:2em; " class="floating">{{$i18n.hello[lang]}}</h1>' : '';
           return `<div style="color:#111"> \
             ${hello}
-            <div style="color:#111 ;bottom:71.8%;top:21.7%; font-size: 1.5em;" class="floating flex-center">${tooMany ? '' : 'Hello'} ${firstName} \
+            <div style="color:#111 ;bottom:71.8%;top:21.7%; font-size: 1.5em;" class="floating flex-center">${tooMany ? '' : i18n.hello[lang]} ${firstName} \
           </div>`
         },
         in: 2800,

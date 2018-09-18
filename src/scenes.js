@@ -25,6 +25,14 @@ const i18n = {
   goodbye: {
     thankYou: 'Thank you.',
     youAre: 'You are the content.',
+  },
+  thankYou: {
+    EN : 'Thank you.',
+    FR : 'Merci beaucoup'
+  },
+  youAre : {
+    EN: 'You are the content.' ,
+    FR: 'Vous êtes le contenu.'
   }
 }
 
@@ -94,13 +102,13 @@ export default (data) => {
     audioSrc: pather('13_OUTRO'),
     attrs: [
       {
-        domGenerator: () => `<div class="floating flex-center" style="font-size:2.5rem;top:26.5%;bottom:67%;color:#111">${i18n.goodbye.thankYou}.</div>`,
+        domGenerator: () => `<div class="floating flex-center" style="font-size:2.5rem;top:26.5%;bottom:67%;color:#111">${i18n.thankYou[lang]}.</div>`,
         in: 0,
         out: 4900
       },
       {
         domGenerator: () => `
-          <div class="floating flex-center" style="font-size:1.5rem;top:36.5%;bottom:57%;color:#111">${i18n.goodbye.youAre}</div>
+          <div class="floating flex-center" style="font-size:1.5rem;top:36.5%;bottom:57%;color:#111">${i18n.youAre[lang]}</div>
         `,
         in: 0,
         out: 5200

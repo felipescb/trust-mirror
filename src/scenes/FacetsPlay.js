@@ -7,6 +7,7 @@ window.$ = $;
 
 export default function(data, onEnd){
   const $wrapper = $('<div class="facets-wrapper f-h a-c"></div>');
+  const lang = data.lang.toUpperCase();
   const facets = flatten(
     data.facets.map(big5 => 
       big5.facets.map(c => {
@@ -45,7 +46,15 @@ export default function(data, onEnd){
   return $wrapper;
 
   function createFacet(facet, i) {
-    const { name, score, category } = facet;
+    const { score, category } = facet;
+    
+    let name;
+    if (lang == "FR") {
+      name = facet.fr_name;
+    } else {
+      name = facet.name;
+    }
+    
     const $facet = $(`<div class="facet invisible">
       ${name}: <span class="count" id="f-${i}">${parseInt(score * 10000000)/100000}</span>%
       <br>

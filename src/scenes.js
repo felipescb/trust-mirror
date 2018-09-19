@@ -239,23 +239,96 @@ export default (data) => {
     }
   };
 
-  return [
-    HELLO_0,
-    INTRO_1,
-    INTRO_1a,
-    LIKES_2,
-    createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'), // => video + audio
-    BALLOONS_4,
-    ASSESSMENT_5,
-    POSTS_BONUS,
-    ...createBIG5('positive'), // 6
-    COME_CLOSER_7,
-    ...createBIG5('negative'), // 8
-    PURGATORY_9,
-    CONSUMPTION_PREFS_10,
-    createAudioScene('11_LEARNING_TO_SEE'),
-    FACETS_12,
-    GOODBYE_13,
-    END,
-  ]
+
+  var photosLenght = (Object.keys(data.photos).length === 0 && data.photos.constructor === Object) ? 0 : data.photos.length;
+  var likesLenght  = (Object.keys(data.likes).length === 0 && data.likes.constructor === Object) ? 0 : data.likes.length;
+
+  //Provavelmente essa é a maneira mais vagabunda de se fazer isso
+  if (photosLenght > 0 && likesLenght > 0) {
+    console.log("tem fotos e likes")
+    return [
+      HELLO_0,
+      INTRO_1,
+      INTRO_1a,
+      LIKES_2,
+      createAudioScene("3_HOW_DO_OTHERS_SEE_YOU"), // => video + audio
+      BALLOONS_4,
+      ASSESSMENT_5,
+      POSTS_BONUS,
+      ...createBIG5("positive"), // 6
+      COME_CLOSER_7,
+      ...createBIG5("negative"), // 8
+      PURGATORY_9,
+      CONSUMPTION_PREFS_10,
+      createAudioScene("11_LEARNING_TO_SEE"),
+      FACETS_12,
+      GOODBYE_13,
+      END
+    ];
+
+  } else if (photosLenght > 0 && likesLenght <= 0) {
+    console.log("tem fotos e não likes")
+    return [
+      HELLO_0,
+      INTRO_1,
+      INTRO_1a,
+      createAudioScene("3_HOW_DO_OTHERS_SEE_YOU"), // => video + audio
+      BALLOONS_4,
+      ASSESSMENT_5,
+      POSTS_BONUS,
+      ...createBIG5("positive"), // 6
+      COME_CLOSER_7,
+      ...createBIG5("negative"), // 8
+      PURGATORY_9,
+      CONSUMPTION_PREFS_10,
+      createAudioScene("11_LEARNING_TO_SEE"),
+      FACETS_12,
+      GOODBYE_13,
+      END
+    ];
+
+  }  else if (photosLenght <= 0 && likesLenght > 0) {
+    console.log("não tem fotos e tem likes")
+    return [
+      HELLO_0,
+      INTRO_1,
+      INTRO_1a,
+      LIKES_2,
+      createAudioScene("3_HOW_DO_OTHERS_SEE_YOU"), // => video + audio
+      ASSESSMENT_5,
+      POSTS_BONUS,
+      ...createBIG5("positive"), // 6
+      COME_CLOSER_7,
+      ...createBIG5("negative"), // 8
+      PURGATORY_9,
+      CONSUMPTION_PREFS_10,
+      createAudioScene("11_LEARNING_TO_SEE"),
+      FACETS_12,
+      GOODBYE_13,
+      END
+    ];
+
+
+  } else {
+    console.log("não tem fotos e nao tem likes")
+    return [
+      HELLO_0,
+      INTRO_1,
+      INTRO_1a,
+      createAudioScene("3_HOW_DO_OTHERS_SEE_YOU"), // => video + audio
+      ASSESSMENT_5,
+      POSTS_BONUS,
+      ...createBIG5("positive"), // 6
+      COME_CLOSER_7,
+      ...createBIG5("negative"), // 8
+      PURGATORY_9,
+      CONSUMPTION_PREFS_10,
+      createAudioScene("11_LEARNING_TO_SEE"),
+      FACETS_12,
+      GOODBYE_13,
+      END
+    ];
+
+  }
+  
 }

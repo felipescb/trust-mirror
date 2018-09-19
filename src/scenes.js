@@ -14,20 +14,27 @@ import facetsPlay from './scenes/FacetsPlay'
 import consumptionPlay from './scenes/ConsumptionPlay'
 
 const i18n = {
+  hello : {
+    EN: 'Hello',
+    FR: 'Bonjour',  
+  },
   thankTrust: {
-    en: 'Thank you for trusting us.',
-    fr: 'Merci pour votre confiance en nous.',
+    EN: 'Thank you for trusting us.',
+    FR: 'Merci pour votre confiance en nous.',
   },
   goodbye: {
     thankYou: 'Thank you.',
     youAre: 'You are the content.',
+  },
+  thankYou: {
+    EN : 'Thank you.',
+    FR : 'Merci beaucoup'
+  },
+  youAre : {
+    EN: 'You are the content.' ,
+    FR: 'Vous êtes le contenu.'
   }
 }
-
-const audioExtension = 'mp3'
-const pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_main_audio/';
-const pather = (fileName) => `${pathPrefix}${fileName}.${audioExtension}`
-const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension, attrs })
 
 // scenes are expected in the following format:
 // type: 'media' or 'custom'
@@ -42,10 +49,21 @@ const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'med
 //                    call onEnd to pass to next scene(effectively calls script.playNext)
 
 export default (data) => {
-  const lang = data.lang;
+  const lang = data.lang.toUpperCase();
 
-  console.log(data)
+  //ça çe tree horrible
+  let pathPrefix;
+  if (lang == "FR") {
+    pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/FR/cached_main_audio/';
+  } else {
+    pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/EN/cached_main_audio/';
+  }
 
+  const audioExtension = 'mp3'
+  const pather = (fileName) => `${pathPrefix}${fileName}.${audioExtension}`
+  const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension, attrs })
+
+  
   const HELLO_0 = {
     type: 'media',
     src: '/assets/video/hello_compr.mp4',
@@ -56,10 +74,10 @@ export default (data) => {
           const { identifier } = data
           const firstName = identifier.split(' ')[0];
           const tooMany = firstName.length >= 13;
-          const hello = tooMany ? '<h1 style="top:15%;font-size:2em; " class="floating">Hello</h1>' : '';
+          const hello = tooMany ? '<h1 style="top:15%;font-size:2em; " class="floating">{{$i18n.hello[lang]}}</h1>' : '';
           return `<div style="color:#111"> \
             ${hello}
-            <div style="color:#111 ;bottom:71.8%;top:21.7%; font-size: 1.5em;" class="floating flex-center">${tooMany ? '' : 'Hello'} ${firstName} \
+            <div style="color:#111 ;bottom:71.8%;top:21.7%; font-size: 1.5em;" class="floating flex-center">${tooMany ? '' : i18n.hello[lang]} ${firstName} \
           </div>`
         },
         in: 2800,
@@ -87,13 +105,13 @@ export default (data) => {
     audioSrc: pather('13_OUTRO'),
     attrs: [
       {
-        domGenerator: () => `<div class="floating flex-center" style="font-size:2.5rem;top:26.5%;bottom:67%;color:#111">${i18n.goodbye.thankYou}.</div>`,
+        domGenerator: () => `<div class="floating flex-center" style="font-size:2.5rem;top:26.5%;bottom:67%;color:#111">${i18n.thankYou[lang]}.</div>`,
         in: 0,
         out: 4900
       },
       {
         domGenerator: () => `
-          <div class="floating flex-center" style="font-size:1.5rem;top:36.5%;bottom:57%;color:#111">${i18n.goodbye.youAre}</div>
+          <div class="floating flex-center" style="font-size:1.5rem;top:36.5%;bottom:57%;color:#111">${i18n.youAre[lang]}</div>
         `,
         in: 0,
         out: 5200
@@ -129,8 +147,8 @@ export default (data) => {
     const fileName = `${trait.id.replace('facet_', '')}_${trait.pole}`.toUpperCase();
     return {
       type: 'media',
-      src: '/assets/CACHED_CONTENT/CACHED_ANIMATIONS/' + fileName + '.mp4',
-      audioSrc: '/assets/CACHED_CONTENT/CACHED_AUDIO/cached_facets_audio/' + fileName + '.' + audioExtension
+      src: '/assets/CACHED_CONTENT/CACHED_ANIMATIONS/'+ lang + '/' + fileName + '.mp4',
+      audioSrc: '/assets/CACHED_CONTENT/CACHED_AUDIO/' + lang + '/cached_facets_audio/' + fileName + '.' + audioExtension
     }
   });
   

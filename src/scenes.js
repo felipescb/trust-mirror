@@ -36,11 +36,6 @@ const i18n = {
   }
 }
 
-const audioExtension = 'mp3'
-var pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/EN/cached_main_audio/';
-const pather = (fileName) => `${pathPrefix}${fileName}.${audioExtension}`
-const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension, attrs })
-
 // scenes are expected in the following format:
 // type: 'media' or 'custom'
 // src: 'url of the video'
@@ -57,9 +52,17 @@ export default (data) => {
   const lang = data.lang.toUpperCase();
 
   //ça çe tree horrible
+  let pathPrefix;
   if (lang == "FR") {
     pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/FR/cached_main_audio/';
+  } else {
+    pathPrefix = '/assets/CACHED_CONTENT/CACHED_AUDIO/EN/cached_main_audio/';
   }
+
+  const audioExtension = 'mp3'
+  const pather = (fileName) => `${pathPrefix}${fileName}.${audioExtension}`
+  const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension, attrs })
+
   
   const HELLO_0 = {
     type: 'media',
@@ -215,17 +218,17 @@ export default (data) => {
   };
 
   return [
-    HELLO_0,
-    INTRO_1,
-    INTRO_1a,
-    LIKES_2,
-    createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'), // => video + audio
-    BALLOONS_4,
-    ASSESSMENT_5,
-    ...createBIG5('positive'), // 6
-    COME_CLOSER_7,
-    ...createBIG5('negative'), // 8
-    PURGATORY_9,
+    // HELLO_0,
+    // INTRO_1,
+    // INTRO_1a,
+    // LIKES_2,
+    // createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'), // => video + audio
+    // BALLOONS_4,
+    // ASSESSMENT_5,
+    // ...createBIG5('positive'), // 6
+    // COME_CLOSER_7,
+    // ...createBIG5('negative'), // 8
+    // PURGATORY_9,
     CONSUMPTION_PREFS_10,
     createAudioScene('11_LEARNING_TO_SEE'),
     FACETS_12,

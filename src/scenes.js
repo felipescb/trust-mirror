@@ -11,6 +11,7 @@
 import ballonsPlay from './scenes/BalloonSceneGenerator'
 import stampsPlay from './scenes/Stamps'
 import facetsPlay from './scenes/FacetsPlay'
+import postsPlay from './scenes/Posts'
 import consumptionPlay from './scenes/ConsumptionPlay'
 
 const i18n = {
@@ -143,6 +144,18 @@ export default (data) => {
     },
   }
 
+  const POSTS_BONUS = {
+    type: 'custom',
+    scene: {
+      play: postsPlay,
+      audioSrc: pather('5_ASSESSMENT'),
+      background: {
+        color: '#3b5998',
+        from: 'left'
+      }
+    },
+  }
+
   const createBIG5 = (posNeg) => data.cached.filter(c => c.type === posNeg).map(trait => {
     const fileName = `${trait.id.replace('facet_', '')}_${trait.pole}`.toUpperCase();
     return {
@@ -218,6 +231,7 @@ export default (data) => {
   };
 
   return [
+  POSTS_BONUS,
     HELLO_0,
     INTRO_1,
     INTRO_1a,
@@ -225,6 +239,7 @@ export default (data) => {
     createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'), // => video + audio
     BALLOONS_4,
     ASSESSMENT_5,
+    //POSTS_BONUS,
     ...createBIG5('positive'), // 6
     COME_CLOSER_7,
     ...createBIG5('negative'), // 8

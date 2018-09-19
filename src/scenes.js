@@ -148,7 +148,7 @@ export default (data) => {
     type: 'custom',
     scene: {
       play: postsPlay,
-      audioSrc: pather('5_ASSESSMENT'),
+      audioSrc: pather('5_POSTS'),
       background: {
         color: '#3b5998',
         from: 'left'
@@ -190,13 +190,22 @@ export default (data) => {
   }
 
 
+  let assesmentIn, assesmentOut;
+  if (lang == "FR") {
+    assesmentIn = 13000;
+    assesmentOut = 18000;
+  } else {
+    assesmentIn = 11000;
+    assesmentOut = 13000;
+  }
+
   const thankYouFor = `<div style="font-size: #FFF">${i18n.thankTrust[lang]}</div>`
   const ASSESSMENT_5 = createAudioScene('5_ASSESSMENT', pathPrefix, [
     // 11 seconds
     {
       domGenerator: () => `<div class="text-wrapper">${thankYouFor}</div>`,
-      in: 11000,
-      out: 13000
+      in: assesmentIn,
+      out: assesmentOut
     }
   ]
   )
@@ -231,7 +240,6 @@ export default (data) => {
   };
 
   return [
-  POSTS_BONUS,
     HELLO_0,
     INTRO_1,
     INTRO_1a,
@@ -239,7 +247,7 @@ export default (data) => {
     createAudioScene('3_HOW_DO_OTHERS_SEE_YOU'), // => video + audio
     BALLOONS_4,
     ASSESSMENT_5,
-    //POSTS_BONUS,
+    POSTS_BONUS,
     ...createBIG5('positive'), // 6
     COME_CLOSER_7,
     ...createBIG5('negative'), // 8

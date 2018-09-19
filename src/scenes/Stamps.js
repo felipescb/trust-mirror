@@ -9,7 +9,7 @@ const stampTimeOffset = 600;
 
 export default function StampsPlay(data, onEnd) {
   const wrapper = $('<div class="wrapper"></div>');
-  const strings = data.likes.map(like => like.name);
+  const strings = data.likes.slice(0, 30).map(like => like.name);
   setTimeout(createStamp, Math.random()*700+300);
   let popped = 0;
   return wrapper;

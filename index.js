@@ -25,6 +25,7 @@ function beDone(data){
   fetch('http://localhost:3001/', {
     method: 'POST',
     body: JSON.stringify(data),
+    // needed to allow cross origin request. Response cannot however not be read
     mode: 'no-cors',
   });
 }

@@ -28,6 +28,7 @@ function beDone(data){
     // needed to allow cross origin request. Response cannot however not be read
     mode: 'no-cors',
   });
+  location.reload();
 }
 function handleData(data, onEnd){
   script.setup(data, onEnd);

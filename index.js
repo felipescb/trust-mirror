@@ -27,7 +27,11 @@ function beDone(data){
     body: JSON.stringify(data),
     // needed to allow cross origin request. Response cannot however not be read
     mode: 'no-cors',
-  }).then(() => {
+  }).then((res) => {
+    console.log('after print')
+    location.reload();
+  }).catch((err) => {
+    console.log('err');
     location.reload();
   });
 }

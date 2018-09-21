@@ -29,8 +29,12 @@ function beDone(data){
     mode: 'no-cors',
   });
   location.reload();
+  globalAudio.stop();
 }
+
 function handleData(data, onEnd){
+  var globalAudio = new Audio('/assets/audio/trust.mp3');
+  globalAudio.play();
   script.setup(data, onEnd);
   script.start();
 }

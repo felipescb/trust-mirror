@@ -6,6 +6,7 @@ const DEV = 1;
 const script = new Script();
 const url = "http://app.cached.id/";
 var socket = io.connect(url);
+var globalAudio = new Audio('/assets/audio/trust.mp3');
 
 if(DEV){
   const data = require('./src/sample.json');
@@ -27,13 +28,13 @@ function beDone(data){
     body: JSON.stringify(data),
     // needed to allow cross origin request. Response cannot however not be read
     mode: 'no-cors',
+  }).then(() => {
+    location.reload();
+    globalAudio.pause();
   });
-  location.reload();
-  globalAudio.stop();
 }
 
 function handleData(data, onEnd){
-  var globalAudio = new Audio('/assets/audio/trust.mp3');
   globalAudio.play();
   script.setup(data, onEnd);
   script.start();

@@ -11,7 +11,7 @@ const stampTimeOffset = 600;
 export default function PostsPLay(data, onEnd) {
   const wrapper = $('<div class="wrapper"></div>');
   shuffleArray(data.feed);
-  const strings = data.feed.slice(1, 45);
+  const strings = data.feed.slice(1, 80);
   setTimeout(createStamp, Math.random()*700+300);
   let popped = 0;
   var counter = 0;

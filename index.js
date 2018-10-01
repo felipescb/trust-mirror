@@ -7,16 +7,24 @@ const script = new Script();
 const url = "http://app.cached.id/";
 var socket = io.connect(url);
 
-if(DEV){
-  const data = require('./src/sample.json');
-  // beDone(data)
-  handleData(data, beDone)
-  document.onload = () => {
-    script.setup(data, beDone);
-    script.start();
-  }
-}
-else{
+if(DEV) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const sesionParam = urlParams.get('s');
+    const dataLocale = 'http://localhost:3000/to_mirror/' + sesionParam + '.json';
+
+    fetch(dataLocale, {method: 'GET',})
+        .then((j) => {
+            return j.json();
+        })
+        .then((data) => {
+            console.log(data);
+            handleData(data, beDone)
+            document.onload = () => {
+                script.setup(data, beDone);
+                script.start();
+            }
+        })
+} else{
   socket.on("go", ({ data }) => handleData(data, beDone));
 }
 

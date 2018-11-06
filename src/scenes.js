@@ -67,7 +67,7 @@ export default (data) => {
 
   const PRE = createAudioScene('0_PRE', pathPrefix, [
       {
-        domGenerator: () => {},
+        domGenerator: () => { console.log('PRE SCENE'); },
         in: 0,
         out: 1
       }

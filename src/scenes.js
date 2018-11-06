@@ -69,7 +69,7 @@ export default (data) => {
       {
         domGenerator: () => { console.log('PRE SCENE'); },
         in: 0,
-        out: 7000
+        out: 1000
       }
     ]
   )

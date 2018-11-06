@@ -69,7 +69,7 @@ export default (data) => {
       {
         domGenerator: () => {},
         in: 0,
-        out: 1
+        out: 1000
       }
     ]
   )

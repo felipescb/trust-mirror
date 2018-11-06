@@ -21,7 +21,7 @@ const i18n = {
   },
   thankTrust: {
     EN: 'Thank you for trusting us.',
-    FR: 'Merci pour votre confiance en nous.',
+    FR: 'Merci de nous faire confiance.',
   },
   goodbye: {
     thankYou: 'Thank you.',

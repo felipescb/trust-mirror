@@ -69,7 +69,7 @@ export default (data) => {
       {
         domGenerator: () => {},
         in: 0,
-        out: 1000
+        out: 1
       }
     ]
   )
@@ -90,7 +90,7 @@ export default (data) => {
             <div style="color:#111 ;bottom:71.8%;top:21.7%; font-size: 1.5em;" class="floating flex-center">${tooMany ? '' : i18n.hello[lang]} ${firstName} \
           </div>`
         },
-        in: 2800,
+        in: 2600,
       }
     ]
   }

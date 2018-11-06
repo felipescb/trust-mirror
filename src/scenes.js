@@ -64,6 +64,15 @@ export default (data) => {
   const pather = (fileName) => `${pathPrefix}${fileName}.${audioExtension}`
   const createAudioScene = (audioSrc, prefix = pathPrefix, attrs) => ({ type: 'media', audioSrc: prefix + audioSrc + '.' + audioExtension, attrs })
 
+
+  const PRE = createAudioScene('0_PRE', pathPrefix, [
+      {
+        domGenerator: () => {},
+        in: 0,
+        out: 1
+      }
+    ]
+  )
   
   const HELLO_0 = {
     type: 'media',
@@ -85,6 +94,7 @@ export default (data) => {
       }
     ]
   }
+
   const INTRO_1 = createAudioScene('1_INTRO', pathPrefix, [
       {
         domGenerator: () => `<div class="text-wrapper"><div class="logo"> <img src="/assets/images/logo.png"> </div>${thankYouFor}</div>`,
@@ -247,6 +257,7 @@ export default (data) => {
   if (photosLenght > 0 && likesLenght > 0) {
     console.log("tem fotos e likes")
     return [
+      PRE,
       HELLO_0,
       INTRO_1,
       INTRO_1a,
@@ -269,6 +280,7 @@ export default (data) => {
   } else if (photosLenght > 0 && likesLenght <= 0) {
     console.log("tem fotos e não likes")
     return [
+      PRE,
       HELLO_0,
       INTRO_1,
       INTRO_1a,
@@ -290,6 +302,7 @@ export default (data) => {
   }  else if (photosLenght <= 0 && likesLenght > 0) {
     console.log("não tem fotos e tem likes")
     return [
+      PRE,
       HELLO_0,
       INTRO_1,
       INTRO_1a,
@@ -312,6 +325,7 @@ export default (data) => {
   } else {
     console.log("não tem fotos e nao tem likes")
     return [
+      PRE,
       HELLO_0,
       INTRO_1,
       INTRO_1a,

@@ -257,7 +257,7 @@ export default (data) => {
   if (photosLenght > 0 && likesLenght > 0) {
     console.log("tem fotos e likes")
     return [
-      PRE,
+      // PRE,
       HELLO_0,
       INTRO_1,
       INTRO_1a,
@@ -280,7 +280,7 @@ export default (data) => {
   } else if (photosLenght > 0 && likesLenght <= 0) {
     console.log("tem fotos e não likes")
     return [
-      PRE,
+      // PRE,
       HELLO_0,
       INTRO_1,
       INTRO_1a,
@@ -302,7 +302,7 @@ export default (data) => {
   }  else if (photosLenght <= 0 && likesLenght > 0) {
     console.log("não tem fotos e tem likes")
     return [
-      PRE,
+      // PRE,
       HELLO_0,
       INTRO_1,
       INTRO_1a,
@@ -325,7 +325,7 @@ export default (data) => {
   } else {
     console.log("não tem fotos e nao tem likes")
     return [
-      PRE,
+      // PRE,
       HELLO_0,
       INTRO_1,
       INTRO_1a,

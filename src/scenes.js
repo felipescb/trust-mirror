@@ -100,7 +100,7 @@ export default (data) => {
       {
         domGenerator: () => `<div class="text-wrapper"><div class="logo"> <img src="/assets/images/logo.png"> </div>${thankYouFor}</div>`,
         in: 1000,
-        out: 3000
+        out: 4000
       }
     ]
   )
@@ -305,17 +305,8 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
-
-
-
-      INTRO_1,
-      INTRO_1a,
-      LIKES_2,
-      createAudioScene("3_HOW_DO_OTHERS_SEE_YOU"), // => video + audio
-      BALLOONS_4,
-      ASSESSMENT_5,
-      POSTS_BONUS,
-      ...createBIG5("positive"), // 6
+      ...createBIG5("positive"), // 9
+      
       COME_CLOSER_7,
       ...createBIG5("negative"), // 8
       PURGATORY_9,
@@ -337,14 +328,8 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
+      ...createBIG5("positive"), // 9
 
-      INTRO_1,
-      INTRO_1a,
-      createAudioScene("3_HOW_DO_OTHERS_SEE_YOU"), // => video + audio
-      BALLOONS_4,
-      ASSESSMENT_5,
-      POSTS_BONUS,
-      ...createBIG5("positive"), // 6
       COME_CLOSER_7,
       ...createBIG5("negative"), // 8
       PURGATORY_9,
@@ -366,14 +351,8 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
+      ...createBIG5("positive"), // 9
 
-      INTRO_1,
-      INTRO_1a,
-      LIKES_2,
-      createAudioScene("3_HOW_DO_OTHERS_SEE_YOU"), // => video + audio
-      ASSESSMENT_5,
-      POSTS_BONUS,
-      ...createBIG5("positive"), // 6
       COME_CLOSER_7,
       ...createBIG5("negative"), // 8
       PURGATORY_9,
@@ -395,13 +374,8 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
-
-      INTRO_1,
-      INTRO_1a,
-      createAudioScene("3_HOW_DO_OTHERS_SEE_YOU"), // => video + audio
-      ASSESSMENT_5,
-      POSTS_BONUS,
-      ...createBIG5("positive"), // 6
+      ...createBIG5("positive"), // 9
+      
       COME_CLOSER_7,
       ...createBIG5("negative"), // 8
       PURGATORY_9,

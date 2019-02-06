@@ -74,10 +74,10 @@ export default (data) => {
     ]
   )
   
-  const HELLO_0 = {
+  const HELLO_1 = {
     type: 'media',
     src: '/assets/video/hello_compr.mp4',
-    audioSrc: pather('0_HELLO'),
+    audioSrc: pather('1_Hello'),
     attrs: [
       {
         domGenerator: () => {
@@ -94,6 +94,57 @@ export default (data) => {
       }
     ]
   }
+
+  //Thanks For Trusting Us
+  const TFTU_2 = createAudioScene('2_Welcome_Thank_You', pathPrefix, [
+      {
+        domGenerator: () => `<div class="text-wrapper"><div class="logo"> <img src="/assets/images/logo.png"> </div>${thankYouFor}</div>`,
+        in: 1000,
+        out: 3000
+      }
+    ]
+  )
+
+  const MAKE_CONFORTABLE_3 = createAudioScene("3_Please_Make");
+
+  const BALLOONS_4 = {
+    type: 'custom',
+    scene: {
+      background: {
+        color: '#B72CFF',
+        from: 'top'
+      },
+      play: ballonsPlay,
+      audioSrc: pather('4_How_do_you_think_others_see_you'),
+      endOnAudio: false,
+    },
+  }
+  
+  const LIKES_5 = {
+    type: 'custom',
+    scene: {
+      play: stampsPlay,
+      audioSrc: pather('5_How_Important_Are_These_Things'),
+      background: {
+        color: '#FE01CD',
+        from: 'left'
+      }
+    },
+  }
+
+  const TROUGHT_SESSION_6 = createAudioScene("6_Through_Todays_Session");
+  
+  const TFTU_7 = createAudioScene('7_Thank_You_For_Trusting_Us', pathPrefix, [
+      {
+        domGenerator: () => `<div class="text-wrapper">${thankYouFor}</div>`,
+        in: 1000,
+        out: 3000
+      }
+    ]
+  )
+
+  const HAPPINESS_PRIORITY_8 = createAudioScene("8_Your_Happiness_Is_Our_Priority");
+
 
   const INTRO_1 = createAudioScene('1_INTRO', pathPrefix, [
       {
@@ -129,19 +180,7 @@ export default (data) => {
       }
     ]
   }
-  const BALLOONS_4 = {
-    type: 'custom',
-    scene: {
-      background: {
-        color: '#B72CFF',
-        from: 'top'
-      },
-      play: ballonsPlay,
-      audioSrc: pather('2_HOW_DO_YOU_SEE_YOURSELF'),
-      endOnAudio: false,
-    },
-  }
-
+  
   const LIKES_2 = {
     type: 'custom',
     scene: {
@@ -258,7 +297,17 @@ export default (data) => {
     console.log("tem fotos e likes")
     return [
       // PRE,
-      HELLO_0,
+      HELLO_1,
+      TFTU_2,
+      MAKE_CONFORTABLE_3,
+      BALLOONS_4,
+      LIKES_5,
+      TROUGHT_SESSION_6,
+      TFTU_7,
+      HAPPINESS_PRIORITY_8,
+
+
+
       INTRO_1,
       INTRO_1a,
       LIKES_2,
@@ -281,7 +330,14 @@ export default (data) => {
     console.log("tem fotos e não likes")
     return [
       // PRE,
-      HELLO_0,
+      HELLO_1,
+      TFTU_2,
+      MAKE_CONFORTABLE_3,
+      BALLOONS_4,
+      TROUGHT_SESSION_6,
+      TFTU_7,
+      HAPPINESS_PRIORITY_8,
+
       INTRO_1,
       INTRO_1a,
       createAudioScene("3_HOW_DO_OTHERS_SEE_YOU"), // => video + audio
@@ -303,7 +359,14 @@ export default (data) => {
     console.log("não tem fotos e tem likes")
     return [
       // PRE,
-      HELLO_0,
+      HELLO_1,
+      TFTU_2,
+      MAKE_CONFORTABLE_3,
+      LIKES_5,
+      TROUGHT_SESSION_6,
+      TFTU_7,
+      HAPPINESS_PRIORITY_8,
+
       INTRO_1,
       INTRO_1a,
       LIKES_2,
@@ -326,7 +389,13 @@ export default (data) => {
     console.log("não tem fotos e nao tem likes")
     return [
       // PRE,
-      HELLO_0,
+      HELLO_1,
+      TFTU_2,
+      MAKE_CONFORTABLE_3,
+      TROUGHT_SESSION_6,
+      TFTU_7,
+      HAPPINESS_PRIORITY_8,
+
       INTRO_1,
       INTRO_1a,
       createAudioScene("3_HOW_DO_OTHERS_SEE_YOU"), // => video + audio

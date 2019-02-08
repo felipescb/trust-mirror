@@ -212,12 +212,23 @@ export default (data) => {
   const inbetweenNeg = [DESPITE_INTENTIONS_24, NEGLECTING_EFFORTS_26, FLAWS_RELATIONSHIP_28, GREAT_DISSAPPOINTM_30];
 
   const BECOMING_EXEMPLARY_32 = createAudioScene("32_It_Must_Be_Difficult");
-  
-  const CONSUMPTION_PREFS_10 = {
+
+  const TFTU_33 = createAudioScene('33_Thank_You_For_Trusting_Us', pathPrefix, [
+      {
+        domGenerator: () => `<div class="text-wrapper">${thankYouFor}</div>`,
+        in: 1000,
+        out: 3000
+      }
+    ]
+  )
+
+  const TRULY_REMARKABLE_34 = createAudioScene("34_Dont_Worry");
+
+  const CONSUMPTION_PREFS_35 = {
     type: 'custom',
     scene: {
       play: consumptionPlay,
-      audioSrc: pather('10_HOW_OUR_CLIENTS_SEE_YOU'),
+      audioSrc: pather('35_Remarkable_To_Our_Clients'),
       background: {
         color: '#000',
         from: 'top',
@@ -225,11 +236,13 @@ export default (data) => {
     }
   }
 
-  const FACETS_12 = {
+  const ITS_BENEFICIAL_36 = createAudioScene("36_It_Is_Beneficial_To_See_You");
+
+  const FACETS_37 = {
     type: 'custom',
     scene: {
       play: facetsPlay,
-      audioSrc: pather('12_GOOD_HARD_LOOK'),
+      audioSrc: pather('37_Keep_Generating_Content'),
       background: {
         color: '#000',
         from: 'right',
@@ -237,46 +250,30 @@ export default (data) => {
     }
   }
 
-
-  let assesmentIn, assesmentOut;
-  if (lang == "FR") {
-    assesmentIn = 13000;
-    assesmentOut = 18000;
-  } else {
-    assesmentIn = 11000;
-    assesmentOut = 13000;
+  const GOODBYE_38 = {
+    type: 'media',
+    src: '/assets/video/goodbye_compr.mp4',
+    audioSrc: pather('38_Smile_You_Are_The_Content'),
+    attrs: [
+      {
+        domGenerator: () => `<div class="floating flex-center" style="font-size:2.5rem;top:26.5%;bottom:67%;color:#111">${i18n.thankYou[lang]}.</div>`,
+        in: 0,
+        out: 4900
+      },
+      {
+        domGenerator: () => `
+          <div class="floating flex-center" style="font-size:1.5rem;top:36.5%;bottom:57%;color:#111">${i18n.youAre[lang]}</div>
+        `,
+        in: 0,
+        out: 5200
+      }
+    ]
   }
 
-  const thankYouFor = `<div style="font-size: #FFF">${i18n.thankTrust[lang]}</div>`
-  const ASSESSMENT_5 = createAudioScene('5_ASSESSMENT', pathPrefix, [
-    // 11 seconds
-    {
-      domGenerator: () => `<div class="text-wrapper">${thankYouFor}</div>`,
-      in: assesmentIn,
-      out: assesmentOut
-    }
-  ]
-  )
-  const COME_CLOSER_7 = createAudioScene('7_COME_CLOSER', pathPrefix, [
-    // 16 seconds
-      {
-        domGenerator: () => `<div class="text-wrapper">${thankYouFor}</div>`,
-        in: 16500,
-        out: 18000
-      }
-    ]
-  )
-  const PURGATORY_9 = createAudioScene('9_PURGATORY', pathPrefix,
-    [
-    // 11seconds
-      {
-        domGenerator: () => `<div class="text-wrapper">${thankYouFor}</div>`,
-        in: 11500,
-        out: 13000
-      }
-    ]
-  );
+  const SESSION_EXPIRED_39 = createAudioScene("39_Your_Session_Has_Expired");
 
+  const thankYouFor = `<div style="font-size: #FFF">${i18n.thankTrust[lang]}</div>`
+  
   const END = {
     type: 'custom',
     scene: {
@@ -312,19 +309,20 @@ export default (data) => {
       GREAT_PERSONALITY_22,
       ...createBIG5WithBetween("negative", inbetweenNeg), // 23
       BECOMING_EXEMPLARY_32,
-      
-      PURGATORY_9,
-      CONSUMPTION_PREFS_10,
-      createAudioScene("11_LEARNING_TO_SEE"),
-      FACETS_12,
-      //GOODBYE_13,
+      TFTU_33,
+      TRULY_REMARKABLE_34,
+      CONSUMPTION_PREFS_35,
+      ITS_BENEFICIAL_36,
+      FACETS_37,
+      GOODBYE_38,
+      SESSION_EXPIRED_39,
       END
     ];
 
   } else if (photosLenght > 0 && likesLenght <= 0) {
     console.log("tem fotos e não likes")
     return [
-      // PRE,
+      //PRE,
       HELLO_1,
       TFTU_2,
       MAKE_CONFORTABLE_3,
@@ -340,12 +338,13 @@ export default (data) => {
       GREAT_PERSONALITY_22,
       ...createBIG5WithBetween("negative", inbetweenNeg), // 23
       BECOMING_EXEMPLARY_32,
-
-      PURGATORY_9,
-      CONSUMPTION_PREFS_10,
-      createAudioScene("11_LEARNING_TO_SEE"),
-      FACETS_12,
-      //GOODBYE_13,
+      TFTU_33,
+      TRULY_REMARKABLE_34,
+      CONSUMPTION_PREFS_35,
+      ITS_BENEFICIAL_36,
+      FACETS_37,
+      GOODBYE_38,
+      SESSION_EXPIRED_39,
       END
     ];
 
@@ -368,12 +367,13 @@ export default (data) => {
       GREAT_PERSONALITY_22,
       ...createBIG5WithBetween("negative", inbetweenNeg), // 23
       BECOMING_EXEMPLARY_32,
-
-      PURGATORY_9,
-      CONSUMPTION_PREFS_10,
-      createAudioScene("11_LEARNING_TO_SEE"),
-      FACETS_12,
-      //GOODBYE_13,
+      TFTU_33,
+      TRULY_REMARKABLE_34,
+      CONSUMPTION_PREFS_35,
+      ITS_BENEFICIAL_36,
+      FACETS_37,
+      GOODBYE_38,
+      SESSION_EXPIRED_39,
       END
     ];
 
@@ -396,12 +396,13 @@ export default (data) => {
       GREAT_PERSONALITY_22,
       ...createBIG5WithBetween("negative", inbetweenNeg), // 23
       BECOMING_EXEMPLARY_32,
-
-      PURGATORY_9,
-      CONSUMPTION_PREFS_10,
-      createAudioScene("11_LEARNING_TO_SEE"),
-      FACETS_12,
-      //GOODBYE_13,
+      TFTU_33,
+      TRULY_REMARKABLE_34,
+      CONSUMPTION_PREFS_35,
+      ITS_BENEFICIAL_36,
+      FACETS_37,
+      GOODBYE_38,
+      SESSION_EXPIRED_39,
       END
     ];
 

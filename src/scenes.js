@@ -14,6 +14,21 @@ import facetsPlay from './scenes/FacetsPlay'
 import postsPlay from './scenes/Posts'
 import consumptionPlay from './scenes/ConsumptionPlay'
 
+//this should not be here
+if(!Array.prototype.hasOwnProperty('interpolate')) {
+  Array.prototype.interpolate = function(other) {
+    var limit = this.length < other.length ? other.length : this.length;
+    var out = [];
+  
+    for(var i = 0; i < limit; i++) {
+      if(this.length > 0) out.push(this.shift());
+      if(other.length > 0) out.push(other.shift());
+    }
+    
+    return out;
+  }
+}
+
 const i18n = {
   hello : {
     EN: 'Hello',
@@ -145,64 +160,17 @@ export default (data) => {
 
   const HAPPINESS_PRIORITY_8 = createAudioScene("8_Your_Happiness_Is_Our_Priority");
 
+  //the inbetween Big 5 Pos
+  const ISNT_GREAT_10 = createAudioScene("10_Isnt_That_Great");
+  const NOW_HERE_EVER_12 = createAudioScene("12_Now_More_Than_Ever");
+  const WEALL_LIKE_14 = createAudioScene("14_We_All_Like_This");
+  const DESERVES_SMILE_16 = createAudioScene("16_This_Deserves_A_Smile");
 
-  const INTRO_1 = createAudioScene('1_INTRO', pathPrefix, [
-      {
-        domGenerator: () => `<div class="text-wrapper"><div class="logo"> <img src="/assets/images/logo.png"> </div>${thankYouFor}</div>`,
-        in: 7000,
-        out: 11000
-      }
-    ]
-  )
-
-  const INTRO_1a = {
-    type: 'media',
-    src: '/assets/video/1a_intro.mp4',
-    audioSrc: pather('1a_INTRO'),
-  }
-
-  const GOODBYE_13 = {
-    type: 'media',
-    src: '/assets/video/goodbye_compr.mp4',
-    audioSrc: pather('13_OUTRO'),
-    attrs: [
-      {
-        domGenerator: () => `<div class="floating flex-center" style="font-size:2.5rem;top:26.5%;bottom:67%;color:#111">${i18n.thankYou[lang]}.</div>`,
-        in: 0,
-        out: 4900
-      },
-      {
-        domGenerator: () => `
-          <div class="floating flex-center" style="font-size:1.5rem;top:36.5%;bottom:57%;color:#111">${i18n.youAre[lang]}</div>
-        `,
-        in: 0,
-        out: 5200
-      }
-    ]
-  }
+  const inbetweenPos = [ISNT_GREAT_10, NOW_HERE_EVER_12, WEALL_LIKE_14, DESERVES_SMILE_16];
   
-  const LIKES_2 = {
-    type: 'custom',
-    scene: {
-      play: stampsPlay,
-      audioSrc: pather('4_HOW_IMPORTANT_ARE_THESE_THINGS'),
-      background: {
-        color: '#FE01CD',
-        from: 'left'
-      }
-    },
-  }
-
-  const POSTS_BONUS = {
-    type: 'custom',
-    scene: {
-      play: postsPlay,
-      audioSrc: pather('5_POSTS'),
-      background: {
-        color: '#3b5998',
-        from: 'left'
-      }
-    },
+  const createBIG5WithBetween = (posNeg, inbetween) => {
+    let facets = createBIG5(posNeg);
+    return facets.interpolate(inbetween);        
   }
 
   const createBIG5 = (posNeg) => data.cached.filter(c => c.type === posNeg).map(trait => {
@@ -213,6 +181,37 @@ export default (data) => {
       audioSrc: '/assets/CACHED_CONTENT/CACHED_AUDIO/' + lang + '/cached_facets_audio/' + fileName + '.' + audioExtension
     }
   });
+
+  const FEELS_GOOD_18 = createAudioScene("18_Isnt_This_Fun");
+
+  const FEEL_APRECIATED_19 = {
+    type: 'media',
+    src: '/assets/video/19_apreciated.mp4',
+    audioSrc: pather('19_Don_t_You_Feel_Appreciated'),
+  }
+
+  const LIKE_SHARING_20 = createAudioScene("20_As_You_Can_see");
+
+  const TFTU_21 = createAudioScene('21_Thank_You_For_Trusting_Us', pathPrefix, [
+      {
+        domGenerator: () => `<div class="text-wrapper">${thankYouFor}</div>`,
+        in: 1000,
+        out: 3000
+      }
+    ]
+  )
+
+  const GREAT_PERSONALITY_22 = createAudioScene("22_Youve_Got_A_Great_Personality");
+
+  //the inbetween Big 5 Neg
+  const DESPITE_INTENTIONS_24 = createAudioScene("24_Despite_Your_Best_Intentions");
+  const NEGLECTING_EFFORTS_26 = createAudioScene("26_Neglecting_Our_Continued_Efforts");
+  const FLAWS_RELATIONSHIP_28 = createAudioScene("28_How_Do_You_Think_These_Flaws");
+  const GREAT_DISSAPPOINTM_30 = createAudioScene("30_To_Great_Dissappointment");
+
+  const inbetweenNeg = [DESPITE_INTENTIONS_24, NEGLECTING_EFFORTS_26, FLAWS_RELATIONSHIP_28, GREAT_DISSAPPOINTM_30];
+
+  const BECOMING_EXEMPLARY_32 = createAudioScene("32_It_Must_Be_Difficult");
   
   const CONSUMPTION_PREFS_10 = {
     type: 'custom',
@@ -305,15 +304,20 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
-      ...createBIG5("positive"), // 9
+      ...createBIG5WithBetween("positive", inbetweenPos), // 9
+      FEELS_GOOD_18,
+      FEEL_APRECIATED_19,
+      LIKE_SHARING_20,
+      TFTU_21,
+      GREAT_PERSONALITY_22,
+      ...createBIG5WithBetween("negative", inbetweenNeg), // 23
+      BECOMING_EXEMPLARY_32,
       
-      COME_CLOSER_7,
-      ...createBIG5("negative"), // 8
       PURGATORY_9,
       CONSUMPTION_PREFS_10,
       createAudioScene("11_LEARNING_TO_SEE"),
       FACETS_12,
-      GOODBYE_13,
+      //GOODBYE_13,
       END
     ];
 
@@ -328,15 +332,20 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
-      ...createBIG5("positive"), // 9
+      ...createBIG5WithBetween("positive", inbetweenPos), // 9
+      FEELS_GOOD_18,
+      FEEL_APRECIATED_19,
+      LIKE_SHARING_20,
+      TFTU_21,
+      GREAT_PERSONALITY_22,
+      ...createBIG5WithBetween("negative", inbetweenNeg), // 23
+      BECOMING_EXEMPLARY_32,
 
-      COME_CLOSER_7,
-      ...createBIG5("negative"), // 8
       PURGATORY_9,
       CONSUMPTION_PREFS_10,
       createAudioScene("11_LEARNING_TO_SEE"),
       FACETS_12,
-      GOODBYE_13,
+      //GOODBYE_13,
       END
     ];
 
@@ -351,15 +360,20 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
-      ...createBIG5("positive"), // 9
+      ...createBIG5WithBetween("positive", inbetweenPos), // 9
+      FEELS_GOOD_18,
+      FEEL_APRECIATED_19,
+      LIKE_SHARING_20,
+      TFTU_21,
+      GREAT_PERSONALITY_22,
+      ...createBIG5WithBetween("negative", inbetweenNeg), // 23
+      BECOMING_EXEMPLARY_32,
 
-      COME_CLOSER_7,
-      ...createBIG5("negative"), // 8
       PURGATORY_9,
       CONSUMPTION_PREFS_10,
       createAudioScene("11_LEARNING_TO_SEE"),
       FACETS_12,
-      GOODBYE_13,
+      //GOODBYE_13,
       END
     ];
 
@@ -374,15 +388,20 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
-      ...createBIG5("positive"), // 9
-      
-      COME_CLOSER_7,
-      ...createBIG5("negative"), // 8
+      ...createBIG5WithBetween("positive", inbetweenPos), // 9
+      FEELS_GOOD_18,
+      FEEL_APRECIATED_19,
+      LIKE_SHARING_20,
+      TFTU_21,
+      GREAT_PERSONALITY_22,
+      ...createBIG5WithBetween("negative", inbetweenNeg), // 23
+      BECOMING_EXEMPLARY_32,
+
       PURGATORY_9,
       CONSUMPTION_PREFS_10,
       createAudioScene("11_LEARNING_TO_SEE"),
       FACETS_12,
-      GOODBYE_13,
+      //GOODBYE_13,
       END
     ];
 

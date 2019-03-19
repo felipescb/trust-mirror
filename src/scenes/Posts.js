@@ -6,7 +6,7 @@ const maxTopForStamps = 80;
 const minTopForStamps = 10;
 const maxFontSizeOffset = 1.5;
 
-const stampTimeOffset = 600;
+const stampTimeOffset = 400;
 
 export default function PostsPLay(data, onEnd) {
   const wrapper = $('<div class="wrapper"></div>');

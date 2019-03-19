@@ -159,6 +159,19 @@ export default (data) => {
   )
 
   const HAPPINESS_PRIORITY_8 = createAudioScene("8_Your_Happiness_Is_Our_Priority");
+  
+
+ const POSTS = {
+    type: 'custom',
+    scene: {
+      play: postsPlay,
+      //audioSrc: pather('8_Your_Happiness_Is_Our_Priority'),
+      background: {
+        color: '#3b5998',
+        from: 'left'
+      }
+    },
+  }
 
   //the inbetween Big 5 Pos
   const ISNT_GREAT_10 = createAudioScene("10_Isnt_That_Great");
@@ -274,6 +287,18 @@ export default (data) => {
 
   const thankYouFor = `<div style="font-size: #FFF">${i18n.thankTrust[lang]}</div>`
   
+   const POSTS_backup = {
+    type: 'custom',
+    scene: {
+      play: postsPlay,
+      audioSrc: pather('5_POSTS'),
+      background: {
+        color: '#3b5998',
+        from: 'left'
+      }
+    },
+  }
+
   const END = {
     type: 'custom',
     scene: {
@@ -301,6 +326,7 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
+      POSTS,
       ...createBIG5WithBetween("positive", inbetweenPos), // 9
       FEELS_GOOD_18,
       FEEL_APRECIATED_19,
@@ -330,6 +356,7 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
+      POSTS,
       ...createBIG5WithBetween("positive", inbetweenPos), // 9
       FEELS_GOOD_18,
       FEEL_APRECIATED_19,
@@ -359,6 +386,7 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
+      POSTS,
       ...createBIG5WithBetween("positive", inbetweenPos), // 9
       FEELS_GOOD_18,
       FEEL_APRECIATED_19,
@@ -388,6 +416,7 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
+      POSTS,
       ...createBIG5WithBetween("positive", inbetweenPos), // 9
       FEELS_GOOD_18,
       FEEL_APRECIATED_19,

@@ -143,7 +143,8 @@ export default (data) => {
       background: {
         color: '#FE01CD',
         from: 'left'
-      }
+      },
+      endOnAudio: false,
     },
   }
 
@@ -158,18 +159,17 @@ export default (data) => {
     ]
   )
 
-  const HAPPINESS_PRIORITY_8 = createAudioScene("8_Your_Happiness_Is_Our_Priority");
-  
-
- const POSTS = {
+  //const HAPPINESS_PRIORITY_8 = createAudioScene("8_Your_Happiness_Is_Our_Priority");
+  const HAPPINESS_PRIORITY_8 = {
     type: 'custom',
     scene: {
       play: postsPlay,
-      //audioSrc: pather('8_Your_Happiness_Is_Our_Priority'),
+      audioSrc: pather('8_Your_Happiness_Is_Our_Priority'),
       background: {
         color: '#3b5998',
         from: 'left'
-      }
+      },
+      endOnAudio: true,
     },
   }
 
@@ -326,7 +326,7 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
-      POSTS,
+      // POSTS,
       ...createBIG5WithBetween("positive", inbetweenPos), // 9
       FEELS_GOOD_18,
       FEEL_APRECIATED_19,
@@ -356,7 +356,7 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
-      POSTS,
+      // POSTS,
       ...createBIG5WithBetween("positive", inbetweenPos), // 9
       FEELS_GOOD_18,
       FEEL_APRECIATED_19,
@@ -386,7 +386,7 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
-      POSTS,
+      // POSTS,
       ...createBIG5WithBetween("positive", inbetweenPos), // 9
       FEELS_GOOD_18,
       FEEL_APRECIATED_19,
@@ -416,7 +416,7 @@ export default (data) => {
       TROUGHT_SESSION_6,
       TFTU_7,
       HAPPINESS_PRIORITY_8,
-      POSTS,
+      // POSTS,
       ...createBIG5WithBetween("positive", inbetweenPos), // 9
       FEELS_GOOD_18,
       FEEL_APRECIATED_19,

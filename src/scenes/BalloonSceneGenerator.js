@@ -3,7 +3,7 @@ import { shuffle, shuffleArray } from '../utils'
 
 export default function ballonsPlay(data, onEnd){
   const player = $('<div></div>');
-  const imgs = data.photos;
+  const imgs = data.photos.slice(1, 15);
   let finishedCount = 0;
   let lastTime = 0;
   const imgsCount = imgs.length;
